@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 918db0846d8247145a7bebb866dfec6f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MaleNames: {fileID: 4900000, guid: 2d7ab87a8afcf5d4bafab5152af7a087, type: 3}
+  - FemaleNames: {fileID: 4900000, guid: fafbc55692c7c534591da39fd32bab6f, type: 3}
+  - SecondNames: {fileID: 4900000, guid: 9928b1382abd03c4d94b75bb2413d685, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

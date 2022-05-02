@@ -14,7 +14,7 @@ public class CaseManager : MonoBehaviour
 
     private void Start()
     {
-        
+        AssignCase();
     }
 
     private void PopulateContainer(/*Param for Case File*/)

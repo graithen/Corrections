@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class WorkloadGenerator : MonoBehaviour
 {
-    public CharacterGeneration CharGen;
+    [SerializeField]
+    private CharacterGeneration CharGen;
     public Dictionary<int, (string, string, int, bool)> CharacterPool;
 
-    int CharacterID = 0;
+    private int CharacterID = 0;
 
-    List<CaseStruct> DailyCaseList = new List<CaseStruct>();
-    int CaseListLength = 10;
+    private List<CaseData> DailyCaseList = new List<CaseData>();
+    private int CaseListLength = 10;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         CharGen.InitializeData();
 
@@ -21,7 +22,7 @@ public class WorkloadGenerator : MonoBehaviour
         CharacterPool = CharGen.GenerateCharacters();
     }
 
-    public List<CaseStruct> GenerateWorkload(bool Story)
+    public List<CaseData> GenerateWorkload(bool Story)
     {
         for (int i = 0; i < CaseListLength; i++)
         {
@@ -38,9 +39,9 @@ public class WorkloadGenerator : MonoBehaviour
         return DailyCaseList;
     }
 
-    CaseStruct GenerateCaseInfo()
+    private CaseData GenerateCaseInfo()
     {
-        CaseStruct newCase = new CaseStruct();
+        CaseData newCase = new CaseData();
 
         (string, string, int, bool) Character;
         CharacterPool.TryGetValue(CharacterID, out Character);
@@ -57,12 +58,13 @@ public class WorkloadGenerator : MonoBehaviour
         else
             newCase.Gender = "Female";
 
+        CharacterID++;
         return newCase;
     }
 
-    CaseStruct GenerateStoryCaseInfo()
+    private CaseData GenerateStoryCaseInfo()
     {
-        CaseStruct newCase = new CaseStruct();
+        CaseData newCase = new CaseData();
 
         (string, string, int, bool) Character;
         CharacterPool.TryGetValue(CharacterID, out Character);
@@ -79,6 +81,7 @@ public class WorkloadGenerator : MonoBehaviour
         else
             newCase.Gender = "Female";
 
+        CharacterID++;
         return newCase;
     }
 }

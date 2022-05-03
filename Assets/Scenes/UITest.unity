@@ -1956,6 +1956,46 @@ MonoBehaviour:
     MaleNameList: []
     FemaleNameList: []
     SecondNameList: []
+  Infractions1:
+  - Vandalism.
+  - Antisocial behaviour.
+  - Abusive to police.
+  - Disturbance in a public space.
+  - Unpaid parking ticket.
+  - Public indecency.
+  - Speeding.
+  Infractions2:
+  - Driving without a licence.
+  - Petty theft.
+  - Dealing drugs.
+  - Burglary.
+  - Robbery.
+  - Stalking and harrassment.
+  - Cyber bullying.
+  Infractions3:
+  - Racism.
+  - Fraud.
+  - Cyber crime.
+  - Domestic abuse.
+  - Grievous bodily harm.
+  - Hate speech.
+  - Indecent exposure.
+  Infractions4:
+  - Animal cruelty.
+  - Molestation.
+  - Arson.
+  - Acid attack.
+  - Drug trafficking.
+  - Manslaughter.
+  - Child abuse.
+  Infractions5:
+  - Murder.
+  - Sexual abuse of a child.
+  - Rape.
+  - Torture.
+  - Kidnapping.
+  - Human trafficking.
+  - Terrorism.
   CaseListLength: 5
 --- !u!4 &604082762
 Transform:

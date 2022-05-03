@@ -8,6 +8,8 @@ public class WorkloadGenerator : MonoBehaviour
     private CharacterGeneration CharGen;
     public Dictionary<int, (string, string, int, bool)> CharacterPool;
 
+    public List<string> Infractions1, Infractions2, Infractions3, Infractions4, Infractions5;
+
     private int CharacterID = 0;
 
     private List<CaseData> DailyCaseList = new List<CaseData>();
@@ -58,6 +60,42 @@ public class WorkloadGenerator : MonoBehaviour
 
         else
             newCase.Gender = "Female";
+
+        int infractionNumber = Random.Range(1, 10);
+        string infraction = "";
+
+        for (int i = 0; i < infractionNumber; i++)
+        {
+            int chance = 0;
+            chance = Random.Range(0, 100);
+
+            if(chance > 60)
+            {
+                infraction += Infractions1[Random.Range(0, Infractions1.Count)] + " ";
+            }
+
+            if (chance >= 50 && chance < 60)
+            {
+                infraction += Infractions2[Random.Range(0, Infractions2.Count)] + " ";
+            }
+
+            if (chance >= 25 && chance < 50)
+            {
+                infraction += Infractions3[Random.Range(0, Infractions3.Count)] + " ";
+            }
+
+            if (chance >= 10 && chance < 25)
+            {
+                infraction += Infractions4[Random.Range(0, Infractions4.Count)] + " ";
+            }
+
+            if (chance < 10)
+            {
+                infraction += Infractions5[Random.Range(0, Infractions5.Count)] + " ";
+            }
+        }
+
+        newCase.InfractionDetails = infraction;
 
         CharacterID++;
         return newCase;

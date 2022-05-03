@@ -11,6 +11,7 @@ public class WorkloadGenerator : MonoBehaviour
     private int CharacterID = 0;
 
     private List<CaseData> DailyCaseList = new List<CaseData>();
+    [SerializeField]
     private int CaseListLength = 10;
 
     // Start is called before the first frame update
@@ -46,8 +47,8 @@ public class WorkloadGenerator : MonoBehaviour
         (string, string, int, bool) Character;
         CharacterPool.TryGetValue(CharacterID, out Character);
 
-        newCase.FirstName = Character.Item1;
-        newCase.SecondName = Character.Item2;
+        newCase.SecondName = Character.Item1;
+        newCase.FirstName = Character.Item2;
         newCase.Age = Character.Item3;
 
         if (Character.Item4)
@@ -69,8 +70,8 @@ public class WorkloadGenerator : MonoBehaviour
         (string, string, int, bool) Character;
         CharacterPool.TryGetValue(CharacterID, out Character);
 
-        newCase.FirstName = Character.Item1;
-        newCase.SecondName = Character.Item2;
+        newCase.SecondName = Character.Item1;
+        newCase.FirstName = Character.Item2;
         newCase.Age = Character.Item3;
 
         if (Character.Item4)

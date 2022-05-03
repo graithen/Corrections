@@ -8,6 +8,8 @@ public class CaseManager : MonoBehaviour
 {
     private WorkloadGenerator workloadGenerator;
 
+    private int elapsedDays = 0;
+
     [SerializeField]
     private GameObject caseButton;
     [SerializeField]
@@ -15,6 +17,7 @@ public class CaseManager : MonoBehaviour
 
     [SerializeField]
     private List<CaseData> todaysCases;
+    private int currCaseIndex = 0;
 
     [Header ("Contents UI")]
     [SerializeField]
@@ -37,27 +40,39 @@ public class CaseManager : MonoBehaviour
     private void Start()
     {
         workloadGenerator = FindObjectOfType<WorkloadGenerator>();
-        CreateDailyCases(isStoryCase()); //Call on New Day - when day system is made
-
-        PopulateContainer(0);
+        CreateDailyCases(); //Call on New Day - when day system is made
     }
 
     public void PopulateContainer(int index)
     {
+        currCaseIndex = index;
         //Update UI Elements within container here
         //picture = todaysCases[index];
         fName.text = todaysCases[index].FirstName;
         sName.text = todaysCases[index].SecondName;
-        //DoB.text = todaysCases[index];
+        DoB.text = todaysCases[index].Age.ToString();
         //iDNumber.text = todaysCases[index];
         //occupation.text = todaysCases[index];
         infractionDetails.text = todaysCases[index].InfractionDetails;
         infractionNotes.text = todaysCases[index].InfractionNotes;
-
     }
 
-    private void CreateDailyCases(bool story)
+    public void CreateDailyCases()
     {
+        currCaseIndex = 0;
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+
+        bool story = false;
+        elapsedDays++;
+        if(elapsedDays %3 == 0)
+        {
+            story = true;
+        }
+
         todaysCases = workloadGenerator.GenerateWorkload(story);
 
         //Spawn Case Buttons and Assign Cases to them
@@ -67,11 +82,21 @@ public class CaseManager : MonoBehaviour
             button.GetComponent<CaseButton>().myCaseNumber = i;
             //Remember to Assign Populate Function to Case Button using Apt Case File
         }
+
+        PopulateContainer(currCaseIndex);
     }
 
-    private bool isStoryCase()
+    public void Submit()
     {
-        //Logic for choosing story or not?
-        return false;
+        todaysCases.RemoveAt(currCaseIndex);
+        Destroy(transform.GetChild(currCaseIndex).gameObject);
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<CaseButton>().myCaseNumber = i-1;
+        }
+
+        currCaseIndex = 0;
+        PopulateContainer(currCaseIndex);
     }
 }

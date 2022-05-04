@@ -38,7 +38,13 @@ public class CaseManager : MonoBehaviour
     private TextMeshProUGUI infractionNotes;
 
     [SerializeField]
+    private TMP_Dropdown sentenceDropdown;
+    [SerializeField]
     private Scrollbar verticalScroll;
+
+    [Header("Sentences")]
+    [SerializeField]
+    private List<string> sentences; 
 
     private void Start()
     {
@@ -87,10 +93,13 @@ public class CaseManager : MonoBehaviour
         }
 
         PopulateContainer(currCaseIndex);
+        PopulateSentenceDropdown();
     }
 
     public void Submit()
     {
+        CheckSentenceDropdown();
+
         todaysCases.RemoveAt(currCaseIndex);
         Destroy(transform.GetChild(currCaseIndex).gameObject);
 
@@ -103,6 +112,26 @@ public class CaseManager : MonoBehaviour
         PopulateContainer(currCaseIndex);
 
         verticalScroll.value = 1;
+    }
+
+    private void PopulateSentenceDropdown()
+    {
+        sentenceDropdown.options.Clear();
+        sentenceDropdown.AddOptions(sentences);      
+    }
+
+    private void CheckSentenceDropdown()
+    {
+        string sentence = sentenceDropdown.options[sentenceDropdown.value].text;
+
+        for (int i = 0; i < sentences.Count; i++)
+        {
+            if (sentence == sentences[i])
+            {
+                //Aftermath of the sentence
+                break;
+            }
+        }
     }
 
     private string ListToString(List<string> toConvert)

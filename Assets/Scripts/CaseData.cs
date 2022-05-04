@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public struct CaseData
 {
     //Basic character information
@@ -17,8 +19,8 @@ public struct CaseData
     private int infractionLevel;
     public int InfractionLevel { get { return infractionLevel; } set { infractionLevel = value; } }
 
-    private string infractionDetails;
-    public string InfractionDetails { get { return infractionDetails; } set { infractionDetails = value; } }
+    private List<string> infractionDetails;
+    public List<string> InfractionDetails { get { return infractionDetails; } set { infractionDetails = value; } }
 
     private string infractionNotes;
     public string InfractionNotes { get { return infractionNotes; } set { infractionNotes = value; } }

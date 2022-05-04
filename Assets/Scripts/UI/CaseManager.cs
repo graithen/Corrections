@@ -53,7 +53,7 @@ public class CaseManager : MonoBehaviour
         DoB.text = todaysCases[index].Age.ToString();
         //iDNumber.text = todaysCases[index];
         //occupation.text = todaysCases[index];
-        infractionDetails.text = todaysCases[index].InfractionDetails;
+        infractionDetails.text = ListToString(todaysCases[index].InfractionDetails);
         infractionNotes.text = todaysCases[index].InfractionNotes;
     }
 
@@ -98,5 +98,17 @@ public class CaseManager : MonoBehaviour
 
         currCaseIndex = 0;
         PopulateContainer(currCaseIndex);
+    }
+
+    private string ListToString(List<string> toConvert)
+    {
+        string converted = "";
+
+        for (int i = 0; i < toConvert.Count; i++)
+        {
+            converted += toConvert[i] + "\n";
+        }
+
+        return converted;
     }
 }

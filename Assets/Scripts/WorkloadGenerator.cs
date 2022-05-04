@@ -95,9 +95,10 @@ public class WorkloadGenerator : MonoBehaviour
         return newCase;
     }
 
-    private string GenerateInfraction()
+    private List<string> GenerateInfraction()
     {
         int infractionNumber = Random.Range(1, maxPossibleInfractions);
+        List<string> infractions = new List<string>();
         string infraction = "";
 
         for (int i = 0; i < infractionNumber; i++)
@@ -107,27 +108,36 @@ public class WorkloadGenerator : MonoBehaviour
 
             if (chance > 60)
             {
-                infraction += Infractions1[Random.Range(0, Infractions1.Count)] + " ";
+                infraction = Infractions1[Random.Range(0, Infractions1.Count)];
             }
             else if (chance >= 50 && chance < 60)
             {
-                infraction += Infractions2[Random.Range(0, Infractions2.Count)] + " ";
+                infraction = Infractions2[Random.Range(0, Infractions1.Count)];
             }
             else if (chance >= 25 && chance < 50)
             {
-                infraction += Infractions3[Random.Range(0, Infractions3.Count)] + " ";
+                infraction = Infractions3[Random.Range(0, Infractions1.Count)];
             }
             else if (chance >= 10 && chance < 25)
             {
-                infraction += Infractions4[Random.Range(0, Infractions4.Count)] + " ";
+                infraction = Infractions4[Random.Range(0, Infractions1.Count)];
             }
             else if (chance < 10)
             {
-                infraction += Infractions5[Random.Range(0, Infractions5.Count)] + " ";
+                infraction = Infractions5[Random.Range(0, Infractions1.Count)];
+            }
+
+            if (infractions.Contains(infraction))
+            {
+                break;
+            }
+            else
+            {
+                infractions.Add(infraction);
             }
         }
 
-        return infraction;
+        return infractions;
     }
 }
 

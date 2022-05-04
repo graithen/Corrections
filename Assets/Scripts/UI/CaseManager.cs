@@ -48,8 +48,6 @@ public class CaseManager : MonoBehaviour
 
     public void PopulateContainer(int index)
     {
-        verticalScroll.value = 1;
-
         currCaseIndex = index;
         //Update UI Elements within container here
         //picture = todaysCases[index];
@@ -103,6 +101,8 @@ public class CaseManager : MonoBehaviour
 
         currCaseIndex = 0;
         PopulateContainer(currCaseIndex);
+
+        verticalScroll.value = 1;
     }
 
     private string ListToString(List<string> toConvert)

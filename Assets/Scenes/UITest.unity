@@ -1997,6 +1997,7 @@ MonoBehaviour:
   - Human trafficking.
   - Terrorism.
   CaseListLength: 5
+  maxPossibleInfractions: 10
 --- !u!4 &604082762
 Transform:
   m_ObjectHideFlags: 0
@@ -5170,6 +5171,7 @@ MonoBehaviour:
   occupation: {fileID: 891804157}
   infractionDetails: {fileID: 1492945445}
   infractionNotes: {fileID: 256092661}
+  verticalScroll: {fileID: 2063557631}
 --- !u!1 &1906934067
 GameObject:
   m_ObjectHideFlags: 0

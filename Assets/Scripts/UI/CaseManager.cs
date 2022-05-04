@@ -37,6 +37,9 @@ public class CaseManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI infractionNotes;
 
+    [SerializeField]
+    private Scrollbar verticalScroll;
+
     private void Start()
     {
         workloadGenerator = FindObjectOfType<WorkloadGenerator>();
@@ -45,6 +48,8 @@ public class CaseManager : MonoBehaviour
 
     public void PopulateContainer(int index)
     {
+        verticalScroll.value = 1;
+
         currCaseIndex = index;
         //Update UI Elements within container here
         //picture = todaysCases[index];

@@ -16,6 +16,9 @@ public class WorkloadGenerator : MonoBehaviour
     [SerializeField]
     private int CaseListLength = 10;
 
+    [SerializeField]
+    private int maxPossibleInfractions = 10;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -57,45 +60,12 @@ public class WorkloadGenerator : MonoBehaviour
         {
             newCase.Gender = "Male";
         }
-
         else
-            newCase.Gender = "Female";
-
-        int infractionNumber = Random.Range(1, 10);
-        string infraction = "";
-
-        for (int i = 0; i < infractionNumber; i++)
         {
-            int chance = 0;
-            chance = Random.Range(0, 100);
-
-            if(chance > 60)
-            {
-                infraction += Infractions1[Random.Range(0, Infractions1.Count)] + " ";
-            }
-
-            if (chance >= 50 && chance < 60)
-            {
-                infraction += Infractions2[Random.Range(0, Infractions2.Count)] + " ";
-            }
-
-            if (chance >= 25 && chance < 50)
-            {
-                infraction += Infractions3[Random.Range(0, Infractions3.Count)] + " ";
-            }
-
-            if (chance >= 10 && chance < 25)
-            {
-                infraction += Infractions4[Random.Range(0, Infractions4.Count)] + " ";
-            }
-
-            if (chance < 10)
-            {
-                infraction += Infractions5[Random.Range(0, Infractions5.Count)] + " ";
-            }
+            newCase.Gender = "Female";
         }
 
-        newCase.InfractionDetails = infraction;
+        newCase.InfractionDetails = GenerateInfraction();
 
         CharacterID++;
         return newCase;
@@ -116,11 +86,49 @@ public class WorkloadGenerator : MonoBehaviour
         {
             newCase.Gender = "Male";
         }
-
         else
+        {
             newCase.Gender = "Female";
+        }
 
         CharacterID++;
         return newCase;
     }
+
+    private string GenerateInfraction()
+    {
+        int infractionNumber = Random.Range(1, maxPossibleInfractions);
+        string infraction = "";
+
+        for (int i = 0; i < infractionNumber; i++)
+        {
+            int chance = 0;
+            chance = Random.Range(0, 100);
+
+            if (chance > 60)
+            {
+                infraction += Infractions1[Random.Range(0, Infractions1.Count)] + " ";
+            }
+            else if (chance >= 50 && chance < 60)
+            {
+                infraction += Infractions2[Random.Range(0, Infractions2.Count)] + " ";
+            }
+            else if (chance >= 25 && chance < 50)
+            {
+                infraction += Infractions3[Random.Range(0, Infractions3.Count)] + " ";
+            }
+            else if (chance >= 10 && chance < 25)
+            {
+                infraction += Infractions4[Random.Range(0, Infractions4.Count)] + " ";
+            }
+            else if (chance < 10)
+            {
+                infraction += Infractions5[Random.Range(0, Infractions5.Count)] + " ";
+            }
+        }
+
+        return infraction;
+    }
 }
+
+    

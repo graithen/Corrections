@@ -13,6 +13,9 @@ public class DateTimeSystem : MonoBehaviour
     public TimeFormat timeFormat = TimeFormat.Hour24;
     public DateFormat dateFormat = DateFormat.DD_MM_YYYY;
 
+    private int startHour = 9;
+    private int startMinute = 0;
+
     public float SecPerMinute = 1;
 
     [Header("Events")]
@@ -36,7 +39,7 @@ public class DateTimeSystem : MonoBehaviour
     int year;
     public int Year { get { return year; } set { year = value; } }
 
-    int maxHr = 24;
+    int maxHr = 18;
     int maxMin = 60;
 
     int maxDay = 30;
@@ -69,12 +72,12 @@ public class DateTimeSystem : MonoBehaviour
     private void Awake()
     {
         //Set a date and time five years from now when no saved date and time to put
-        hr = System.DateTime.Now.Hour;
-        min = System.DateTime.Now.Minute;
+        hr = startHour;
+        min = startMinute;
         day = System.DateTime.Now.Day;
         month = System.DateTime.Now.Month;
         year = System.DateTime.Now.Year + 5;
-        
+
         CalculateDaysInMonth();
 
         if (hr < 12)
@@ -101,7 +104,7 @@ public class DateTimeSystem : MonoBehaviour
                 HourTrigger.Invoke();
                 if (hr >= maxHr)
                 {
-                    hr = 0;
+                    hr = startHour;
                     day++;
                     DayTrigger.Invoke();
                     if (day > maxDay)

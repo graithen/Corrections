@@ -2144,6 +2144,7 @@ GameObject:
   - component: {fileID: 604082761}
   - component: {fileID: 604082763}
   - component: {fileID: 604082764}
+  - component: {fileID: 604082765}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -2304,6 +2305,22 @@ MonoBehaviour:
   YearTrigger:
     m_PersistentCalls:
       m_Calls: []
+  CurrentDay: 0
+  PerformanceReview:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 604082765}
+        m_TargetAssemblyTypeName: PerformanceReview, Assembly-CSharp
+        m_MethodName: GenerateWeeklyReport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &604082764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2316,8 +2333,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de2763cf1c4d8c45b039198feb52f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  suspicionRating: 0
   totalCompletedCases: 0
   completedDays: 0
+--- !u!114 &604082765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604082760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048f09882821dab42a657e1e20b1e548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameplayTracking: {fileID: 604082764}
+  Grade: 0
+  ExceptionalStatements: []
+  PositiveStatements: []
+  NegativeStatements: []
+  ExceptionallyNegativeStatements: []
+  StoryStatements: []
 --- !u!1 &637751525
 GameObject:
   m_ObjectHideFlags: 0

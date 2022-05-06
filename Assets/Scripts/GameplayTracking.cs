@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameplayTracking : MonoBehaviour
 {
-    private int suspicionRating = 0;
+    public int suspicionRating = 0;
     private int suspicionModifier = 0;
 
     private int suspicionEventIndex = 0;
@@ -77,7 +77,5 @@ public class GameplayTracking : MonoBehaviour
     {
         completedDays++;
         averageCompletedCases = totalCompletedCases / completedDays;
-
-        Debug.Log("ACC = " + averageCompletedCases);
     }
 }

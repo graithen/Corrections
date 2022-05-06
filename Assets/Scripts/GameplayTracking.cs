@@ -13,6 +13,9 @@ public class GameplayTracking : MonoBehaviour
     // Start is called before the first frame update
 
     //Performance statistics
+
+    public int totalCompletedCases = 0;
+    public int completedDays = 0;
     public int AverageCompletedCases { get { return averageCompletedCases; } }
     int averageCompletedCases = 0;
 
@@ -70,9 +73,11 @@ public class GameplayTracking : MonoBehaviour
         }
     }
 
-    void DailyStats(int completedCases)
+    public void DailyUpdate()
     {
-        
-    }
+        completedDays++;
+        averageCompletedCases = totalCompletedCases / completedDays;
 
+        Debug.Log("ACC = " + averageCompletedCases);
+    }
 }

@@ -5699,6 +5699,7 @@ MonoBehaviour:
   - Fine
   - Prison
   - Death
+  - Mega Death
   caseButton: {fileID: 3215310781001209057, guid: 82087dd0fc8ffef428ba95feacda64e2, type: 3}
   caseFilesContainer: {fileID: 1675021940}
   picture: {fileID: 1199590112}

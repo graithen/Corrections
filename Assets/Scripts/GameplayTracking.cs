@@ -11,16 +11,10 @@ public class GameplayTracking : MonoBehaviour
 
     private List<string> victimList = new List<string>();
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //Performance statistics
+    public int AverageCompletedCases { get { return averageCompletedCases; } }
+    int averageCompletedCases = 0;
 
     public void ProcessVictim(string Name, int Punishment, int ExpectedPunishment)
     {
@@ -75,4 +69,10 @@ public class GameplayTracking : MonoBehaviour
                 break;
         }
     }
+
+    void DailyStats(int completedCases)
+    {
+        
+    }
+
 }

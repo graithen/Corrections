@@ -68,6 +68,22 @@ public class DateTimeSystem : MonoBehaviour
         YYYY_DD_MM
     }
 
+    public enum DayOfWeek
+    {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    }
+
+    int DayIndex = 0;
+    public DayOfWeek CurrentDay;
+
+    public UnityEvent PerformanceReview = new UnityEvent();
+
 
     private void Awake()
     {
@@ -75,10 +91,12 @@ public class DateTimeSystem : MonoBehaviour
         hr = startHour;
         min = startMinute;
         day = System.DateTime.Now.Day;
+        DayIndex = (int)System.DateTime.Today.DayOfWeek;
         month = System.DateTime.Now.Month;
         year = System.DateTime.Now.Year + 5;
 
         CalculateDaysInMonth();
+        CalculateDay();
 
         if (hr < 12)
         {
@@ -106,6 +124,7 @@ public class DateTimeSystem : MonoBehaviour
                 {
                     hr = startHour;
                     day++;
+                    CalculateDay();
                     DayTrigger.Invoke();
                     if (day > maxDay)
                     {
@@ -241,6 +260,54 @@ public class DateTimeSystem : MonoBehaviour
         {
             maxDay = 31;
         }
+    }
+
+    void CalculateDay()
+    {
+        switch (DayIndex)
+        {
+            case 1:
+                {
+                    CurrentDay = DayOfWeek.Monday;
+                    break;
+                }
+            case 2:
+                {
+                    CurrentDay = DayOfWeek.Tuesday;
+                    break;
+                }
+            case 3:
+                {
+                    CurrentDay = DayOfWeek.Wednesday;
+                    break;
+                }
+            case 4:
+                {
+                    CurrentDay = DayOfWeek.Thursday;
+                    break;
+                }
+            case 5:
+                {
+                    CurrentDay = DayOfWeek.Friday;
+                    PerformanceReview.Invoke(); //invoke the performance review
+                    break;
+                }
+            case 6:
+                {
+                    CurrentDay = DayOfWeek.Saturday;
+                    break;
+                }
+            case 7:
+                {
+                    CurrentDay = DayOfWeek.Sunday;
+                    break;
+                }
+        }
+        
+        DayIndex++;
+        
+        if (DayIndex > 7)
+            DayIndex = 1;
     }
 
     //Time controls

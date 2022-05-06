@@ -66,6 +66,7 @@ public class WorkloadGenerator : MonoBehaviour
         }
 
         newCase.InfractionDetails = GenerateInfraction();
+        newCase.InfractionLevel = CalculateInfractionLevel(newCase.InfractionDetails);
 
         CharacterID++;
         return newCase;
@@ -112,19 +113,19 @@ public class WorkloadGenerator : MonoBehaviour
             }
             else if (chance >= 50 && chance < 60)
             {
-                infraction = Infractions2[Random.Range(0, Infractions1.Count)];
+                infraction = Infractions2[Random.Range(0, Infractions2.Count)];
             }
             else if (chance >= 25 && chance < 50)
             {
-                infraction = Infractions3[Random.Range(0, Infractions1.Count)];
+                infraction = Infractions3[Random.Range(0, Infractions3.Count)];
             }
             else if (chance >= 10 && chance < 25)
             {
-                infraction = Infractions4[Random.Range(0, Infractions1.Count)];
+                infraction = Infractions4[Random.Range(0, Infractions4.Count)];
             }
             else if (chance < 10)
             {
-                infraction = Infractions5[Random.Range(0, Infractions1.Count)];
+                infraction = Infractions5[Random.Range(0, Infractions5.Count)];
             }
 
             if (infractions.Contains(infraction))
@@ -138,6 +139,53 @@ public class WorkloadGenerator : MonoBehaviour
         }
 
         return infractions;
+    }
+
+    private int CalculateInfractionLevel(List<string> infraction)
+    {
+        int level = 0;
+
+        if(ElementInListAIsInListB(infraction,Infractions1))
+        {
+            level = 1;
+        }
+        if (ElementInListAIsInListB(infraction, Infractions2))
+        {
+            level = 2;
+        }
+        if (ElementInListAIsInListB(infraction, Infractions3))
+        {
+            level = 3;
+        }
+        if (ElementInListAIsInListB(infraction, Infractions4))
+        {
+            level = 4;
+        }
+        if (ElementInListAIsInListB(infraction, Infractions5))
+        {
+            level = 5;
+        }
+
+        return level;
+    }
+
+    private bool ElementInListAIsInListB(List<string> A, List<string> B)
+    {
+        bool outcome = false;
+
+        for (int i = 0; i < A.Count; i++)
+        {
+            for (int j = 0; j < B.Count; j++)
+            {
+                if(A[i].Equals(B[j]))
+                {
+                    outcome = true;
+                    break;
+                }
+            }
+        }
+
+        return outcome;
     }
 }
 

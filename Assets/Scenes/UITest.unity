@@ -2143,6 +2143,7 @@ GameObject:
   - component: {fileID: 604082762}
   - component: {fileID: 604082761}
   - component: {fileID: 604082763}
+  - component: {fileID: 604082764}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -2291,6 +2292,18 @@ MonoBehaviour:
   YearTrigger:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &604082764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604082760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de2763cf1c4d8c45b039198feb52f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &637751525
 GameObject:
   m_ObjectHideFlags: 0
@@ -5680,6 +5693,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d41ffe87ca8b542b8746719c76b575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currSentence: 0
+  sentences:
+  - Social Work
+  - Fine
+  - Prison
+  - Death
   caseButton: {fileID: 3215310781001209057, guid: 82087dd0fc8ffef428ba95feacda64e2, type: 3}
   caseFilesContainer: {fileID: 1675021940}
   picture: {fileID: 1199590112}
@@ -5692,11 +5711,6 @@ MonoBehaviour:
   infractionNotes: {fileID: 256092661}
   sentenceDropdown: {fileID: 1946363563}
   verticalScroll: {fileID: 2063557631}
-  sentences:
-  - Social Work
-  - Fine
-  - Prison
-  - Death
 --- !u!1 &1906934067
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,20 @@ using TMPro;
 
 public class CaseManager : MonoBehaviour
 {
+    public enum Sentences
+    {
+        Tier1 = 0,
+        Tier2 = 1,
+        Tier3 = 2,
+        Tier4 = 3,
+        Tier5 = 4,
+    }
+
+    public Sentences currSentence;
+    public List<string> sentences;
+
     private WorkloadGenerator workloadGenerator;
+    private GameplayTracking gameplayTracking;
 
     private int elapsedDays = 0;
 
@@ -42,13 +55,10 @@ public class CaseManager : MonoBehaviour
     [SerializeField]
     private Scrollbar verticalScroll;
 
-    [Header("Sentences")]
-    [SerializeField]
-    private List<string> sentences; 
-
     private void Start()
     {
         workloadGenerator = FindObjectOfType<WorkloadGenerator>();
+        gameplayTracking = FindObjectOfType<GameplayTracking>();
         CreateDailyCases(); //Call on New Day - when day system is made
     }
 
@@ -128,10 +138,43 @@ public class CaseManager : MonoBehaviour
         {
             if (sentence == sentences[i])
             {
-                //Aftermath of the sentence
+                currSentence = intToSentence(i);
+                gameplayTracking.ProcessVictim(FullNameToString(todaysCases[currCaseIndex]),EvaluateSentence(currSentence),todaysCases[currCaseIndex].InfractionLevel);
                 break;
             }
         }
+    }
+
+    private int EvaluateSentence(Sentences sentence)
+    {
+        int evaluation = 0;
+
+        switch(sentence)
+        {
+            case Sentences.Tier1:
+                evaluation = 1;
+                break;
+            case Sentences.Tier2:
+                evaluation = 2;
+                break;
+            case Sentences.Tier3:
+                evaluation = 3;
+                break;
+            case Sentences.Tier4:
+                evaluation = 4;
+                break;
+            case Sentences.Tier5:
+                evaluation = 5;
+                break;
+        }
+
+        return evaluation;
+    }
+
+    private string FullNameToString(CaseData caseData)
+    {
+        string fullName = caseData.FirstName + " " + caseData.SecondName;
+        return fullName;
     }
 
     private string ListToString(List<string> toConvert)
@@ -144,5 +187,31 @@ public class CaseManager : MonoBehaviour
         }
 
         return converted;
+    }
+
+    private Sentences intToSentence(int index)
+    {
+        Sentences thisSentence = Sentences.Tier1;
+
+        switch(index)
+        {
+            case 0:
+                thisSentence = Sentences.Tier1;
+                break;
+            case 1:
+                thisSentence = Sentences.Tier2;
+                break;
+            case 2:
+                thisSentence = Sentences.Tier3;
+                break;
+            case 3:
+                thisSentence = Sentences.Tier4;
+                break;
+            case 4:
+                thisSentence = Sentences.Tier5;
+                break;
+        }
+
+        return thisSentence;
     }
 }

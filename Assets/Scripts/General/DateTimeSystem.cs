@@ -25,6 +25,7 @@ public class DateTimeSystem : MonoBehaviour
     public UnityEvent YearTrigger = new UnityEvent();
 
     private string time;
+    public string TimeGet { get { return time; } }
     private string date;
 
     private int hr;
@@ -329,5 +330,80 @@ public class DateTimeSystem : MonoBehaviour
     {
         isPaused = !isPaused;
         Debug.Log("Pausing time");
+    }
+
+    public string PickRandomTime()
+    {
+        string randomTime = "";
+
+        int randomHour = Random.Range(startHour, maxHr);
+        int randomMinute = Random.Range(startMinute, maxMin);
+
+        switch (timeFormat)
+        {
+            case TimeFormat.Hour12:
+            {
+                int h;
+
+                if (randomHour >= 13)
+                {
+                    h = randomHour - 12;
+                }
+                else if (hr == 0)
+                {
+                    h = 12;
+                }
+                else
+                {
+                    h = randomHour;
+                }
+
+                randomTime = h + ":";
+
+                if (randomMinute <= 9)
+                {
+                    randomTime += "0" + randomMinute;
+                }
+                else
+                {
+                    randomTime += randomMinute;
+                }
+
+                if (isAM)
+                {
+                    randomTime += " AM";
+                }
+                else
+                {
+                    randomTime += " PM";
+                }
+
+                break;
+            }
+
+            case TimeFormat.Hour24:
+            {
+                if (randomHour <= 9)
+                {
+                    randomTime = "0" + randomHour + ":";
+                }
+                else
+                {
+                    randomTime = randomHour + ":";
+                }
+
+                if (randomMinute <= 9)
+                {
+                    randomTime += "0" + randomMinute;
+                }
+                else
+                {
+                    randomTime += randomMinute;
+                }
+                break;
+            }
+        }
+
+        return randomTime;
     }
 }

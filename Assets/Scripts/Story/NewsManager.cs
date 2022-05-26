@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewsManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class NewsManager : MonoBehaviour
     private GameObject newsPrefab;
     [SerializeField]
     private Transform newsContainer;
+    [SerializeField]
+    private Scrollbar verticalScroll;
 
     [SerializeField]
     private int minArticlesPerDay;
@@ -66,6 +69,7 @@ public class NewsManager : MonoBehaviour
                 GameObject newsTweet = Instantiate(newsPrefab, newsContainer);
                 newsTweet.GetComponent<TweetUI>().Populate(thisArticle.title, thisArticle.body);
                 newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 32);
+                verticalScroll.value = 0;
             }
         } 
     }

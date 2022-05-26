@@ -19,11 +19,19 @@ public class NewsManager : MonoBehaviour
 
     [SerializeField]
     private DateTimeSystem dateTimeSystem;
-
     [SerializeField]
+    private StoryManager storyManager;
+
     private List<NewsData> allNewsData;
+    [SerializeField]
+    private List<NewsData> chapterOneFluffNews;
+    [SerializeField]
+    private List<NewsData> chapterTwoFluffNews;
+    [SerializeField]
+    private List<NewsData> chapterThreeFluffNews;
+
     private List<NewsData> todaysNewsData = new List<NewsData>();
-    private Dictionary<string, NewsData> finalNewsFeed;
+    public Dictionary<string, NewsData> finalNewsFeed;
 
 
     public void ConstructDailyFeed() // Called at Start of Day (DayTime NewDayEvent)
@@ -33,6 +41,20 @@ public class NewsManager : MonoBehaviour
         todaysNewsData.Clear();
 
         int numberOfArticles = Random.Range(minArticlesPerDay, maxArticlesPerDay);
+
+        if(storyManager.currentChapter == StoryManager.Chapter.One)
+        {
+            allNewsData = chapterOneFluffNews;
+        }
+        else if(storyManager.currentChapter == StoryManager.Chapter.Two)
+        {
+            allNewsData = chapterTwoFluffNews;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Three)
+        {
+            allNewsData = chapterThreeFluffNews;
+        }
+
         if (allNewsData.Count < numberOfArticles)
         {
             Debug.Log("NOT ENOUGH ARTICLES IN LIST!");
@@ -54,7 +76,9 @@ public class NewsManager : MonoBehaviour
             {
                 finalNewsFeed.Add(dateTimeSystem.PickRandomTime(), newsArticle);
             }
-        }   
+        }
+
+        storyManager.CheckForStoryNews();
     }
 
     public void PublishFeed()

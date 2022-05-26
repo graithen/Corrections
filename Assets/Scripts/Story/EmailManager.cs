@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EmailManager : MonoBehaviour
 {
-    //Hold a list of generic Emails (EmailData)
-    //Send x number of emails everyday
-    //Construct Story Emails?
+    //Look at Story Data (using currentStoryMProgress int) and Send Email
+
 }

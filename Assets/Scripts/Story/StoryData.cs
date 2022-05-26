@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class StoryData
 {
+    public int releaseDay; //x+n ... (x = day started, n = days elapsed)
     public NewsData news;
-    public EmailData email;
+    public List<EmailData> emails;
 }

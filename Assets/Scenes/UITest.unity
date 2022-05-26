@@ -2507,9 +2507,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a342ccb4100258946bf4688c8d3c896f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentChapter: 0
+  dateTimeSystem: {fileID: 958383137}
+  gameplayTracking: {fileID: 958383136}
+  newsManager: {fileID: 604082767}
   allStories:
-  - news: {fileID: 0}
-    email: {fileID: 0}
+  - releaseDay: 2
+    news: {fileID: 11400000, guid: 830e8b05e27c95346948a09f71184fb1, type: 2}
+    emails: []
 --- !u!114 &604082767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2528,12 +2533,25 @@ MonoBehaviour:
   minArticlesPerDay: 1
   maxArticlesPerDay: 3
   dateTimeSystem: {fileID: 958383137}
-  allNewsData:
+  storyManager: {fileID: 604082766}
+  chapterOneFluffNews:
   - {fileID: 11400000, guid: 6f222ab67b89a0f4e9121da012d59d18, type: 2}
   - {fileID: 11400000, guid: 8b5e25f59f5c35c4c90093c36a85adb5, type: 2}
   - {fileID: 11400000, guid: 4aa4c337a7086f14984264c8d88898cd, type: 2}
   - {fileID: 11400000, guid: a6248baf0b2cee843919d4cf2287337a, type: 2}
   - {fileID: 11400000, guid: 9e70b96a04bb22c4f9f32cf25d27cdeb, type: 2}
+  chapterTwoFluffNews:
+  - {fileID: 11400000, guid: 7ecac0c492032ee4f87072586b54c365, type: 2}
+  - {fileID: 11400000, guid: 9a2d6ce2b27524f4c9f298741e0ad7f7, type: 2}
+  - {fileID: 11400000, guid: aa1006dbc7067824baf5f261beb9b594, type: 2}
+  - {fileID: 11400000, guid: 4c98806d9782f6340ad92f2d006c61b2, type: 2}
+  - {fileID: 11400000, guid: 34a81ce7a9ae4c140800542837c0a3fe, type: 2}
+  chapterThreeFluffNews:
+  - {fileID: 11400000, guid: 954ed63599ea7f0419a99dcafda93efd, type: 2}
+  - {fileID: 11400000, guid: 5c1a87f720f296d4d942b0a0cbf78704, type: 2}
+  - {fileID: 11400000, guid: c04eacb6d7b72f84f8696e696064449d, type: 2}
+  - {fileID: 11400000, guid: 7d20461e950f4bc43ab7d7c38a86b969, type: 2}
+  - {fileID: 11400000, guid: 7010b9bf21cb8a14b8cade1b2e8357a6, type: 2}
 --- !u!1 &624442827
 GameObject:
   m_ObjectHideFlags: 0
@@ -3532,6 +3550,18 @@ MonoBehaviour:
       - m_Target: {fileID: 604082767}
         m_TargetAssemblyTypeName: NewsManager, Assembly-CSharp
         m_MethodName: ConstructDailyFeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 604082766}
+        m_TargetAssemblyTypeName: StoryManager, Assembly-CSharp
+        m_MethodName: UpdateChapter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6472,12 +6502,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currSentence: 0
-  sentences:
-  - Social Work
-  - Fine
-  - Prison
-  - Death
-  - Mega Death
+  chapterOneSentences:
+  - Ch1_Lowest
+  - Ch1_Low
+  - Ch1_Intermediate
+  - Ch1_High
+  - Ch1_Highest
+  chapterTwoSentences:
+  - Ch2_Lowest
+  - Ch2_Low
+  - Ch2_Intermediate
+  - Ch2_High
+  - Ch2_Highest
+  chapterThreeSentences:
+  - Ch3_Lowest
+  - Ch3_Low
+  - Ch3_Intermediate
+  - Ch3_High
+  - Ch3_Highest
   caseButton: {fileID: 3215310781001209057, guid: 82087dd0fc8ffef428ba95feacda64e2, type: 3}
   caseFilesContainer: {fileID: 1675021940}
   picture: {fileID: 1199590112}

@@ -16,10 +16,18 @@ public class CaseManager : MonoBehaviour
     }
 
     public Sentences currSentence;
-    public List<string> sentences;
+    private List<string> sentences;
+
+    [SerializeField]
+    private List<string> chapterOneSentences;
+    [SerializeField]
+    private List<string> chapterTwoSentences;
+    [SerializeField]
+    private List<string> chapterThreeSentences;
 
     private WorkloadGenerator workloadGenerator;
     private GameplayTracking gameplayTracking;
+    private StoryManager storyManager;
 
     private int elapsedDays = 0;
 
@@ -59,6 +67,7 @@ public class CaseManager : MonoBehaviour
     {
         workloadGenerator = FindObjectOfType<WorkloadGenerator>();
         gameplayTracking = FindObjectOfType<GameplayTracking>();
+        storyManager = FindObjectOfType<StoryManager>();
         CreateDailyCases(); //Call on New Day - when day system is made
     }
 
@@ -129,6 +138,20 @@ public class CaseManager : MonoBehaviour
     private void PopulateSentenceDropdown()
     {
         sentenceDropdown.options.Clear();
+
+        if(storyManager.currentChapter == StoryManager.Chapter.One)
+        {
+            sentences = chapterOneSentences;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Two)
+        {
+            sentences = chapterTwoSentences;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Three)
+        {
+            sentences = chapterThreeSentences;
+        }
+
         sentenceDropdown.AddOptions(sentences);      
     }
 

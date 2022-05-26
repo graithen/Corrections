@@ -19,6 +19,7 @@ public class DateTimeSystem : MonoBehaviour
     public float SecPerMinute = 1;
 
     [Header("Events")]
+    public UnityEvent MinuteTrigger = new UnityEvent();
     public UnityEvent HourTrigger = new UnityEvent();
     public UnityEvent DayTrigger = new UnityEvent();
     public UnityEvent MonthTrigger = new UnityEvent();
@@ -116,6 +117,7 @@ public class DateTimeSystem : MonoBehaviour
         if (timer >= SecPerMinute)
         {
             min++;
+            MinuteTrigger.Invoke();
             if (min >= maxMin)
             {
                 min = 0;
@@ -316,20 +318,20 @@ public class DateTimeSystem : MonoBehaviour
     {
         SecPerMinute = 1;
         isPaused = false;
-        Debug.Log("Time at normal speed");
+        //Debug.Log("Time at normal speed");
     }
     
     public void FastForward()
     {
         SecPerMinute = 0.0000000000000001f;
         isPaused = false;
-        Debug.Log("Fast forwarding time");
+        //Debug.Log("Fast forwarding time");
     }
 
     public void Pause()
     {
         isPaused = !isPaused;
-        Debug.Log("Pausing time");
+        //Debug.Log("Pausing time");
     }
 
     public string PickRandomTime()

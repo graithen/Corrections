@@ -60,7 +60,7 @@ public class StoryManager : MonoBehaviour
     public void CheckForStoryNews()
     {
         StoryData thisStory;
-        bool hasStory = storedStories.TryGetValue(gameplayTracking.completedDays, out thisStory);
+        bool hasStory = storedStories.TryGetValue(gameplayTracking.completedDays + 1, out thisStory);
 
         if(hasStory)
         {

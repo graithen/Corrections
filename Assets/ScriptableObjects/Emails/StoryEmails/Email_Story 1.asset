@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
-  m_Name: TestEmailData
+  m_Name: Email_Story 1
   m_EditorClassIdentifier: 
-  title: 
-  body: 
+  sender: Sender 1
+  title: Title 1
+  body: Text Text Text!
+  sendDay: 0
   sendHour: 0
   sendMin: 0

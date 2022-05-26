@@ -1508,7 +1508,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1983,18 +1983,30 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1512652297}
     - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1753060200}
+    - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
@@ -2002,11 +2014,27 @@ PrefabInstance:
       value: PlayAudio
       objectReference: {fileID: 0}
     - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlaySound, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1119456929459141787, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
@@ -2043,7 +2071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2642480104111172027, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_Name
-      value: EMailButton
+      value: EMailPageButton
       objectReference: {fileID: 0}
     - target: {fileID: 3813430815521506109, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_text
@@ -2160,6 +2188,10 @@ PrefabInstance:
     - target: {fileID: 5985259273593501777, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807310655231549414, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8228921746722991926, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_RootOrder
@@ -2538,6 +2570,7 @@ GameObject:
   - component: {fileID: 604082762}
   - component: {fileID: 604082766}
   - component: {fileID: 604082767}
+  - component: {fileID: 604082768}
   m_Layer: 0
   m_Name: StoryController
   m_TagString: Untagged
@@ -2617,6 +2650,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c04eacb6d7b72f84f8696e696064449d, type: 2}
   - {fileID: 11400000, guid: 7d20461e950f4bc43ab7d7c38a86b969, type: 2}
   - {fileID: 11400000, guid: 7010b9bf21cb8a14b8cade1b2e8357a6, type: 2}
+--- !u!114 &604082768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604082760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886aa1a110cae874b941dddc04f6b3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emailButton: {fileID: 1603786467701950671, guid: 92abbfca0a116f3429009c1a9631e6d5, type: 3}
+  emailButtonHolder: {fileID: 713234577}
+  newEmailNotif: {fileID: 1753060200}
+  dateTimeSystem: {fileID: 958383137}
+  gameplayTracking: {fileID: 958383136}
+  allEmails:
+  - {fileID: 11400000, guid: 1d176a24637843d4996af60ecaee21f5, type: 2}
+  - {fileID: 11400000, guid: 1d42fa2bf912b204c8759b22e17c8256, type: 2}
+  - {fileID: 11400000, guid: 74476da3963cf4a46bc1282803ebb4d6, type: 2}
+  - {fileID: 11400000, guid: 6a6de8dc13463354d843cd78fdb0cfb8, type: 2}
 --- !u!1 &624442827
 GameObject:
   m_ObjectHideFlags: 0
@@ -3010,7 +3065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2642480104111172027, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_Name
-      value: NewsButton
+      value: NewsPageButton
       objectReference: {fileID: 0}
     - target: {fileID: 3813430815521506109, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_text
@@ -3588,15 +3643,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  HourTrigger:
-    m_PersistentCalls:
-      m_Calls: []
-  DayTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827284321}
-        m_TargetAssemblyTypeName: CaseManager, Assembly-CSharp
-        m_MethodName: CreateDailyCases
+      - m_Target: {fileID: 604082768}
+        m_TargetAssemblyTypeName: EmailManager, Assembly-CSharp
+        m_MethodName: SendEmail
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3606,6 +3655,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  HourTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+  DayTrigger:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 958383137}
         m_TargetAssemblyTypeName: DateTimeSystem, Assembly-CSharp
         m_MethodName: Pause
@@ -3618,10 +3673,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 94275095}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 604082766}
+        m_TargetAssemblyTypeName: StoryManager, Assembly-CSharp
+        m_MethodName: UpdateChapter
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3629,6 +3684,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1827284321}
+        m_TargetAssemblyTypeName: CaseManager, Assembly-CSharp
+        m_MethodName: CreateDailyCases
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 958383136}
         m_TargetAssemblyTypeName: GameplayTracking, Assembly-CSharp
@@ -3654,10 +3721,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 604082766}
-        m_TargetAssemblyTypeName: StoryManager, Assembly-CSharp
-        m_MethodName: UpdateChapter
+      - m_Target: {fileID: 604082768}
+        m_TargetAssemblyTypeName: EmailManager, Assembly-CSharp
+        m_MethodName: ConstructTodaysEmails
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 94275095}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4337,7 +4416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1218928857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4971,7 +5050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2642480104111172027, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_Name
-      value: PerformanceReviewButton
+      value: PerformanceReviewPageButton
       objectReference: {fileID: 0}
     - target: {fileID: 3813430815521506109, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_text
@@ -6336,7 +6415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1753060201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7370,7 +7449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009062536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 908.60956, y: 538.81116, z: -20.662134}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7637,6 +7716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EmailButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1603786467701950671, guid: 92abbfca0a116f3429009c1a9631e6d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3443835085240486321, guid: 92abbfca0a116f3429009c1a9631e6d5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7793,7 +7876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2642480104111172027, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_Name
-      value: CaseFileButton
+      value: CaseFileMenuButton
       objectReference: {fileID: 0}
     - target: {fileID: 3813430815521506109, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_text

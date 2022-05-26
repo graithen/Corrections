@@ -341,71 +341,80 @@ public class DateTimeSystem : MonoBehaviour
         int randomHour = Random.Range(startHour, maxHr);
         int randomMinute = Random.Range(startMinute, maxMin);
 
+        randomTime = IntToStringTime(randomHour, randomMinute);
+
+        return randomTime;
+    }
+
+    public string IntToStringTime(int hour, int min)
+    {
+        string time = "";
+
         switch (timeFormat)
         {
             case TimeFormat.Hour12:
-            {
-                int h;
+                {
+                    int h;
 
-                if (randomHour >= 13)
-                {
-                    h = randomHour - 12;
-                }
-                else if (hr == 0)
-                {
-                    h = 12;
-                }
-                else
-                {
-                    h = randomHour;
-                }
+                    if (hour >= 13)
+                    {
+                        h = hour - 12;
+                    }
+                    else if (hour == 0)
+                    {
+                        h = 12;
+                    }
+                    else
+                    {
+                        h = hour;
+                    }
 
-                randomTime = h + ":";
+                    time = h + ":";
 
-                if (randomMinute <= 9)
-                {
-                    randomTime += "0" + randomMinute;
-                }
-                else
-                {
-                    randomTime += randomMinute;
-                }
+                    if (min <= 9)
+                    {
+                        time += "0" + min;
+                    }
+                    else
+                    {
+                        time += min;
+                    }
 
-                if (isAM)
-                {
-                    randomTime += " AM";
-                }
-                else
-                {
-                    randomTime += " PM";
-                }
+                    if (isAM)
+                    {
+                        time += " AM";
+                    }
+                    else
+                    {
+                        time += " PM";
+                    }
 
-                break;
-            }
+                    break;
+                }
 
             case TimeFormat.Hour24:
-            {
-                if (randomHour <= 9)
                 {
-                    randomTime = "0" + randomHour + ":";
-                }
-                else
-                {
-                    randomTime = randomHour + ":";
-                }
+                    if (hour <= 9)
+                    {
+                        time = "0" + hour + ":";
+                    }
+                    else
+                    {
+                        time = hour + ":";
+                    }
 
-                if (randomMinute <= 9)
-                {
-                    randomTime += "0" + randomMinute;
+                    if (min <= 9)
+                    {
+                        time += "0" + min;
+                    }
+                    else
+                    {
+                        time += min;
+                    }
+                    break;
                 }
-                else
-                {
-                    randomTime += randomMinute;
-                }
-                break;
-            }
         }
 
-        return randomTime;
+        return time;
     }
 }

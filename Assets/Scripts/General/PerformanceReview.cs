@@ -54,7 +54,7 @@ public class PerformanceReview : MonoBehaviour
             Grade = 7;
         }
 
-        Debug.Log(Grade);
+        //Debug.Log(Grade);
     }
 
     void UpdateUI()

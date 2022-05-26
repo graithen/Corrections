@@ -40,8 +40,8 @@ public class GameplayTracking : MonoBehaviour
             }
         }
 
-        Debug.Log(Name + ": " + Punishment + " / " + ExpectedPunishment);
-        Debug.Log("Sus Rating = " + suspicionRating);
+        //Debug.Log(Name + ": " + Punishment + " / " + ExpectedPunishment);
+        //Debug.Log("Sus Rating = " + suspicionRating);
 
         SuspicionEvents();
         victimList.Add(Name);

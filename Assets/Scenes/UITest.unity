@@ -2268,80 +2268,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 604082762}
-  - component: {fileID: 604082761}
-  - component: {fileID: 604082763}
-  - component: {fileID: 604082764}
-  - component: {fileID: 604082765}
   - component: {fileID: 604082766}
   - component: {fileID: 604082767}
   m_Layer: 0
-  m_Name: Controller
+  m_Name: StoryController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &604082761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604082760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ae445a78163cdf4682ac14a3e100586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CharGen:
-    MaleNames: {fileID: 4900000, guid: 2d7ab87a8afcf5d4bafab5152af7a087, type: 3}
-    FemaleNames: {fileID: 4900000, guid: fafbc55692c7c534591da39fd32bab6f, type: 3}
-    SecondNames: {fileID: 4900000, guid: 9928b1382abd03c4d94b75bb2413d685, type: 3}
-    MaleNameList: []
-    FemaleNameList: []
-    SecondNameList: []
-  Infractions1:
-  - Vandalism.
-  - Antisocial behaviour.
-  - Abusive to police.
-  - Disturbance in a public space.
-  - Unpaid parking ticket.
-  - Public indecency.
-  - Speeding.
-  Infractions2:
-  - Driving without a licence.
-  - Petty theft.
-  - Dealing drugs.
-  - Burglary.
-  - Robbery.
-  - Stalking and harrassment.
-  - Cyber bullying.
-  Infractions3:
-  - Racism.
-  - Fraud.
-  - Cyber crime.
-  - Domestic abuse.
-  - Grievous bodily harm.
-  - Hate speech.
-  - Indecent exposure.
-  Infractions4:
-  - Animal cruelty.
-  - Molestation.
-  - Arson.
-  - Acid attack.
-  - Drug trafficking.
-  - Manslaughter.
-  - Child abuse.
-  Infractions5:
-  - Murder.
-  - Sexual abuse of a child.
-  - Rape.
-  - Torture.
-  - Kidnapping.
-  - Human trafficking.
-  - Terrorism.
-  CaseListLength: 5
-  maxPossibleInfractions: 10
 --- !u!4 &604082762
 Transform:
   m_ObjectHideFlags: 0
@@ -2355,162 +2290,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &604082763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604082760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f9b75f4d80293f40bbb8b9dcaf5c853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeUI: {fileID: 1252668117}
-  DateUI: {fileID: 256136774}
-  timeFormat: 0
-  dateFormat: 1
-  SecPerMinute: 0.001
-  MinuteTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 604082767}
-        m_TargetAssemblyTypeName: NewsManager, Assembly-CSharp
-        m_MethodName: PublishFeed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  HourTrigger:
-    m_PersistentCalls:
-      m_Calls: []
-  DayTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1827284321}
-        m_TargetAssemblyTypeName: CaseManager, Assembly-CSharp
-        m_MethodName: CreateDailyCases
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 604082763}
-        m_TargetAssemblyTypeName: DateTimeSystem, Assembly-CSharp
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 94275095}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 604082764}
-        m_TargetAssemblyTypeName: GameplayTracking, Assembly-CSharp
-        m_MethodName: DailyUpdate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 604082767}
-        m_TargetAssemblyTypeName: NewsManager, Assembly-CSharp
-        m_MethodName: ConstructDailyFeed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  MonthTrigger:
-    m_PersistentCalls:
-      m_Calls: []
-  YearTrigger:
-    m_PersistentCalls:
-      m_Calls: []
-  CurrentDay: 0
-  PerformanceReview:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 604082765}
-        m_TargetAssemblyTypeName: PerformanceReview, Assembly-CSharp
-        m_MethodName: GenerateWeeklyReport
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &604082764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604082760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de2763cf1c4d8c45b039198feb52f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  suspicionRating: 0
-  totalCompletedCases: 0
-  completedDays: 0
---- !u!114 &604082765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604082760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048f09882821dab42a657e1e20b1e548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameplayTracking: {fileID: 604082764}
-  Grade: 0
-  ExceptionalStatements: []
-  PositiveStatements: []
-  NegativeStatements: []
-  ExceptionallyNegativeStatements: []
-  StoryStatements: []
 --- !u!114 &604082766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2542,7 +2323,7 @@ MonoBehaviour:
   newsContainer: {fileID: 120785758}
   minArticlesPerDay: 1
   maxArticlesPerDay: 3
-  dateTimeSystem: {fileID: 604082763}
+  dateTimeSystem: {fileID: 0}
   allNewsData:
   - {fileID: 11400000, guid: 6f222ab67b89a0f4e9121da012d59d18, type: 2}
   - {fileID: 11400000, guid: 8b5e25f59f5c35c4c90093c36a85adb5, type: 2}
@@ -3404,6 +3185,256 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891804155}
   m_CullTransparentMesh: 1
+--- !u!1 &958383134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 958383139}
+  - component: {fileID: 958383138}
+  - component: {fileID: 958383137}
+  - component: {fileID: 958383136}
+  - component: {fileID: 958383135}
+  m_Layer: 0
+  m_Name: GameplayController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &958383135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958383134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048f09882821dab42a657e1e20b1e548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameplayTracking: {fileID: 958383136}
+  Grade: 0
+  ExceptionalStatements: []
+  PositiveStatements: []
+  NegativeStatements: []
+  ExceptionallyNegativeStatements: []
+  StoryStatements: []
+--- !u!114 &958383136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958383134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de2763cf1c4d8c45b039198feb52f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  suspicionRating: 0
+  totalCompletedCases: 0
+  completedDays: 0
+--- !u!114 &958383137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958383134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9b75f4d80293f40bbb8b9dcaf5c853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeUI: {fileID: 1252668117}
+  DateUI: {fileID: 256136774}
+  timeFormat: 0
+  dateFormat: 1
+  SecPerMinute: 0.001
+  MinuteTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 604082767}
+        m_TargetAssemblyTypeName: NewsManager, Assembly-CSharp
+        m_MethodName: PublishFeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  HourTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+  DayTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1827284321}
+        m_TargetAssemblyTypeName: CaseManager, Assembly-CSharp
+        m_MethodName: CreateDailyCases
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 958383137}
+        m_TargetAssemblyTypeName: DateTimeSystem, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 94275095}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameplayTracking, Assembly-CSharp
+        m_MethodName: DailyUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 604082767}
+        m_TargetAssemblyTypeName: NewsManager, Assembly-CSharp
+        m_MethodName: ConstructDailyFeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  MonthTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+  YearTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+  CurrentDay: 0
+  PerformanceReview:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PerformanceReview, Assembly-CSharp
+        m_MethodName: GenerateWeeklyReport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &958383138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958383134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae445a78163cdf4682ac14a3e100586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CharGen:
+    MaleNames: {fileID: 4900000, guid: 2d7ab87a8afcf5d4bafab5152af7a087, type: 3}
+    FemaleNames: {fileID: 4900000, guid: fafbc55692c7c534591da39fd32bab6f, type: 3}
+    SecondNames: {fileID: 4900000, guid: 9928b1382abd03c4d94b75bb2413d685, type: 3}
+    MaleNameList: []
+    FemaleNameList: []
+    SecondNameList: []
+  Infractions1:
+  - Vandalism.
+  - Antisocial behaviour.
+  - Abusive to police.
+  - Disturbance in a public space.
+  - Unpaid parking ticket.
+  - Public indecency.
+  - Speeding.
+  Infractions2:
+  - Driving without a licence.
+  - Petty theft.
+  - Dealing drugs.
+  - Burglary.
+  - Robbery.
+  - Stalking and harrassment.
+  - Cyber bullying.
+  Infractions3:
+  - Racism.
+  - Fraud.
+  - Cyber crime.
+  - Domestic abuse.
+  - Grievous bodily harm.
+  - Hate speech.
+  - Indecent exposure.
+  Infractions4:
+  - Animal cruelty.
+  - Molestation.
+  - Arson.
+  - Acid attack.
+  - Drug trafficking.
+  - Manslaughter.
+  - Child abuse.
+  Infractions5:
+  - Murder.
+  - Sexual abuse of a child.
+  - Rape.
+  - Torture.
+  - Kidnapping.
+  - Human trafficking.
+  - Terrorism.
+  CaseListLength: 5
+  maxPossibleInfractions: 10
+--- !u!4 &958383139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958383134}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &983096377
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,7 +5459,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 604082763}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DateTimeSystem, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1

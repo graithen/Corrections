@@ -8,7 +8,7 @@ public class EmailData : ScriptableObject
     [TextArea(2, 5)]
     public string sender;
     [TextArea(2,5)]
-    public string title;
+    public string subject;
     [TextArea(10,5)]
     public string body;
 

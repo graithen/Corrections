@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Email_General 3
   m_EditorClassIdentifier: 
   sender: Sender C
-  title: Title C
+  subject: Subject C
   body: ANOTHER BODY!
   sendDay: 3
   sendHour: 14

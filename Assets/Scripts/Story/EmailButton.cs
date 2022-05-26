@@ -14,8 +14,12 @@ public class EmailButton : MonoBehaviour
     [SerializeField]
     private GameObject unreadMarker;
 
-    public void InitButton(EmailData email)
+    private EmailManager emailManager;
+
+    public void InitButton(EmailData email, EmailManager manager)
     {
+        emailManager = manager;
+
         myEmailData = email;
         senderName.text = email.sender;
     }
@@ -23,6 +27,6 @@ public class EmailButton : MonoBehaviour
     public void DisplayEmail()
     {
         unreadMarker.SetActive(false);
-        //Update EMail Display UI Here!
+        emailManager.DisplayEmail(myEmailData);
     }
 }

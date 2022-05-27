@@ -5,8 +5,6 @@ using TMPro;
 
 public class EmailManager : MonoBehaviour
 {
-    //Look at List of Dated Emails and Send
-    //Process Story Emails and Send
     [Header("UI")]
     [SerializeField]
     private GameObject emailButton;
@@ -26,11 +24,14 @@ public class EmailManager : MonoBehaviour
     private DateTimeSystem dateTimeSystem;
     [SerializeField]
     private GameplayTracking gameplayTracking;
+    [SerializeField]
+    private StoryManager storyManager;
 
     [Header("Data")]
     [SerializeField]
     private List<EmailData> allEmails;
-    private List<EmailData> todaysEmails = new List<EmailData>();
+    [HideInInspector]
+    public List<EmailData> todaysEmails = new List<EmailData>();
 
     public void ConstructTodaysEmails() //Call every Day
     {
@@ -43,6 +44,8 @@ public class EmailManager : MonoBehaviour
                 todaysEmails.Add(allEmails[i]);
             }
         }
+
+        storyManager.CheckForStoryEmails();
     }
 
     public void SendEmail() //Call every Minute

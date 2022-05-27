@@ -70,6 +70,10 @@ public class NewsManager : MonoBehaviour
                     todaysNewsData.Add(allNewsData[x]);
                     allNewsData.Remove(allNewsData[x]); //Uncomment to make it so news doesn't repeat on other days
                 }
+                else
+                {
+                    continue;
+                }
             }
 
             foreach (var newsArticle in todaysNewsData)

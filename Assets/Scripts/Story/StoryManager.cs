@@ -22,6 +22,8 @@ public class StoryManager : MonoBehaviour
     private GameplayTracking gameplayTracking;
     [SerializeField]
     private NewsManager newsManager;
+    [SerializeField]
+    private EmailManager emailManager;
 
     [SerializeField]
     private List<StoryData> allStories;
@@ -74,6 +76,28 @@ public class StoryManager : MonoBehaviour
         if(story.news != null)
         {
             newsManager.finalNewsFeed.Add(dateTimeSystem.PickRandomTime(), story.news);
+        }
+    }
+
+    public void CheckForStoryEmails()
+    {
+        StoryData thisStory;
+        bool hasStory = storedStories.TryGetValue(gameplayTracking.completedDays + 1, out thisStory);
+
+        if(hasStory)
+        {
+            SendEmailsToEmailManager(thisStory);
+        }
+    }
+
+    private void SendEmailsToEmailManager(StoryData story)
+    {
+        if(story.emails.Count > 0)
+        {
+            for (int i = 0; i < story.emails.Count; i++)
+            {
+                emailManager.todaysEmails.Add(story.emails[i]);
+            }
         }
     }
 }

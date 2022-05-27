@@ -2692,10 +2692,13 @@ MonoBehaviour:
   dateTimeSystem: {fileID: 958383137}
   gameplayTracking: {fileID: 958383136}
   newsManager: {fileID: 604082767}
+  emailManager: {fileID: 604082768}
   allStories:
   - releaseDay: 2
     news: {fileID: 11400000, guid: 830e8b05e27c95346948a09f71184fb1, type: 2}
-    emails: []
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
 --- !u!114 &604082767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2753,11 +2756,13 @@ MonoBehaviour:
   bodyText: {fileID: 76931503}
   dateTimeSystem: {fileID: 958383137}
   gameplayTracking: {fileID: 958383136}
+  storyManager: {fileID: 604082766}
   allEmails:
   - {fileID: 11400000, guid: 1d176a24637843d4996af60ecaee21f5, type: 2}
   - {fileID: 11400000, guid: 1d42fa2bf912b204c8759b22e17c8256, type: 2}
   - {fileID: 11400000, guid: 74476da3963cf4a46bc1282803ebb4d6, type: 2}
   - {fileID: 11400000, guid: 6a6de8dc13463354d843cd78fdb0cfb8, type: 2}
+  todaysEmails: []
 --- !u!1 &624442827
 GameObject:
   m_ObjectHideFlags: 0

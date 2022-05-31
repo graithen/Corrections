@@ -334,6 +334,12 @@ public class DateTimeSystem : MonoBehaviour
         //Debug.Log("Pausing time");
     }
 
+    public void TimeSkip()
+    {
+        //Decide Number of Days to Skip based on (Current Day Number?)
+        //Process all Date Time Variables to accomodate for the Time Skip
+    }
+
     public string PickRandomTime()
     {
         string randomTime = "";

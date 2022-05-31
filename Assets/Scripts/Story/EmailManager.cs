@@ -5,6 +5,8 @@ using TMPro;
 
 public class EmailManager : MonoBehaviour
 {
+    public bool generateDailyEmails;
+
     [Header("UI")]
     [SerializeField]
     private GameObject emailButton;
@@ -37,14 +39,17 @@ public class EmailManager : MonoBehaviour
     {
         todaysEmails.Clear();
 
-        for (int i = 0; i < allEmails.Count; i++)
+        if(generateDailyEmails)
         {
-            if(allEmails[i].sendDay == gameplayTracking.completedDays + 1)
+            for (int i = 0; i < allEmails.Count; i++)
             {
-                todaysEmails.Add(allEmails[i]);
+                if (allEmails[i].sendDay == gameplayTracking.completedDays + 1)
+                {
+                    todaysEmails.Add(allEmails[i]);
+                }
             }
         }
-
+        
         storyManager.CheckForStoryEmails();
     }
 

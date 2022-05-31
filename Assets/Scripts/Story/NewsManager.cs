@@ -7,6 +7,7 @@ public class NewsManager : MonoBehaviour
 {
     public bool generateFluffNews;
 
+    [Header("UI")]
     [SerializeField]
     private GameObject newsPrefab;
     [SerializeField]
@@ -14,15 +15,17 @@ public class NewsManager : MonoBehaviour
     [SerializeField]
     private Scrollbar verticalScroll;
 
-    [SerializeField]
-    private int minArticlesPerDay;
-    [SerializeField]
-    private int maxArticlesPerDay;
-
+    [Header("Custom Components")]
     [SerializeField]
     private DateTimeSystem dateTimeSystem;
     [SerializeField]
     private StoryManager storyManager;
+
+    [Header("News Articles")]
+    [SerializeField]
+    private int minArticlesPerDay;
+    [SerializeField]
+    private int maxArticlesPerDay;
 
     private List<NewsData> allNewsData;
     [SerializeField]

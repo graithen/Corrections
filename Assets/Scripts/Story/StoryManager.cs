@@ -10,12 +10,14 @@ public class StoryManager : MonoBehaviour
         Two,
         Three
     }
+    [Header("Chapters")]
     public Chapter currentChapter = Chapter.One;
 
-    private int chapterOneStart = 1;
-    private int chapterTwoStart = 14;
-    private int chapterThreeStart = 31;
+    public int chapterOneStart = 1;
+    public int chapterTwoStart = 14;
+    public int chapterThreeStart = 31;
 
+    [Header("Custom Components")]
     [SerializeField]
     private DateTimeSystem dateTimeSystem;
     [SerializeField]
@@ -25,6 +27,7 @@ public class StoryManager : MonoBehaviour
     [SerializeField]
     private EmailManager emailManager;
 
+    [Header("Stories")]
     [SerializeField]
     private List<StoryData> allStories;
     private Dictionary<int, StoryData> storedStories = new Dictionary<int, StoryData>();

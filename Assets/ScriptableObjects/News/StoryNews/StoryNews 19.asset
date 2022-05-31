@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 19
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201CThe British Freedom Party: A revolution round the corner\u201D"
+  body: A growing number of people join the British Freedom Party as THE PARTY disapproves,
+    claiming them to be racist, right-wing, ultra-nationalists.

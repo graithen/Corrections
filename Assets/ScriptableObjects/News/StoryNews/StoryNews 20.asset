@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 20
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201CA potential threat to National Security\u201D"
+  body: THE PARTY place the BFP on the Government Watch List.

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 17
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201CPunce Behind Bars\u201D"
+  body: Blimey Punce is apprehended by the Ministry of Enforcement and charged with
+    disruptive speech.

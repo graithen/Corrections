@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 24
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201CAny BFP affiliated protestors, instigators or agitators will be made
+    an example of\u201D"
+  body: A public announcement from THE PARTY pledging to crack down on BFP criminality.

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 25
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201C[PARTY NAME] outraged by THE PARTY\u2019s BFP response\u201D"
+  body: "[PARTY NAME] Party Leader, Telary Drape, defends BFP as \u201Ca righteous
+    cause\u201D."

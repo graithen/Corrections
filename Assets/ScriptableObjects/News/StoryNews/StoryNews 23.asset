@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 23
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201CThe BFP are no different to the IRA\u201D"
+  body: The BFP have been declared a domestic terrorist group.

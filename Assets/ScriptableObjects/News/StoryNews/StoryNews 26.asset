@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 26
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201C[PARTY NAME] members jailed for BFP affiliation\u201D"
+  body: Three [PARTY NAME] members charged with Conspiracy to Commit Terrorism and
+    Sedition.

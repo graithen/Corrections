@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 18
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201CThose who disrupt the peace, will be punished\u201D"
+  body: THE PARTY declares Disruptive Speech as an Indictable Only Offence.

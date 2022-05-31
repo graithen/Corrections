@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 15
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201CPunce publicly criticises THE PARTY\u201D"
+  body: '[PARTY NAME] Party Leader, Blimey Punce, deems the sweeping changes introduced
+    by THE PARTY detrimental to national wellbeing.'

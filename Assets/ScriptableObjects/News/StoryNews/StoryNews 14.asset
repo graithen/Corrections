@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 14
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201CTHE PARTY: Our people are paramount\u201D"
+  body: THE PARTY push for harsher sanctions regarding transgressions against the
+    interests of the people.

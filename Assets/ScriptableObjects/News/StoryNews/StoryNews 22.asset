@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: StoryNews 22
   m_EditorClassIdentifier: 
-  title: Title
-  body: Body
+  title: "\u201CChaos outside Parliament: 18 DEAD\u201D"
+  body: Protestors killed as BFP rally erupts into violence and havoc. The British
+    Army are deployed, as the Ministry of Enforcement struggle to contain chaos.

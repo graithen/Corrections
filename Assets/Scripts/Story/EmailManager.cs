@@ -20,6 +20,8 @@ public class EmailManager : MonoBehaviour
     private TextMeshProUGUI subjectText;
     [SerializeField]
     private TextMeshProUGUI bodyText;
+    [SerializeField]
+    private GameObject noEmailsText;
 
     [Header("Custom Components")]
     [SerializeField]
@@ -34,6 +36,11 @@ public class EmailManager : MonoBehaviour
     private List<EmailData> allEmails;
     [HideInInspector]
     public List<EmailData> todaysEmails = new List<EmailData>();
+
+    private void OnEnable()
+    {
+        UpdateNoEmailsText();
+    }
 
     public void ConstructTodaysEmails() //Call every Day
     {
@@ -70,6 +77,8 @@ public class EmailManager : MonoBehaviour
                 }
             }
         }
+
+        UpdateNoEmailsText();
     }
 
     private void NewEmailButton(EmailData email)
@@ -89,5 +98,17 @@ public class EmailManager : MonoBehaviour
         senderText.text = email.sender;
         subjectText.text = email.subject;
         bodyText.text = email.body;
+    }
+
+    private void UpdateNoEmailsText()
+    {
+        if(emailButtonHolder.childCount > 0)
+        {
+            noEmailsText.SetActive(false);
+        }
+        else
+        {
+            noEmailsText.SetActive(true);
+        }
     }
 }

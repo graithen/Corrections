@@ -14,6 +14,8 @@ public class NewsManager : MonoBehaviour
     private Transform newsContainer;
     [SerializeField]
     private Scrollbar verticalScroll;
+    [SerializeField]
+    private GameObject noNewsText;
 
     [Header("Custom Components")]
     [SerializeField]
@@ -38,6 +40,11 @@ public class NewsManager : MonoBehaviour
     private List<NewsData> todaysNewsData = new List<NewsData>();
     public Dictionary<string, NewsData> finalNewsFeed;
 
+
+    private void OnEnable()
+    {
+        UpdateNoNewsText();
+    }
 
     public void ConstructDailyFeed() // Called at Start of Day (DayTime NewDayEvent)
     {
@@ -107,6 +114,20 @@ public class NewsManager : MonoBehaviour
                 newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 32);
                 verticalScroll.value = 0;
             }
-        } 
+        }
+
+        UpdateNoNewsText();
+    }
+
+    private void UpdateNoNewsText()
+    {
+        if (newsContainer.childCount > 0)
+        {
+            noNewsText.SetActive(false);
+        }
+        else
+        {
+            noNewsText.SetActive(true);
+        }
     }
 }

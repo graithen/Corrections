@@ -2819,7 +2819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c48e08ba53b8134d83a01149abc9b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generateFluffNews: 0
+  generateFluffNews: 1
   newsPrefab: {fileID: 4533506577194047449, guid: 1b1c57157c75dc84085ed1152eb9f361, type: 3}
   newsContainer: {fileID: 120785758}
   verticalScroll: {fileID: 94070008}
@@ -2887,7 +2887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886aa1a110cae874b941dddc04f6b3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generateDailyEmails: 0
+  generateDailyEmails: 1
   emailButton: {fileID: 1603786467701950671, guid: 92abbfca0a116f3429009c1a9631e6d5, type: 3}
   emailButtonHolder: {fileID: 713234577}
   newEmailNotif: {fileID: 1753060200}

@@ -2124,18 +2124,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.b
-      value: 0.69803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.g
-      value: 0.36078432
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.r
-      value: 0.15294118
-      objectReference: {fileID: 0}
     - target: {fileID: 2573925034938377595, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2703,6 +2691,136 @@ MonoBehaviour:
     emails:
     - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
     - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 3
+    news: {fileID: 11400000, guid: d0488cac45678174788a3f2145d837bb, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 4
+    news: {fileID: 11400000, guid: c1278e9aab9237547ba1ee1e5cefdc48, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 7
+    news: {fileID: 11400000, guid: 52577f9880b96ee45a7bae637b58c81c, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 11
+    news: {fileID: 11400000, guid: 862c80052e4049d46aede38fd3755318, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 12
+    news: {fileID: 11400000, guid: fda9cb7f96797e843a63ec06975870a9, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 13
+    news: {fileID: 11400000, guid: 1bd253b753aeef244adb6a09e30d5d3e, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 14
+    news: {fileID: 11400000, guid: ba0a4374d5cf28b4595b90c944ab0bd0, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 15
+    news: {fileID: 11400000, guid: 696a67b2dd4b4cc48b2e9c3d399b3020, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 16
+    news: {fileID: 11400000, guid: 2a7c56892702f5349a392dccf24396ae, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 17
+    news: {fileID: 11400000, guid: be06189215c6e7944b19ab89981777c3, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 18
+    news: {fileID: 11400000, guid: 0ad496fb514bfd4418d5013d8b94e224, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 19
+    news: {fileID: 11400000, guid: 296c0b97e8d81284d8dd18bc15a78a47, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 20
+    news: {fileID: 11400000, guid: 2dadc36091ec0314f9a28b1d5d4e6186, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 22
+    news: {fileID: 11400000, guid: d0f85925786e0a34a934b90c5cfba368, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 23
+    news: {fileID: 11400000, guid: 89cc3bd77b760ce44b091023821b4add, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 25
+    news: {fileID: 11400000, guid: 34a7a21f68a0de640b2640ddbbcfa782, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 29
+    news: {fileID: 11400000, guid: db3211b7d3013314582849bc025b60eb, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 30
+    news: {fileID: 11400000, guid: ad0b0e09a7f9fec40a0a5048f7cea8df, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 31
+    news: {fileID: 11400000, guid: 3ebc87935238dad4fa8c28384dec5f63, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 35
+    news: {fileID: 11400000, guid: 561a115e10bf98243a71889370d08a9b, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 36
+    news: {fileID: 11400000, guid: f4a9b4c501d04b146a77139466e0c8f9, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 37
+    news: {fileID: 11400000, guid: ab505187d648a9241aa96bd7a5f885c6, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 38
+    news: {fileID: 11400000, guid: 89a42b72736ad2549826e160a433a7f8, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 39
+    news: {fileID: 11400000, guid: 4a1911a86b2269e4ca165f306a019197, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 40
+    news: {fileID: 11400000, guid: a6e37bf14c43e6a40a57b47b5e2aedd7, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
+  - releaseDay: 45
+    news: {fileID: 11400000, guid: f97a4a6d9993df542afa2f9c847ca4fd, type: 2}
+    emails:
+    - {fileID: 11400000, guid: 6ca32bb5621270040a73c961040e8f06, type: 2}
+    - {fileID: 11400000, guid: 8ae857f0684b65e428993547c29083e1, type: 2}
 --- !u!114 &604082767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2715,6 +2833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c48e08ba53b8134d83a01149abc9b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generateFluffNews: 0
   newsPrefab: {fileID: 4533506577194047449, guid: 1b1c57157c75dc84085ed1152eb9f361, type: 3}
   newsContainer: {fileID: 120785758}
   verticalScroll: {fileID: 94070008}
@@ -3128,18 +3247,6 @@ PrefabInstance:
     - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.b
-      value: 0.69803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.g
-      value: 0.36078432
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.r
-      value: 0.15294118
       objectReference: {fileID: 0}
     - target: {fileID: 2573925034938377595, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_Sprite
@@ -5132,18 +5239,6 @@ PrefabInstance:
     - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.b
-      value: 0.69803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.g
-      value: 0.36078432
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.r
-      value: 0.15294118
       objectReference: {fileID: 0}
     - target: {fileID: 2573925034938377595, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_Sprite
@@ -7857,18 +7952,6 @@ PrefabInstance:
     - target: {fileID: 753790050674270231, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.b
-      value: 0.69803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.g
-      value: 0.36078432
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079974597169175450, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
-      propertyPath: m_Color.r
-      value: 0.15294118
       objectReference: {fileID: 0}
     - target: {fileID: 2573925034938377595, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
       propertyPath: m_Sprite

@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
-  m_Name: StoryNews 1
+  m_Name: StoryNews 21
   m_EditorClassIdentifier: 
-  title: "\u201CPower, Politics, and Paedophilia\u201D"
-  body: '[PARTY NAME] Party Leader, Alfred Sandhurst, accused of grooming children
-    on social media.'
+  title: Title
+  body: Body

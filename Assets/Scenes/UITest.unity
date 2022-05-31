@@ -723,6 +723,7 @@ GameObject:
   - component: {fileID: 94275096}
   - component: {fileID: 94275098}
   - component: {fileID: 94275097}
+  - component: {fileID: 94275099}
   m_Layer: 0
   m_Name: DayEndScreen
   m_TagString: Untagged
@@ -790,6 +791,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94275095}
   m_CullTransparentMesh: 1
+--- !u!114 &94275099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94275095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8024122dbdd2c3c4bad896a046c60c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameplayTracking: {fileID: 958383136}
+  dayEndText: {fileID: 1563432052}
 --- !u!1 &120785757
 GameObject:
   m_ObjectHideFlags: 0

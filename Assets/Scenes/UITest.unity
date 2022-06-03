@@ -2959,6 +2959,57 @@ MonoBehaviour:
     emails:
     - {fileID: 11400000, guid: 563e068e46dfccb4eae00b5e83f9e334, type: 2}
     - {fileID: 11400000, guid: 1e8939f28ccef47478548af40e47690d, type: 2}
+  - releaseDay: 46
+    news: {fileID: 11400000, guid: 2877f9f0dd523c34c9139d8ec6731017, type: 2}
+    emails: []
+  - releaseDay: 48
+    news: {fileID: 11400000, guid: c543f749de17cbd458e5482324d42401, type: 2}
+    emails: []
+  - releaseDay: 49
+    news: {fileID: 11400000, guid: dc7a1b00b66d8b1488eb5d4c91e594a5, type: 2}
+    emails: []
+  - releaseDay: 50
+    news: {fileID: 11400000, guid: a8541f768f1001046900d9091a3149ae, type: 2}
+    emails: []
+  - releaseDay: 51
+    news: {fileID: 11400000, guid: 58f4b908acd1ce04d8d2751c520a0eaa, type: 2}
+    emails: []
+  - releaseDay: 52
+    news: {fileID: 11400000, guid: cf886ba4198ea384bb5ede72824c2cac, type: 2}
+    emails: []
+  - releaseDay: 55
+    news: {fileID: 11400000, guid: df8b4da6d0aaaf044a62d13da0f0ed38, type: 2}
+    emails: []
+  - releaseDay: 56
+    news: {fileID: 11400000, guid: 216344b8678993e48b530006ea2df335, type: 2}
+    emails: []
+  - releaseDay: 57
+    news: {fileID: 11400000, guid: cf963a86398a0a9478330646402d4d51, type: 2}
+    emails: []
+  - releaseDay: 59
+    news: {fileID: 11400000, guid: 4611aaae359ed6a4a9516da06248b96b, type: 2}
+    emails: []
+  - releaseDay: 60
+    news: {fileID: 11400000, guid: c71f4db7aa7a41d49bfa8ba29c7da9a5, type: 2}
+    emails: []
+  - releaseDay: 61
+    news: {fileID: 11400000, guid: bad72e893c7b1454c9778970a26ce3c1, type: 2}
+    emails: []
+  - releaseDay: 62
+    news: {fileID: 11400000, guid: 27992445c6635324a966ead70a1daf86, type: 2}
+    emails: []
+  - releaseDay: 63
+    news: {fileID: 11400000, guid: 1078073dff29cdf499cca54f541f7d3d, type: 2}
+    emails: []
+  - releaseDay: 65
+    news: {fileID: 11400000, guid: 2086148633b8ad9419ae919a3a6bc43c, type: 2}
+    emails: []
+  - releaseDay: 67
+    news: {fileID: 11400000, guid: 75737582e6ac2924489c930c7c8dbc9d, type: 2}
+    emails: []
+  - releaseDay: 70
+    news: {fileID: 11400000, guid: cfcc7af7c14f0294d817fe9d0cd16bcd, type: 2}
+    emails: []
 --- !u!114 &604082767
 MonoBehaviour:
   m_ObjectHideFlags: 0

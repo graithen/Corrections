@@ -5,10 +5,20 @@ using UnityEngine;
 public class WorkloadGenerator : MonoBehaviour
 {
     [SerializeField]
+    private StoryManager storyManager;
+
+    public bool useChapters;
+
+    [SerializeField]
     private CharacterGeneration CharGen;
     public Dictionary<int, (string, string, int, bool)> CharacterPool;
 
     public List<string> Infractions1, Infractions2, Infractions3, Infractions4, Infractions5;
+
+    public List<string> ch1Infractions1, ch1Infractions2, ch1Infractions3, ch1Infractions4, ch1Infractions5;
+    public List<string> ch2Infractions1, ch2Infractions2, ch2Infractions3, ch2Infractions4, ch2Infractions5;
+    public List<string> ch3Infractions1, ch3Infractions2, ch3Infractions3, ch3Infractions4, ch3Infractions5;
+    public List<string> ch4Infractions1, ch4Infractions2, ch4Infractions3, ch4Infractions4, ch4Infractions5;
 
     private int CharacterID = 0;
 
@@ -19,7 +29,6 @@ public class WorkloadGenerator : MonoBehaviour
     [SerializeField]
     private int maxPossibleInfractions = 10;
 
-    // Start is called before the first frame update
     private void Start()
     {
         CharGen.InitializeData();
@@ -65,7 +74,7 @@ public class WorkloadGenerator : MonoBehaviour
             newCase.Gender = "Female";
         }
 
-        newCase.InfractionDetails = GenerateInfraction();
+        newCase.InfractionDetails = GenerateInfraction(useChapters);
         newCase.InfractionLevel = CalculateInfractionLevel(newCase.InfractionDetails);
 
         CharacterID++;
@@ -96,49 +105,128 @@ public class WorkloadGenerator : MonoBehaviour
         return newCase;
     }
 
-    private List<string> GenerateInfraction()
+    private List<string> GenerateInfraction(bool chapters)
     {
         int infractionNumber = Random.Range(1, maxPossibleInfractions);
         List<string> infractions = new List<string>();
         string infraction = "";
 
-        for (int i = 0; i < infractionNumber; i++)
+        if(chapters)
         {
-            int chance = 0;
-            chance = Random.Range(0, 100);
+            if(storyManager.currentChapter == StoryManager.Chapter.One)
+            {
+                for (int i = 0; i < infractionNumber; i++)
+                {
+                    infraction = PickInfraction(ch1Infractions1, ch1Infractions2, ch1Infractions3, ch1Infractions4, ch1Infractions5);
 
-            if (chance > 60)
-            {
-                infraction = Infractions1[Random.Range(0, Infractions1.Count)];
+                    if (infractions.Contains(infraction))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        infractions.Add(infraction);
+                    }
+                }
             }
-            else if (chance >= 50 && chance < 60)
+            else if(storyManager.currentChapter == StoryManager.Chapter.Two)
             {
-                infraction = Infractions2[Random.Range(0, Infractions2.Count)];
-            }
-            else if (chance >= 25 && chance < 50)
-            {
-                infraction = Infractions3[Random.Range(0, Infractions3.Count)];
-            }
-            else if (chance >= 10 && chance < 25)
-            {
-                infraction = Infractions4[Random.Range(0, Infractions4.Count)];
-            }
-            else if (chance < 10)
-            {
-                infraction = Infractions5[Random.Range(0, Infractions5.Count)];
-            }
+                for (int i = 0; i < infractionNumber; i++)
+                {
+                    infraction = PickInfraction(ch2Infractions1, ch2Infractions2, ch2Infractions3, ch2Infractions4, ch2Infractions5);
 
-            if (infractions.Contains(infraction))
-            {
-                break;
+                    if (infractions.Contains(infraction))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        infractions.Add(infraction);
+                    }
+                }
             }
-            else
+            else if (storyManager.currentChapter == StoryManager.Chapter.Three)
             {
-                infractions.Add(infraction);
+                for (int i = 0; i < infractionNumber; i++)
+                {
+                    infraction = PickInfraction(ch3Infractions1, ch3Infractions2, ch3Infractions3, ch3Infractions4, ch3Infractions5);
+
+                    if (infractions.Contains(infraction))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        infractions.Add(infraction);
+                    }
+                }
+            }
+            else if (storyManager.currentChapter == StoryManager.Chapter.Four)
+            {
+                for (int i = 0; i < infractionNumber; i++)
+                {
+                    infraction = PickInfraction(ch4Infractions1, ch4Infractions2, ch4Infractions3, ch4Infractions4, ch4Infractions5);
+
+                    if (infractions.Contains(infraction))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        infractions.Add(infraction);
+                    }
+                }
             }
         }
+        else
+        {
+            for (int i = 0; i < infractionNumber; i++)
+            {
+                infraction = PickInfraction(Infractions1, Infractions2, Infractions3, Infractions4, Infractions5);
+
+                if (infractions.Contains(infraction))
+                {
+                    break;
+                }
+                else
+                {
+                    infractions.Add(infraction);
+                }
+            }
+        }  
 
         return infractions;
+    }
+
+    private string PickInfraction(List<string> list1, List<string> list2, List<string> list3, List<string> list4, List<string> list5)
+    {
+        string infractionPicked = "";
+
+        int chance = 0;
+        chance = Random.Range(0, 100);
+
+        if (chance > 60)
+        {
+            infractionPicked = Infractions1[Random.Range(0, list1.Count)];
+        }
+        else if (chance >= 50 && chance < 60)
+        {
+            infractionPicked = Infractions2[Random.Range(0, list2.Count)];
+        }
+        else if (chance >= 25 && chance < 50)
+        {
+            infractionPicked = Infractions3[Random.Range(0, list3.Count)];
+        }
+        else if (chance >= 10 && chance < 25)
+        {
+            infractionPicked = Infractions4[Random.Range(0, list4.Count)];
+        }
+        else if (chance < 10)
+        {
+            infractionPicked = Infractions5[Random.Range(0, list5.Count)];
+        }
+
+        return infractionPicked;
     }
 
     private int CalculateInfractionLevel(List<string> infraction)

@@ -4364,6 +4364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae445a78163cdf4682ac14a3e100586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storyManager: {fileID: 604082766}
+  useChapters: 0
   CharGen:
     MaleNames: {fileID: 4900000, guid: 2d7ab87a8afcf5d4bafab5152af7a087, type: 3}
     FemaleNames: {fileID: 4900000, guid: fafbc55692c7c534591da39fd32bab6f, type: 3}
@@ -4411,6 +4413,26 @@ MonoBehaviour:
   - Kidnapping.
   - Human trafficking.
   - Terrorism.
+  ch1Infractions1: []
+  ch1Infractions2: []
+  ch1Infractions3: []
+  ch1Infractions4: []
+  ch1Infractions5: []
+  ch2Infractions1: []
+  ch2Infractions2: []
+  ch2Infractions3: []
+  ch2Infractions4: []
+  ch2Infractions5: []
+  ch3Infractions1: []
+  ch3Infractions2: []
+  ch3Infractions3: []
+  ch3Infractions4: []
+  ch3Infractions5: []
+  ch4Infractions1: []
+  ch4Infractions2: []
+  ch4Infractions3: []
+  ch4Infractions4: []
+  ch4Infractions5: []
   CaseListLength: 5
   maxPossibleInfractions: 10
 --- !u!4 &958383139

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch3 11
   m_EditorClassIdentifier: 
-  title: Chapter 3 Fluff
-  body: 11
+  title: "\u201CDISGUSTING! 40% of Brits admit to not flushing when visiting the
+    toilet\u201D"
+  body: 

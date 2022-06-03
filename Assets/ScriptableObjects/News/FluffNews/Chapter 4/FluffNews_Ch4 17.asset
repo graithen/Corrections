@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch4 17
   m_EditorClassIdentifier: 
-  title: Chapter 4 Fluff
-  body: 1
+  title: "\u201CZom-bye: Wife\u2019s late husband awakens during farewell speech
+    at his funeral\u201D"
+  body: 

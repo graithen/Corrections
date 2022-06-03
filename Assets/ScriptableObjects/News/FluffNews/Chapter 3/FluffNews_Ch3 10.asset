@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch3 10
   m_EditorClassIdentifier: 
-  title: Chapter 3 Fluff
-  body: 10
+  title: "\u201CTHE PARTY advises the Ministry of Corrections will hand out harsher
+    penalties to those who disapprove of their ideology\u201D"
+  body: 

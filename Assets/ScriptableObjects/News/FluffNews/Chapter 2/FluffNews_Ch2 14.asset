@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch2 14
   m_EditorClassIdentifier: 
-  title: Chapter 2 Fluff
-  body: 14
+  title: "\u201CDeadly virus reaping havoc in the Capital. Government urges individuals
+    to wear face masks when leaving the house\u201D"
+  body: 

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch3 12
   m_EditorClassIdentifier: 
-  title: Chapter 3 Fluff
-  body: 12
+  title: "\u201CStudies show a glass of red wine a day can help prevent the risk
+    of heart disease\u201D"
+  body: 

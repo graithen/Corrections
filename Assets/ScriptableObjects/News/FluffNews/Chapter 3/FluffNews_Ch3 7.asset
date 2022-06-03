@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch3 7
   m_EditorClassIdentifier: 
-  title: Chapter 3 Fluff
-  body: 7
+  title: "\u201CBring back the death penalty! Citizens outraged by mass shooting
+    in the Capital\u201D"
+  body: 

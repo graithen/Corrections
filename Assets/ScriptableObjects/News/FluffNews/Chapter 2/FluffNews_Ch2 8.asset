@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch2 8
   m_EditorClassIdentifier: 
-  title: Chapter 2 Fluff
-  body: 8
+  title: "\u201CBlimey Punce arrives to the Four Seasons in style, as she flaunts
+    new \xA3200,000 convertible\u201D"
+  body: 

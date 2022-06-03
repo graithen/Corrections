@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch3 17
   m_EditorClassIdentifier: 
-  title: Chapter 3 Fluff
-  body: 15
+  title: "\u201CThe Queen announces that her birthday ceremony will be televised
+    to the nation\u201D"
+  body: 

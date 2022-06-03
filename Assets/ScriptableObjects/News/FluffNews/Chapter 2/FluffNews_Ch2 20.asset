@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch2 20
   m_EditorClassIdentifier: 
-  title: Chapter 2 Fluff
-  body: 15
+  title: "\u201CTobacco prices set to rise for the second time this year\u201D"
+  body: 

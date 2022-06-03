@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch2 16
   m_EditorClassIdentifier: 
-  title: Chapter 2 Fluff
-  body: 15
+  title: "\u201CHole in Swan: Man kills swan in mortifying golf accident\u201D"
+  body: 

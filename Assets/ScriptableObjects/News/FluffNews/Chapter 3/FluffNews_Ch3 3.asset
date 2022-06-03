@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch3 3
   m_EditorClassIdentifier: 
-  title: Chapter 3 Fluff
-  body: 3
+  title: "\u201CTHE PARTY instruct people to disregard political extremist groups,
+    advising that they are being dealt with\u201D"
+  body: 

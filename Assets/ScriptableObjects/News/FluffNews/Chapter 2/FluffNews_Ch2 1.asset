@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch2 1
   m_EditorClassIdentifier: 
-  title: Chapter 2 Fluff
-  body: 1
+  title: "\u201COur country is in good hands \u2013 The Nation responds to THE PARTY\u2019s
+    recent political changes\u201D"
+  body: 

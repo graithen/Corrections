@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch2 10
   m_EditorClassIdentifier: 
-  title: Chapter 2 Fluff
-  body: 10
+  title: "\u201CLaw Enforcement criticized by THE PARTY for poor performance\u201D"
+  body: 

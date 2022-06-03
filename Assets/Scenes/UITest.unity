@@ -2988,6 +2988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generateFluffNews: 1
   newsPrefab: {fileID: 4533506577194047449, guid: 1b1c57157c75dc84085ed1152eb9f361, type: 3}
+  fluffNewsPrefab: {fileID: 8164995637981936029, guid: edb922e5e759d0e419725b0d73bbb78e, type: 3}
   newsContainer: {fileID: 120785758}
   verticalScroll: {fileID: 94070008}
   noNewsText: {fileID: 693946694}

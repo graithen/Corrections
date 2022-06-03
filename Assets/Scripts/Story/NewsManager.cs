@@ -11,6 +11,8 @@ public class NewsManager : MonoBehaviour
     [SerializeField]
     private GameObject newsPrefab;
     [SerializeField]
+    private GameObject fluffNewsPrefab;
+    [SerializeField]
     private Transform newsContainer;
     [SerializeField]
     private Scrollbar verticalScroll;
@@ -115,9 +117,19 @@ public class NewsManager : MonoBehaviour
 
             if (hasNews)
             {
-                GameObject newsTweet = Instantiate(newsPrefab, newsContainer);
-                newsTweet.GetComponent<TweetUI>().Populate(thisArticle.title, thisArticle.body);
-                newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 32);
+                if(string.IsNullOrEmpty(thisArticle.body))
+                {
+                    GameObject newsTweet = Instantiate(fluffNewsPrefab, newsContainer);
+                    newsTweet.GetComponent<TweetUI>().Populate(thisArticle.title, thisArticle.body);
+                    newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, fluffNewsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+                }
+                else
+                {
+                    GameObject newsTweet = Instantiate(newsPrefab, newsContainer);
+                    newsTweet.GetComponent<TweetUI>().Populate(thisArticle.title, thisArticle.body);
+                    newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+                }
+
                 verticalScroll.value = 0;
             }
         }

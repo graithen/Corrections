@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch1 3
   m_EditorClassIdentifier: 
-  title: Chapter 1 Fluff
-  body: 3
+  title: "\u201CHoliday-goers left in turmoil as more than 60 flights cancelled due
+    to weather warnings\u201D"
+  body: 

@@ -36,6 +36,8 @@ public class NewsManager : MonoBehaviour
     private List<NewsData> chapterTwoFluffNews;
     [SerializeField]
     private List<NewsData> chapterThreeFluffNews;
+    [SerializeField]
+    private List<NewsData> chapterFourFluffNews;
 
     private List<NewsData> todaysNewsData = new List<NewsData>();
     public Dictionary<string, NewsData> finalNewsFeed;
@@ -67,6 +69,10 @@ public class NewsManager : MonoBehaviour
             else if (storyManager.currentChapter == StoryManager.Chapter.Three)
             {
                 allNewsData = chapterThreeFluffNews;
+            }
+            else if (storyManager.currentChapter == StoryManager.Chapter.Four)
+            {
+                allNewsData = chapterFourFluffNews;
             }
 
             if (allNewsData.Count < numberOfArticles)

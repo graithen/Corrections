@@ -24,6 +24,8 @@ public class CaseManager : MonoBehaviour
     private List<string> chapterTwoSentences;
     [SerializeField]
     private List<string> chapterThreeSentences;
+    [SerializeField]
+    private List<string> chapterFourSentences;
 
     private WorkloadGenerator workloadGenerator;
     private GameplayTracking gameplayTracking;
@@ -150,6 +152,10 @@ public class CaseManager : MonoBehaviour
         else if (storyManager.currentChapter == StoryManager.Chapter.Three)
         {
             sentences = chapterThreeSentences;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Four)
+        {
+            sentences = chapterFourSentences;
         }
 
         sentenceDropdown.AddOptions(sentences);      

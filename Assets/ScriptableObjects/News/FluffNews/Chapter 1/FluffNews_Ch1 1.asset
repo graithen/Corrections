@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch1 1
   m_EditorClassIdentifier: 
-  title: Chapter 1 Fluff
-  body: 1
+  title: "\u201CClimate Change protests continue outside parliament\u201D"
+  body: 

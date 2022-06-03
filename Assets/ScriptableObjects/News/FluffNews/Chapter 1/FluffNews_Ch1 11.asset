@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch1 11
   m_EditorClassIdentifier: 
-  title: Chapter 1 Fluff
-  body: 11
+  title: "\u201CScientists discover miracle herb that lowers risk of Alzheimer\u2019s
+    in elderly\u201D"
+  body: 

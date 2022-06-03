@@ -8,7 +8,8 @@ public class StoryManager : MonoBehaviour
     {
         One,
         Two,
-        Three
+        Three,
+        Four
     }
     [Header("Chapters")]
     public Chapter currentChapter = Chapter.One;
@@ -16,6 +17,7 @@ public class StoryManager : MonoBehaviour
     public int chapterOneStart = 1;
     public int chapterTwoStart = 14;
     public int chapterThreeStart = 31;
+    public int chapterFourStart = 45;
 
     [Header("Custom Components")]
     [SerializeField]
@@ -51,6 +53,10 @@ public class StoryManager : MonoBehaviour
         else if (gameplayTracking.completedDays + 1 == chapterThreeStart)
         {
             currentChapter = Chapter.Three;
+        }
+        else if (gameplayTracking.completedDays + 1 == chapterFourStart)
+        {
+            currentChapter = Chapter.Four;
         }
     }
 

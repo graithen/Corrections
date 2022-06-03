@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch1 5
   m_EditorClassIdentifier: 
-  title: Chapter 1 Fluff
-  body: 5
+  title: "\u201CSevere flooding in the North as Storm Jess\xE9 approaches\u201D"
+  body: 

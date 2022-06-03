@@ -2836,6 +2836,7 @@ MonoBehaviour:
   chapterOneStart: 1
   chapterTwoStart: 14
   chapterThreeStart: 31
+  chapterFourStart: 45
   dateTimeSystem: {fileID: 958383137}
   gameplayTracking: {fileID: 958383136}
   newsManager: {fileID: 604082767}
@@ -2843,122 +2844,85 @@ MonoBehaviour:
   allStories:
   - releaseDay: 2
     news: {fileID: 11400000, guid: 830e8b05e27c95346948a09f71184fb1, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 811aa3a064cc7fa4993ce81d0d969eb0, type: 2}
-    - {fileID: 11400000, guid: f71deeeb6e4ef2942897969d939e6a65, type: 2}
+    emails: []
   - releaseDay: 3
     news: {fileID: 11400000, guid: d0488cac45678174788a3f2145d837bb, type: 2}
-    emails:
-    - {fileID: 11400000, guid: eda63346fc6847047b68f8afeaa7445f, type: 2}
+    emails: []
   - releaseDay: 4
     news: {fileID: 11400000, guid: c1278e9aab9237547ba1ee1e5cefdc48, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 72a25fe9c607d6346ae1ed241f3e83bb, type: 2}
-    - {fileID: 11400000, guid: b3cec1961fc545d4eb9c05bc0633e765, type: 2}
+    emails: []
   - releaseDay: 7
     news: {fileID: 11400000, guid: 52577f9880b96ee45a7bae637b58c81c, type: 2}
-    emails:
-    - {fileID: 11400000, guid: ab3e55c2d352c0d4a958e4e9bdee427a, type: 2}
+    emails: []
   - releaseDay: 11
     news: {fileID: 11400000, guid: 862c80052e4049d46aede38fd3755318, type: 2}
-    emails:
-    - {fileID: 11400000, guid: cf8b0599413c3b644ae68b9d370204eb, type: 2}
+    emails: []
   - releaseDay: 12
     news: {fileID: 11400000, guid: fda9cb7f96797e843a63ec06975870a9, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 0e3f658f7cc111b478767770d308373c, type: 2}
-    - {fileID: 11400000, guid: c76ab1d23e3d4c64fa4b361fa8f60446, type: 2}
+    emails: []
   - releaseDay: 13
     news: {fileID: 11400000, guid: 1bd253b753aeef244adb6a09e30d5d3e, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 62bf771c63e0a8e4581d29f2a0780a6e, type: 2}
+    emails: []
   - releaseDay: 14
     news: {fileID: 11400000, guid: ba0a4374d5cf28b4595b90c944ab0bd0, type: 2}
-    emails:
-    - {fileID: 11400000, guid: cde9af7c9e0e3b040a4ac19e36147b93, type: 2}
+    emails: []
   - releaseDay: 15
     news: {fileID: 11400000, guid: 696a67b2dd4b4cc48b2e9c3d399b3020, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 8b332c0b34486e942b8343cf7c91225b, type: 2}
+    emails: []
   - releaseDay: 16
     news: {fileID: 11400000, guid: 2a7c56892702f5349a392dccf24396ae, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 077e765f88f99654698c99d07ad934e3, type: 2}
-    - {fileID: 11400000, guid: 036065e705fe74c4592d7cf50a54c2cc, type: 2}
+    emails: []
   - releaseDay: 17
     news: {fileID: 11400000, guid: be06189215c6e7944b19ab89981777c3, type: 2}
-    emails:
-    - {fileID: 11400000, guid: cc0b2b6e74be8a34f80d69de809f38c6, type: 2}
+    emails: []
   - releaseDay: 18
     news: {fileID: 11400000, guid: 0ad496fb514bfd4418d5013d8b94e224, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 2191bfd0643f05642907a4bd994df5d9, type: 2}
-    - {fileID: 11400000, guid: 88b0e3e24d0c1934f92e44f700608394, type: 2}
+    emails: []
   - releaseDay: 19
     news: {fileID: 11400000, guid: 296c0b97e8d81284d8dd18bc15a78a47, type: 2}
-    emails:
-    - {fileID: 11400000, guid: d9a541e7b9d45154a832be8f03942b50, type: 2}
+    emails: []
   - releaseDay: 20
     news: {fileID: 11400000, guid: 2dadc36091ec0314f9a28b1d5d4e6186, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 493c3e16dd1f46042977d4e4a269bf3a, type: 2}
+    emails: []
   - releaseDay: 22
     news: {fileID: 11400000, guid: d0f85925786e0a34a934b90c5cfba368, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 0a12151b912ed1d4e8c87c5958f7ca49, type: 2}
+    emails: []
   - releaseDay: 23
     news: {fileID: 11400000, guid: 89cc3bd77b760ce44b091023821b4add, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 0fa5121614f16594da5dcc21eef5bc07, type: 2}
+    emails: []
   - releaseDay: 25
     news: {fileID: 11400000, guid: 34a7a21f68a0de640b2640ddbbcfa782, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 685bf96d57f666d42aee8ced512a1711, type: 2}
-    - {fileID: 11400000, guid: 1245772683f79e6478d2f385b7aa9167, type: 2}
+    emails: []
   - releaseDay: 29
     news: {fileID: 11400000, guid: db3211b7d3013314582849bc025b60eb, type: 2}
-    emails:
-    - {fileID: 11400000, guid: f5a7da3031b5d09439cc44b74d234301, type: 2}
+    emails: []
   - releaseDay: 30
     news: {fileID: 11400000, guid: ad0b0e09a7f9fec40a0a5048f7cea8df, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 58b9b9bb0eeaeea46b95abbc091e551b, type: 2}
+    emails: []
   - releaseDay: 31
     news: {fileID: 11400000, guid: 3ebc87935238dad4fa8c28384dec5f63, type: 2}
-    emails:
-    - {fileID: 11400000, guid: a2891358c9418ec46bb3c555fc17ecfe, type: 2}
-    - {fileID: 11400000, guid: 7e9549daccbdd554d978dc66f712834e, type: 2}
+    emails: []
   - releaseDay: 35
     news: {fileID: 11400000, guid: 561a115e10bf98243a71889370d08a9b, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 4dd984b247ddeb742a7c54b9c5e5d3ce, type: 2}
+    emails: []
   - releaseDay: 36
     news: {fileID: 11400000, guid: f4a9b4c501d04b146a77139466e0c8f9, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 6bc8205d47b74d5479fbecd647f112b1, type: 2}
-    - {fileID: 11400000, guid: f4d735c2888f7c447b4548bc818eeeae, type: 2}
+    emails: []
   - releaseDay: 37
     news: {fileID: 11400000, guid: ab505187d648a9241aa96bd7a5f885c6, type: 2}
-    emails:
-    - {fileID: 11400000, guid: f23a992a367865e43b70ea27fae63c8f, type: 2}
-    - {fileID: 11400000, guid: c9552a5268894b642af9584e2971c4ba, type: 2}
+    emails: []
   - releaseDay: 38
     news: {fileID: 11400000, guid: 89a42b72736ad2549826e160a433a7f8, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 2ac50eb224f954147a37c3ffae076da9, type: 2}
+    emails: []
   - releaseDay: 39
     news: {fileID: 11400000, guid: 4a1911a86b2269e4ca165f306a019197, type: 2}
-    emails:
-    - {fileID: 11400000, guid: a4138d1e4bbf8db458a70c8421e63277, type: 2}
+    emails: []
   - releaseDay: 40
     news: {fileID: 11400000, guid: a6e37bf14c43e6a40a57b47b5e2aedd7, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 305fd2afad5c45045b09362ee6870fff, type: 2}
+    emails: []
   - releaseDay: 45
     news: {fileID: 11400000, guid: f97a4a6d9993df542afa2f9c847ca4fd, type: 2}
-    emails:
-    - {fileID: 11400000, guid: 563e068e46dfccb4eae00b5e83f9e334, type: 2}
-    - {fileID: 11400000, guid: 1e8939f28ccef47478548af40e47690d, type: 2}
+    emails: []
   - releaseDay: 46
     news: {fileID: 11400000, guid: 2877f9f0dd523c34c9139d8ec6731017, type: 2}
     emails: []
@@ -3047,6 +3011,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80974606e5c22d640933dbf3edb4248c, type: 2}
   - {fileID: 11400000, guid: d992ec582b29f8647bd43110599ab462, type: 2}
   - {fileID: 11400000, guid: 3a2482a5fd12f8d43b553c239401bf98, type: 2}
+  - {fileID: 11400000, guid: 0e36e6a4c04d190489953847f599377b, type: 2}
+  - {fileID: 11400000, guid: ee4a39f73d60fc54c86aa4b3c018105f, type: 2}
+  - {fileID: 11400000, guid: 296fdfdeac63eee40b5db2e25b9c1a8a, type: 2}
+  - {fileID: 11400000, guid: e8ee08918da92d5488cb07c8571d85c5, type: 2}
+  - {fileID: 11400000, guid: 9f1e55831bb4d87488775ff6fbd3d25a, type: 2}
   chapterTwoFluffNews:
   - {fileID: 11400000, guid: fc91689f233820644b9150d5f4761c19, type: 2}
   - {fileID: 11400000, guid: 0c57924123120ec4089ecb44d733003f, type: 2}
@@ -3063,6 +3032,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1639948cfa1a9cc4bbc549f5d9d74b46, type: 2}
   - {fileID: 11400000, guid: 7e8f915d7b297274d86855f0df5a2e9a, type: 2}
   - {fileID: 11400000, guid: 346e953b2bee2284d8b07069b1bc87f1, type: 2}
+  - {fileID: 11400000, guid: 294a18507deeaaf4e9eaed80a67eda2a, type: 2}
+  - {fileID: 11400000, guid: a4ffdc2a9f981ed4a97a699ba25134bb, type: 2}
+  - {fileID: 11400000, guid: a0e12697ee69d314e9d768af69bb7f4d, type: 2}
+  - {fileID: 11400000, guid: 04daf863c795e0f43b4855860db00bc5, type: 2}
+  - {fileID: 11400000, guid: 152155c3b9132644da1e28178ff7d972, type: 2}
   chapterThreeFluffNews:
   - {fileID: 11400000, guid: 29c479e900102704bb34011e801f9182, type: 2}
   - {fileID: 11400000, guid: 5d6e2a1a9a99a7c45830cd8c5bb98caf, type: 2}
@@ -3079,6 +3053,32 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a94223d9ef78d0d4fbac7a7ed996e268, type: 2}
   - {fileID: 11400000, guid: f2577c801f6999c49ac652100fe2a2f8, type: 2}
   - {fileID: 11400000, guid: db38ab0ed92676e4bb59debdcf725451, type: 2}
+  - {fileID: 11400000, guid: 9510a181eab5e4c4e9982402fa83ef6b, type: 2}
+  - {fileID: 11400000, guid: fa1bd7a9a4f00bc429a340ae92e70a65, type: 2}
+  - {fileID: 11400000, guid: 3314e90bea8f5ee488c98d9461958651, type: 2}
+  - {fileID: 11400000, guid: 3b9ac9f8eaf6e4148b6e5b2b2acd8112, type: 2}
+  - {fileID: 11400000, guid: b9d07be453a575040ba106ad6b7c9529, type: 2}
+  chapterFourFluffNews:
+  - {fileID: 11400000, guid: 3b1b157c7c6e65f4c89875742a357109, type: 2}
+  - {fileID: 11400000, guid: b608d361e9507df47944978d3159001e, type: 2}
+  - {fileID: 11400000, guid: 82e255e6e51782c4da0906eca37ca561, type: 2}
+  - {fileID: 11400000, guid: 83b15880b3eda4d4ba4aa3e6e73eaafc, type: 2}
+  - {fileID: 11400000, guid: 526b54246d8b07949a6b5e4b0db675db, type: 2}
+  - {fileID: 11400000, guid: cd8f9ffe7d033e04fa225e7f985ce7e0, type: 2}
+  - {fileID: 11400000, guid: 4fe2939080b0fa047a1e33c98f9deadc, type: 2}
+  - {fileID: 11400000, guid: 7a8179f6a151e8247895b1fc5bf9ac7b, type: 2}
+  - {fileID: 11400000, guid: c80bd9ca72ac0574c8ceb3dcd827141c, type: 2}
+  - {fileID: 11400000, guid: 1327dd719dbb8a44085da81b15712add, type: 2}
+  - {fileID: 11400000, guid: 01eac39d46e0b2f4d8b328eb79a39132, type: 2}
+  - {fileID: 11400000, guid: 87b86f0a6811b8943ba2290f6115446f, type: 2}
+  - {fileID: 11400000, guid: 707e6d20b36f9034b90e3c4b698737a0, type: 2}
+  - {fileID: 11400000, guid: 4c17cf3debff704489156352e7622c25, type: 2}
+  - {fileID: 11400000, guid: 0e7c664db48300f40b80b8895658c282, type: 2}
+  - {fileID: 11400000, guid: 0f27a175449b24b4da02218d4fadabdd, type: 2}
+  - {fileID: 11400000, guid: 93f2c1f51cd26fb4b9de7e9def3b3621, type: 2}
+  - {fileID: 11400000, guid: 1b1c6960e26033b4da55a0f007da8856, type: 2}
+  - {fileID: 11400000, guid: 15b457d8c7d827c44ab527e57edc76f6, type: 2}
+  - {fileID: 11400000, guid: 0db0eda6e4f4d0a4d84aa647ee200854, type: 2}
 --- !u!114 &604082768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7465,6 +7465,7 @@ MonoBehaviour:
   - Ch3_Intermediate
   - Ch3_High
   - Ch3_Highest
+  chapterFourSentences: []
   caseButton: {fileID: 3215310781001209057, guid: 82087dd0fc8ffef428ba95feacda64e2, type: 3}
   caseFilesContainer: {fileID: 1675021940}
   picture: {fileID: 1199590112}

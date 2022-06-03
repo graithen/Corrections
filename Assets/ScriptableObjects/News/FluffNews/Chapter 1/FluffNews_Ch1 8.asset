@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c553adb3df82e4da398038fbad8d38, type: 3}
   m_Name: FluffNews_Ch1 8
   m_EditorClassIdentifier: 
-  title: Chapter 1 Fluff
-  body: 8
+  title: "\u201CMissing Person: Samuel Groarke, 25, lost at sea\u201D"
+  body: 

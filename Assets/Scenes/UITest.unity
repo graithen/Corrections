@@ -4775,36 +4775,36 @@ MonoBehaviour:
   employeeNameText: {fileID: 781411185}
   gradeText: {fileID: 1739448131}
   performanceReviewText: {fileID: 197269430}
-  underConstructionText: {fileID: 0}
-  newReviewNotif: {fileID: 0}
+  underConstructionText: {fileID: 1618158013}
+  newReviewNotif: {fileID: 1890990300}
   ch1ReviewStatements:
-  - F
-  - E
-  - D
-  - C
-  - B
-  - A
+  - Ch1_F
+  - Ch1_E
+  - Ch1_D
+  - Ch1_C
+  - Ch1_B
+  - Ch1_A
   ch2ReviewStatements:
-  - F
-  - E
-  - D
-  - C
-  - B
-  - A
+  - Ch2_F
+  - Ch2_E
+  - Ch2_D
+  - Ch2_C
+  - Ch2_B
+  - Ch2_A
   ch3ReviewStatements:
-  - F
-  - E
-  - D
-  - C
-  - B
-  - A
+  - Ch3_F
+  - Ch3_E
+  - Ch3_D
+  - Ch3_C
+  - Ch3_B
+  - Ch3_A
   ch4ReviewStatements:
-  - F
-  - E
-  - D
-  - C
-  - B
-  - A
+  - Ch4_F
+  - Ch4_E
+  - Ch4_D
+  - Ch4_C
+  - Ch4_B
+  - Ch4_A
 --- !u!114 &958383136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7515,7 +7515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1458663665
 RectTransform:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ public class StoryManager : MonoBehaviour
     public int chapterTwoStart = 14;
     public int chapterThreeStart = 31;
     public int chapterFourStart = 45;
+    public int finalGameDay = 60;
 
     [Header("Custom Components")]
     [SerializeField]

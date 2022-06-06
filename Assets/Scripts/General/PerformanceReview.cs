@@ -86,6 +86,7 @@ public class PerformanceReview : MonoBehaviour
         {
             case 1:
                 gradeText.text = "F";
+                gameplayTracking.ProcessGameEnd(false);
                 break;
             case 2:
                 gradeText.text = "E";

@@ -1,9 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class GameplayTracking : MonoBehaviour
 {
+    [Header("Custom Components")]
+    [SerializeField]
+    private StoryManager storyManager;
+
+    [Header("UI")]
+    [SerializeField]
+    private GameObject endScreen;
+    [SerializeField]
+    private TextMeshProUGUI playerNameText;
+
+    [Header("Values")]
     public int suspicionRating = 0;
     private int suspicionModifier = 0;
 
@@ -17,7 +31,7 @@ public class GameplayTracking : MonoBehaviour
     public int totalCompletedCases = 0;
     public int completedDays = 0;
     public int AverageCompletedCases { get { return averageCompletedCases; } }
-    int averageCompletedCases = 0;
+    private int averageCompletedCases = 0;
 
     public void ProcessVictim(string Name, int Punishment, int ExpectedPunishment)
     {
@@ -47,7 +61,7 @@ public class GameplayTracking : MonoBehaviour
         victimList.Add(Name);
     }
 
-    void SuspicionEvents()
+    private void SuspicionEvents()
     {
         //TODO: ^
 
@@ -79,5 +93,31 @@ public class GameplayTracking : MonoBehaviour
     {
         completedDays++;
         averageCompletedCases = totalCompletedCases / completedDays;
+
+        if(completedDays >= storyManager.finalGameDay)
+        {
+            ProcessGameEnd(true);
+        }
+    }
+
+    public void ProcessGameEnd(bool finalDayEnding)
+    {
+        endScreen.SetActive(true);
+
+        playerNameText.text = PlayerPrefs.GetString("PlayerName");
+
+        if (finalDayEnding)
+        {
+            //Do Stuff for Final Day Ending!
+        }
+        else
+        {
+            //Do Stuff for Other Ending!
+        }
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

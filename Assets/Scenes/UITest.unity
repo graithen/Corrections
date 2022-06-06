@@ -4771,7 +4771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameplayTracking: {fileID: 958383136}
-  storyManager: {fileID: 0}
+  storyManager: {fileID: 604082766}
   employeeNameText: {fileID: 781411185}
   gradeText: {fileID: 1739448131}
   performanceReviewText: {fileID: 197269430}

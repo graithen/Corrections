@@ -35,14 +35,14 @@ public class CaseManager : MonoBehaviour
 
     [SerializeField]
     private GameObject caseButton;
-    [SerializeField]
-    private GameObject caseFilesContainer;
 
     [SerializeField]
     private List<CaseData> todaysCases;
     private int currCaseIndex = 0;
 
-    [Header ("Contents UI")]
+    [Header("Contents UI")]
+    [SerializeField]
+    private GameObject contentScreen;
     [SerializeField]
     private Image picture;
     [SerializeField]
@@ -61,6 +61,9 @@ public class CaseManager : MonoBehaviour
     private TextMeshProUGUI infractionNotes;
 
     [SerializeField]
+    private TextMeshProUGUI noCasesRightNowText;
+
+    [SerializeField]
     private TMP_Dropdown sentenceDropdown;
     [SerializeField]
     private Scrollbar verticalScroll;
@@ -75,6 +78,8 @@ public class CaseManager : MonoBehaviour
 
     public void PopulateContainer(int index)
     {
+        noCasesRightNowText.gameObject.SetActive(false);
+
         currCaseIndex = index;
         //Update UI Elements within container here
         //picture = todaysCases[index];
@@ -85,6 +90,7 @@ public class CaseManager : MonoBehaviour
         //occupation.text = todaysCases[index];
         infractionDetails.text = ListToString(todaysCases[index].InfractionDetails);
         infractionNotes.text = todaysCases[index].InfractionNotes;
+
     }
 
     public void CreateDailyCases()
@@ -113,6 +119,7 @@ public class CaseManager : MonoBehaviour
             //Remember to Assign Populate Function to Case Button using Apt Case File
         }
 
+        contentScreen.SetActive(true);
         PopulateContainer(currCaseIndex);
         PopulateSentenceDropdown();
     }
@@ -123,14 +130,23 @@ public class CaseManager : MonoBehaviour
 
         todaysCases.RemoveAt(currCaseIndex);
         Destroy(transform.GetChild(currCaseIndex).gameObject);
-
-        for (int i = 0; i < transform.childCount; i++)
+      
+        if (todaysCases.Count > 0)
         {
-            transform.GetChild(i).GetComponent<CaseButton>().myCaseNumber = i-1;
-        }
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).GetComponent<CaseButton>().myCaseNumber = i - 1;
+            }
 
-        currCaseIndex = 0;
-        PopulateContainer(currCaseIndex);
+            currCaseIndex = 0;
+
+            PopulateContainer(currCaseIndex);
+        }
+        else
+        {
+            contentScreen.SetActive(false);
+            noCasesRightNowText.gameObject.SetActive(true);
+        }
 
         verticalScroll.value = 1;
 

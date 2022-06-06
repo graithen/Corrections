@@ -14,6 +14,12 @@ public class StartScreen : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI gameNameText;
     [SerializeField]
+    private TextMeshProUGUI welcomeText;
+    [SerializeField]
+    private TMP_InputField nameInputField;
+    [SerializeField]
+    private TextMeshProUGUI warningText;
+    [SerializeField]
     private Button startButton;
 
     private void Start()
@@ -23,14 +29,24 @@ public class StartScreen : MonoBehaviour
 
     public void StartGame()
     {
-        startButton.gameObject.SetActive(false);
-
-        StartCoroutine(coStartAnim());
+        if(string.IsNullOrEmpty(nameInputField.text)) //Display Enter Name Message!
+        {
+            warningText.gameObject.SetActive(true);
+        }
+        else //Start Game!
+        {
+            PlayerPrefs.SetString("PlayerName", nameInputField.text);
+            startButton.gameObject.SetActive(false);
+            StartCoroutine(coStartAnim());
+        }
     }
 
     private IEnumerator coStartAnim()
     {
         gameNameText.gameObject.SetActive(false);
+        welcomeText.gameObject.SetActive(false);
+        nameInputField.gameObject.SetActive(false);
+        warningText.gameObject.SetActive(false);
 
         while(backgroundImage.color.a > 0)
         {
@@ -39,6 +55,7 @@ public class StartScreen : MonoBehaviour
         }
 
         dateTimeSystem.Pause(); //Unpase Time when Clicked Play
+        //Debug.Log(PlayerPrefs.GetString("PlayerName"));
         backgroundImage.gameObject.SetActive(false);
     }
 }

@@ -1,65 +1,137 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PerformanceReview : MonoBehaviour
 {
+    [Header("Custom Components")]
     [SerializeField]
     private GameplayTracking gameplayTracking;
+    [SerializeField]
+    private StoryManager storyManager;
 
-    public int Grade; //A - F rating, 'F' being 1, 'A' being 7 
-    string notes;
+    [Header("UI")]
+    [SerializeField]
+    private TextMeshProUGUI employeeNameText;
+    [SerializeField]
+    private TextMeshProUGUI gradeText;
+    [SerializeField]
+    private TextMeshProUGUI performanceReviewText;
+    [SerializeField]
+    private GameObject underConstructionText;
+    [SerializeField]
+    private GameObject newReviewNotif;
 
-    int suspicionLevel;
+    private int Grade; //A - F rating, 'F' being 1, 'A' being  
+    private int suspicionLevel;
 
-    public List<string> ExceptionalStatements;
-    public List<string> PositiveStatements;
-    public List<string> NegativeStatements;
-    public List<string> ExceptionallyNegativeStatements;
+    private List<string> reviewStatements;
 
-    public List<string> StoryStatements;
+    public List<string> ch1ReviewStatements;
+    public List<string> ch2ReviewStatements;
+    public List<string> ch3ReviewStatements;
+    public List<string> ch4ReviewStatements;
 
     public void GenerateWeeklyReport()
     {
-        //rank each element out of 7, then average each element
-        int grade = gameplayTracking.AverageCompletedCases + CalculateSuspicionRating(gameplayTracking.suspicionRating); //max DCA = 5 & max SR = 7 ===> max = 12
+        underConstructionText.gameObject.SetActive(false);
 
-        //suspicionRating;
-        if(grade <= 2)
+        employeeNameText.gameObject.SetActive(true);
+        gradeText.gameObject.SetActive(true);
+        performanceReviewText.gameObject.SetActive(true);
+
+        CalculateGrade();
+        UpdateUI();
+    }
+
+    private void CalculateGrade()
+    {
+        //rank each element out of 6, then average each element?
+
+        int rating = gameplayTracking.AverageCompletedCases + CalculateSuspicionRating(gameplayTracking.suspicionRating); //max DCA = 5 & max SR = 7 ===> max = 12
+
+        if (rating <= 2)
         {
             Grade = 1;
         }
-        else if(grade > 2 && grade <=4)
+        else if (rating > 2 && rating <= 4)
         {
             Grade = 2;
         }
-        else if (grade > 2 && grade <= 4)
+        else if (rating > 2 && rating <= 4)
         {
             Grade = 3;
         }
-        else if (grade > 4 && grade <= 6)
+        else if (rating > 4 && rating <= 6)
         {
             Grade = 4;
         }
-        else if (grade > 6 && grade <= 8)
+        else if (rating > 6 && rating <= 8)
         {
             Grade = 5;
         }
-        else if (grade > 8 && grade <= 10)
+        else if (rating > 8)
         {
             Grade = 6;
         }
-        else if (grade > 10 && grade <= 12)
-        {
-            Grade = 7;
-        }
-
-        //Debug.Log(Grade);
     }
 
-    void UpdateUI()
+    private void UpdateUI()
     {
-        //TODO: THIS^
+        employeeNameText.text = PlayerPrefs.GetString("PlayerName");
+
+        //Debug.Log(Grade);
+        switch (Grade)
+        {
+            case 1:
+                gradeText.text = "F";
+                break;
+            case 2:
+                gradeText.text = "E";
+                break;
+            case 3:
+                gradeText.text = "D";
+                break;
+            case 4:
+                gradeText.text = "C";
+                break;
+            case 5:
+                gradeText.text = "B";
+                break;
+            case 6:
+                gradeText.text = "A";
+                break;
+        }
+
+        performanceReviewText.text = PickPerformanceReviewText();
+        newReviewNotif.SetActive(true);
+    }
+
+    private string PickPerformanceReviewText()
+    {
+        string review = "";
+
+        if (storyManager.currentChapter == StoryManager.Chapter.One)
+        {
+            reviewStatements = ch1ReviewStatements;
+        }
+        else if(storyManager.currentChapter == StoryManager.Chapter.Two)
+        {
+            reviewStatements = ch2ReviewStatements;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Three)
+        {
+            reviewStatements = ch3ReviewStatements;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Four)
+        {
+            reviewStatements = ch4ReviewStatements;
+        }
+
+        review = reviewStatements[Grade - 1];
+
+        return review;
     }
 
     private int CalculateSuspicionRating(int SusValue)

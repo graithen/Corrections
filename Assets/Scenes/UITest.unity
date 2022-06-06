@@ -4839,7 +4839,7 @@ MonoBehaviour:
   DateUI: {fileID: 256136774}
   timeFormat: 0
   dateFormat: 1
-  SecPerMinute: 0.01
+  SecPerMinute: 0.26
   MinuteTrigger:
     m_PersistentCalls:
       m_Calls:

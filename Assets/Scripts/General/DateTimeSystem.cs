@@ -16,7 +16,7 @@ public class DateTimeSystem : MonoBehaviour
     private int startHour = 9;
     private int startMinute = 0;
 
-    public float SecPerMinute = 1;
+    public float SecPerMinute = 1; //0.26 -> Day Length of 2min 30sec
 
     [Header("Events")]
     public UnityEvent MinuteTrigger = new UnityEvent();

@@ -19,7 +19,7 @@ public class GameplayTracking : MonoBehaviour
 
     [Header("Values")]
     public int suspicionRating = 0;
-    private int suspicionModifier = 0;
+    private int suspicionLevel = 0;
 
     private int suspicionEventIndex = 0;
 
@@ -32,6 +32,7 @@ public class GameplayTracking : MonoBehaviour
     public int completedDays = 0;
     public int AverageCompletedCases { get { return averageCompletedCases; } }
     private int averageCompletedCases = 0;
+    public int ExpectedCaseClearance = 5;
 
     public void ProcessVictim(string Name, int Punishment, int ExpectedPunishment)
     {
@@ -40,17 +41,17 @@ public class GameplayTracking : MonoBehaviour
             int punishmentDifference = ExpectedPunishment - Punishment;
             suspicionRating += punishmentDifference;
 
-            if (suspicionRating > 40 && suspicionModifier < 1)
+            if (suspicionRating > 40 && suspicionLevel < 1)
             {
-                suspicionModifier++;
+                suspicionLevel++;
             }
-            else if (suspicionRating > 60 && suspicionModifier < 2)
+            else if (suspicionRating > 60 && suspicionLevel < 2)
             {
-                suspicionModifier++;
+                suspicionLevel++;
             }
-            else if (suspicionRating > 80 && suspicionModifier < 3)
+            else if (suspicionRating > 80 && suspicionLevel < 3)
             {
-                suspicionModifier++;
+                suspicionLevel++;
             }
         }
 
@@ -93,10 +94,23 @@ public class GameplayTracking : MonoBehaviour
     {
         completedDays++;
         averageCompletedCases = totalCompletedCases / completedDays;
+        CheckMeetingQuota();
 
         if(completedDays >= storyManager.finalGameDay)
         {
             ProcessGameEnd(true);
+        }
+    }
+
+    public void CheckMeetingQuota()
+    {
+        if(averageCompletedCases < ExpectedCaseClearance/2)
+        {
+            suspicionLevel++;
+        }
+        if(averageCompletedCases > ExpectedCaseClearance*2)
+        {
+            suspicionLevel--;
         }
     }
 

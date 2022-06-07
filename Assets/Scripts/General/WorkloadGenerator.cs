@@ -57,7 +57,7 @@ public class WorkloadGenerator : MonoBehaviour
             DailyCaseList.Add(GenerateStoryCaseInfo());
         }
 
-        //algorithm to randomly sort list
+        ChangeMutator();
 
         return DailyCaseList;
     }
@@ -113,6 +113,11 @@ public class WorkloadGenerator : MonoBehaviour
 
         CharacterID++;
         return newCase;
+    }
+
+    private void ChangeMutator()
+    {
+
     }
 
     private List<string> GenerateInfraction(bool chapters)
@@ -233,23 +238,23 @@ public class WorkloadGenerator : MonoBehaviour
 
         if (chance > 60)
         {
-            infractionPicked = Infractions1[Random.Range(0, list1.Count)];
+            infractionPicked = list1[Random.Range(0, list1.Count)];
         }
         else if (chance >= 45 && chance < 60)
         {
-            infractionPicked = Infractions2[Random.Range(0, list2.Count)];
+            infractionPicked = list2[Random.Range(0, list2.Count)];
         }
         else if (chance >= 20 && chance < 45)
         {
-            infractionPicked = Infractions3[Random.Range(0, list3.Count)];
+            infractionPicked = list3[Random.Range(0, list3.Count)];
         }
         else if (chance >= 5 && chance < 20)
         {
-            infractionPicked = Infractions4[Random.Range(0, list4.Count)];
+            infractionPicked = list4[Random.Range(0, list4.Count)];
         }
         else if (chance < 5)
         {
-            infractionPicked = Infractions5[Random.Range(0, list5.Count)];
+            infractionPicked = list5[Random.Range(0, list5.Count)];
         }
 
         return infractionPicked;
@@ -259,7 +264,38 @@ public class WorkloadGenerator : MonoBehaviour
     {
         int level = 0;
 
-        if(ElementInListAIsInListB(infraction,Infractions1))
+        if (useChapters)
+        {
+            if (storyManager.currentChapter == StoryManager.Chapter.One)
+            {
+                level = ProcessLevel(infraction, ch1Infractions1, ch1Infractions2, ch1Infractions3, ch1Infractions4, ch1Infractions5);
+            }
+            else if(storyManager.currentChapter == StoryManager.Chapter.Two)
+            {
+                level = ProcessLevel(infraction, ch2Infractions1, ch2Infractions2, ch2Infractions3, ch2Infractions4, ch2Infractions5);
+            }
+            else if (storyManager.currentChapter == StoryManager.Chapter.Three)
+            {
+                level = ProcessLevel(infraction, ch3Infractions1, ch3Infractions2, ch3Infractions3, ch3Infractions4, ch3Infractions5);
+            }
+            else if (storyManager.currentChapter == StoryManager.Chapter.Four)
+            {
+                level = ProcessLevel(infraction, ch4Infractions1, ch4Infractions2, ch4Infractions3, ch4Infractions4, ch4Infractions5);
+            }
+        }
+        else
+        {
+            level = ProcessLevel(infraction, Infractions1, Infractions2, Infractions3, Infractions4, Infractions5);
+        }
+    
+        return level;
+    }
+
+    private int ProcessLevel(List<string> infraction,List<string> list1, List<string> list2, List<string> list3, List<string> list4, List<string> list5)
+    {
+        int level = 0;
+
+        if (ElementInListAIsInListB(infraction, Infractions1))
         {
             level = 1;
         }

@@ -104,10 +104,10 @@ public class CaseManager : MonoBehaviour
 
         bool story = false;
         elapsedDays++;
-        if(elapsedDays %3 == 0)
-        {
-            story = true;
-        }
+        //if(elapsedDays %3 == 0)
+        //{
+            //story = true;
+        //}
 
         todaysCases = workloadGenerator.GenerateWorkload(story);
 

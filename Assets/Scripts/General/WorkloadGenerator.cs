@@ -26,8 +26,16 @@ public class WorkloadGenerator : MonoBehaviour
     [SerializeField]
     private int CaseListLength = 10;
 
+    [Header("Infraction Limits")]
     [SerializeField]
-    private int maxPossibleInfractions = 10;
+    private int ch1MaxPossibleInfractions = 3;
+    [SerializeField]
+    private int ch2MaxPossibleInfractions = 5;
+    [SerializeField]
+    private int ch3MaxPossibleInfractions = 7;
+    [SerializeField]
+    private int ch4MaxPossibleInfractions = 10;
+    private int maxPossibleInfractions;
 
     private void Start()
     {
@@ -101,12 +109,30 @@ public class WorkloadGenerator : MonoBehaviour
             newCase.Gender = "Female";
         }
 
+        //Instead of Generating Infractions Assign Based on Some Story Data?
+
         CharacterID++;
         return newCase;
     }
 
     private List<string> GenerateInfraction(bool chapters)
     {
+        switch(storyManager.currentChapter)
+        {
+            case StoryManager.Chapter.One:
+                maxPossibleInfractions = ch1MaxPossibleInfractions;
+                break;
+            case StoryManager.Chapter.Two:
+                maxPossibleInfractions = ch2MaxPossibleInfractions;
+                break;
+            case StoryManager.Chapter.Three:
+                maxPossibleInfractions = ch3MaxPossibleInfractions;
+                break;
+            case StoryManager.Chapter.Four:
+                maxPossibleInfractions = ch4MaxPossibleInfractions;
+                break;
+        }
+
         int infractionNumber = Random.Range(1, maxPossibleInfractions);
         List<string> infractions = new List<string>();
         string infraction = "";
@@ -209,19 +235,19 @@ public class WorkloadGenerator : MonoBehaviour
         {
             infractionPicked = Infractions1[Random.Range(0, list1.Count)];
         }
-        else if (chance >= 50 && chance < 60)
+        else if (chance >= 45 && chance < 60)
         {
             infractionPicked = Infractions2[Random.Range(0, list2.Count)];
         }
-        else if (chance >= 25 && chance < 50)
+        else if (chance >= 20 && chance < 45)
         {
             infractionPicked = Infractions3[Random.Range(0, list3.Count)];
         }
-        else if (chance >= 10 && chance < 25)
+        else if (chance >= 5 && chance < 20)
         {
             infractionPicked = Infractions4[Random.Range(0, list4.Count)];
         }
-        else if (chance < 10)
+        else if (chance < 5)
         {
             infractionPicked = Infractions5[Random.Range(0, list5.Count)];
         }

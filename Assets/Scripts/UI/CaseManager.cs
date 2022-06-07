@@ -64,6 +64,9 @@ public class CaseManager : MonoBehaviour
     private TextMeshProUGUI noCasesRightNowText;
 
     [SerializeField]
+    private Button endDayButton;
+
+    [SerializeField]
     private TMP_Dropdown sentenceDropdown;
     [SerializeField]
     private Scrollbar verticalScroll;
@@ -79,6 +82,7 @@ public class CaseManager : MonoBehaviour
     public void PopulateContainer(int index)
     {
         noCasesRightNowText.gameObject.SetActive(false);
+        endDayButton.gameObject.SetActive(false);
 
         currCaseIndex = index;
         //Update UI Elements within container here
@@ -146,6 +150,7 @@ public class CaseManager : MonoBehaviour
         {
             contentScreen.SetActive(false);
             noCasesRightNowText.gameObject.SetActive(true);
+            endDayButton.gameObject.SetActive(true);
         }
 
         verticalScroll.value = 1;

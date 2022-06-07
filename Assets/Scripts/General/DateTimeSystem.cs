@@ -340,6 +340,12 @@ public class DateTimeSystem : MonoBehaviour
         //Process all Date Time Variables to accomodate for the Time Skip
     }
 
+    public void EndDay()
+    {
+        min = 59;
+        hr = maxHr - 1;
+    }
+
     public string PickRandomTime()
     {
         string randomTime = "";

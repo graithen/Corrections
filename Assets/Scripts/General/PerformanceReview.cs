@@ -51,27 +51,27 @@ public class PerformanceReview : MonoBehaviour
 
         int rating = gameplayTracking.AverageCompletedCases + CalculateSuspicionRating(gameplayTracking.suspicionRating); //max DCA = 5 & max SR = 7 ===> max = 12
 
-        if (rating <= 2)
+        if (rating <= 5)
         {
             Grade = 1;
         }
-        else if (rating > 2 && rating <= 4)
+        else if (rating > 5 && rating <= 6)
         {
             Grade = 2;
         }
-        else if (rating > 2 && rating <= 4)
+        else if (rating > 6 && rating <= 8)
         {
             Grade = 3;
         }
-        else if (rating > 4 && rating <= 6)
+        else if (rating > 8 && rating <= 10)
         {
             Grade = 4;
         }
-        else if (rating > 6 && rating <= 8)
+        else if (rating > 10 && rating <= 12)
         {
             Grade = 5;
         }
-        else if (rating > 8)
+        else if (rating > 12)
         {
             Grade = 6;
         }

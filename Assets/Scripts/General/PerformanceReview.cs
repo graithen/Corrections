@@ -24,7 +24,6 @@ public class PerformanceReview : MonoBehaviour
     private GameObject newReviewNotif;
 
     private int Grade; //A - F rating, 'F' being 1, 'A' being  
-    private int suspicionLevel;
 
     private List<string> reviewStatements;
 
@@ -47,31 +46,29 @@ public class PerformanceReview : MonoBehaviour
 
     private void CalculateGrade()
     {
-        //rank each element out of 6, then average each element?
+        int rating = 100 - gameplayTracking.suspicionRating;
 
-        int rating = gameplayTracking.AverageCompletedCases + CalculateSuspicionRating(gameplayTracking.suspicionRating); //max DCA = 5 & max SR = 7 ===> max = 12
-
-        if (rating <= 5)
+        if (rating <= 40) //F
         {
             Grade = 1;
         }
-        else if (rating > 5 && rating <= 6)
+        else if (rating > 40 && rating <= 50) //E
         {
             Grade = 2;
         }
-        else if (rating > 6 && rating <= 8)
+        else if (rating > 50 && rating <= 60) //D
         {
             Grade = 3;
         }
-        else if (rating > 8 && rating <= 10)
+        else if (rating > 60 && rating <= 80) //C
         {
             Grade = 4;
         }
-        else if (rating > 10 && rating <= 12)
+        else if (rating > 80 && rating <= 90) //B
         {
             Grade = 5;
         }
-        else if (rating > 12)
+        else if (rating > 90) //A
         {
             Grade = 6;
         }
@@ -133,25 +130,5 @@ public class PerformanceReview : MonoBehaviour
         review = reviewStatements[Grade - 1];
 
         return review;
-    }
-
-    private int CalculateSuspicionRating(int SusValue)
-    {
-        if (SusValue <= 15)
-            suspicionLevel = 7;
-        else if (SusValue > 15 && SusValue <= 30)
-            suspicionLevel = 6;
-        else if (SusValue > 30 && SusValue <= 45)
-            suspicionLevel = 5;
-        else if (SusValue > 45 && SusValue <= 60)
-            suspicionLevel = 4;
-        else if (SusValue > 60 && SusValue <= 75)
-            suspicionLevel = 3;
-        else if (SusValue > 75 && SusValue <= 90)
-            suspicionLevel = 2;
-        else if (SusValue > 90)
-            suspicionLevel = 1;
-
-        return suspicionLevel;
     }
 }

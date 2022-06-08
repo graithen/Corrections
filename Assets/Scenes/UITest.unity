@@ -5440,6 +5440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyManager: {fileID: 604082766}
+  emailManager: {fileID: 604082768}
   endScreen: {fileID: 1993886541}
   playerNameText: {fileID: 1661602351}
   suspicionRating: 0
@@ -5451,6 +5452,12 @@ MonoBehaviour:
   ch2ExpectedClearance: 10
   ch3ExpectedClearance: 15
   ch4ExpectedClearance: 20
+  suspicionEmails:
+  - {fileID: 11400000, guid: c45de25eef0550f499e9061d1c82d04f, type: 2}
+  - {fileID: 11400000, guid: 757b32f62d17d144398a5d226bc5021b, type: 2}
+  - {fileID: 11400000, guid: d782b0eb1f2c831448d67ba354b7dde4, type: 2}
+  - {fileID: 11400000, guid: 6a65696ea9b72f440b47245a4effb0e1, type: 2}
+  - {fileID: 11400000, guid: 0e90563c686591041b02afb52e781c6a, type: 2}
 --- !u!114 &958383137
 MonoBehaviour:
   m_ObjectHideFlags: 0

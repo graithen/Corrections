@@ -10,6 +10,8 @@ public class GameplayTracking : MonoBehaviour
     [Header("Custom Components")]
     [SerializeField]
     private StoryManager storyManager;
+    [SerializeField]
+    private EmailManager emailManager;
 
     [Header("UI")]
     [SerializeField]
@@ -21,6 +23,7 @@ public class GameplayTracking : MonoBehaviour
     public int suspicionRating = 0;
     private int suspicionLevel = 0;
 
+    private int prevSuspicionEventIndex = -1;
     private int suspicionEventIndex = 0;
 
     private List<string> victimList = new List<string>();
@@ -46,6 +49,9 @@ public class GameplayTracking : MonoBehaviour
     [SerializeField]
     private int ch4ExpectedClearance = 25;
     private int expectedCaseClearance;
+
+    [Header("Suspicion Emails")]
+    public List<EmailData> suspicionEmails;
 
     public void ProcessVictim(string Name, int Punishment, int ExpectedPunishment)
     {
@@ -101,32 +107,39 @@ public class GameplayTracking : MonoBehaviour
         }
     }
 
+    private void DetermineSuspicionEventIndex()
+    {
+        if(suspicionRating > 10 && suspicionEventIndex <= 20)
+        {
+            suspicionEventIndex = 0;
+        }
+        else if(suspicionRating > 20 && suspicionEventIndex <= 35)
+        {
+            suspicionEventIndex = 1;
+        }
+        else if (suspicionRating > 35 && suspicionEventIndex <= 55)
+        {
+            suspicionEventIndex = 2;
+        }
+        else if (suspicionRating > 55 && suspicionEventIndex <= 80)
+        {
+            suspicionEventIndex = 3;
+        }
+        else if (suspicionRating > 80 && suspicionEventIndex <= 100)
+        {
+            suspicionEventIndex = 4;
+        }
+    }
+
     private void SuspicionEvents()
     {
-        //TODO: ^
-
-        switch (suspicionEventIndex)
+        DetermineSuspicionEventIndex();
+        if(prevSuspicionEventIndex < suspicionEventIndex)
         {
-            case 10:
-                //friendly warning
-                break;
-
-            case 45:
-                //Stern warning
-                break;
-
-            case 50:
-                //under investigation
-                break;
-
-            case 90:
-                //house raided
-                break;
-
-            case 100:
-                //trigger end game loss
-                break;
+            SendEmailsToEmailManager(suspicionEmails[suspicionEventIndex]);
+            prevSuspicionEventIndex = suspicionEventIndex;
         }
+
     }
 
     public void DailyUpdate()
@@ -197,5 +210,13 @@ public class GameplayTracking : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void SendEmailsToEmailManager(EmailData email)
+    {
+        if (email != null)
+        {
+            emailManager.todaysEmails.Add(email);
+        }
     }
 }

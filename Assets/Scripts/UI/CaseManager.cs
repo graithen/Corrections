@@ -6,6 +6,8 @@ using TMPro;
 
 public class CaseManager : MonoBehaviour
 {
+    public GameObject SubmitButton;
+    public GameObject SentenceGFX;
     public enum Sentences
     {
         Tier1 = 0,
@@ -128,8 +130,18 @@ public class CaseManager : MonoBehaviour
         PopulateSentenceDropdown();
     }
 
-    public void Submit()
+    public void InitiateSubmit()
     {
+        StartCoroutine(Submit());
+    }
+
+    private IEnumerator Submit()
+    {
+        SubmitButton.SetActive(false);
+        SentenceGFX.SetActive(true);
+
+        yield return new WaitForSeconds(1.5f);
+
         CheckSentenceDropdown();
 
         todaysCases.RemoveAt(currCaseIndex);
@@ -156,6 +168,9 @@ public class CaseManager : MonoBehaviour
         verticalScroll.value = 1;
 
         gameplayTracking.totalCompletedCases++;
+
+        SentenceGFX.SetActive(false);
+        SubmitButton.SetActive(true);
     }
 
     private void PopulateSentenceDropdown()

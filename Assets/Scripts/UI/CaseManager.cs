@@ -154,8 +154,6 @@ public class CaseManager : MonoBehaviour
         }
 
         verticalScroll.value = 1;
-
-        gameplayTracking.totalCompletedCases++;
     }
 
     private void PopulateSentenceDropdown()

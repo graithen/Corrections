@@ -46,8 +46,9 @@ public class PerformanceReview : MonoBehaviour
 
     private void CalculateGrade()
     {
-        int rating = 100 - gameplayTracking.suspicionRating;
-
+        float rating = (gameplayTracking.CalculateWeeklyCaseValues() + gameplayTracking.CalculateAverageCompletedCases()) * (100 - gameplayTracking.suspicionRating);
+        Debug.Log("Rating = " + rating);
+        
         if (rating <= 40) //F
         {
             Grade = 1;
@@ -104,6 +105,8 @@ public class PerformanceReview : MonoBehaviour
 
         performanceReviewText.text = PickPerformanceReviewText();
         newReviewNotif.SetActive(true);
+
+        gameplayTracking.ResetWeeklyValues();
     }
 
     private string PickPerformanceReviewText()

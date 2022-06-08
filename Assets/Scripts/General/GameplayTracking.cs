@@ -26,17 +26,25 @@ public class GameplayTracking : MonoBehaviour
     private List<string> victimList = new List<string>();
     // Start is called before the first frame update
 
-    //Performance statistics
-
-    public int totalCompletedCases = 0;
+    [Header("Performance Stats")]
     public int completedDays = 0;
-    public int AverageCompletedCases { get { return averageCompletedCases; } }
-    private int averageCompletedCases = 0;
+    [SerializeField]
+    private int weeklyCompletedCases = 0;
+    [SerializeField]
+    private int weeklyCorrectlyMarkedCases = 0;
+    [SerializeField]
+    private float averageCompletedCases = 0;
+    [SerializeField]
     public int ExpectedCaseClearance = 5;
+    private int daysElapsedInWeek = 0;
 
     public void ProcessVictim(string Name, int Punishment, int ExpectedPunishment)
     {
-        if(Punishment < ExpectedPunishment)
+        if(Punishment == ExpectedPunishment)
+        {
+            weeklyCorrectlyMarkedCases++;
+        }
+        else if(Punishment < ExpectedPunishment)
         {
             int punishmentDifference = ExpectedPunishment - Punishment;
             suspicionRating += punishmentDifference;
@@ -57,6 +65,8 @@ public class GameplayTracking : MonoBehaviour
 
         //Debug.Log(Name + ": " + Punishment + " / " + ExpectedPunishment);
         //Debug.Log("Sus Rating = " + suspicionRating);
+
+        weeklyCompletedCases++;
 
         SuspicionEvents();
         victimList.Add(Name);
@@ -93,13 +103,34 @@ public class GameplayTracking : MonoBehaviour
     public void DailyUpdate()
     {
         completedDays++;
-        averageCompletedCases = totalCompletedCases / completedDays;
+        daysElapsedInWeek++;
         CheckMeetingQuota();
 
         if(completedDays >= storyManager.finalGameDay)
         {
             ProcessGameEnd(true);
         }
+    }
+
+    public float CalculateWeeklyCaseValues()
+    {
+        float ratio = (weeklyCompletedCases - weeklyCorrectlyMarkedCases) / weeklyCompletedCases;
+        return ratio;
+    }
+
+    public float CalculateAverageCompletedCases()
+    {
+        averageCompletedCases = weeklyCompletedCases / daysElapsedInWeek;
+        float ratio = averageCompletedCases / ExpectedCaseClearance;
+        return ratio;
+    }
+
+    public void ResetWeeklyValues()
+    {
+        daysElapsedInWeek = 0;
+        weeklyCompletedCases = 0;
+        weeklyCorrectlyMarkedCases = 0;
+        averageCompletedCases = 0;
     }
 
     public void CheckMeetingQuota()

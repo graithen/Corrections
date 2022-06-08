@@ -5443,9 +5443,11 @@ MonoBehaviour:
   endScreen: {fileID: 1993886541}
   playerNameText: {fileID: 1661602351}
   suspicionRating: 0
-  totalCompletedCases: 0
   completedDays: 0
-  ExpectedCaseClearance: 5
+  weeklyCompletedCases: 0
+  weeklyCorrectlyMarkedCases: 0
+  averageCompletedCases: 0
+  ExpectedCaseClearance: 7
 --- !u!114 &958383137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5663,27 +5665,194 @@ MonoBehaviour:
   - Kidnapping.
   - Human trafficking.
   - Terrorism.
-  ch1Infractions1: []
-  ch1Infractions2: []
-  ch1Infractions3: []
-  ch1Infractions4: []
-  ch1Infractions5: []
-  ch2Infractions1: []
-  ch2Infractions2: []
-  ch2Infractions3: []
-  ch2Infractions4: []
-  ch2Infractions5: []
-  ch3Infractions1: []
-  ch3Infractions2: []
-  ch3Infractions3: []
-  ch3Infractions4: []
-  ch3Infractions5: []
-  ch4Infractions1: []
-  ch4Infractions2: []
-  ch4Infractions3: []
-  ch4Infractions4: []
-  ch4Infractions5: []
-  CaseListLength: 5
+  ch1Infractions1:
+  - Vandalism.
+  - Antisocial behaviour.
+  - Abusive to police.
+  - Disturbance in a public space.
+  - Unpaid parking ticket.
+  - Public indecency.
+  - Speeding.
+  ch1Infractions2:
+  - Driving without a licence.
+  - Petty theft.
+  - Dealing drugs.
+  - Burglary.
+  - Robbery.
+  - Stalking and harrassment.
+  - Cyber bullying.
+  ch1Infractions3:
+  - Racism.
+  - Fraud.
+  - Cyber crime.
+  - Domestic abuse.
+  - Grievous bodily harm.
+  - Hate speech.
+  - Indecent exposure.
+  ch1Infractions4:
+  - Animal cruelty.
+  - Molestation.
+  - Arson.
+  - Acid attack.
+  - Drug trafficking.
+  - Manslaughter.
+  - Child abuse.
+  ch1Infractions5:
+  - Murder.
+  - Sexual abuse of a child.
+  - Rape.
+  - Torture.
+  - Kidnapping.
+  - Human trafficking.
+  - Terrorism.
+  ch2Infractions1:
+  - Vandalism.
+  - Antisocial behaviour.
+  - Abusive to police.
+  - Disturbance in a public space.
+  - Unpaid parking ticket.
+  - Public indecency.
+  - Speeding.
+  - Public disruption.
+  ch2Infractions2:
+  - Driving without a licence.
+  - Petty theft.
+  - Dealing drugs.
+  - Burglary.
+  - Robbery.
+  - Stalking and harrassment.
+  - Cyber bullying.
+  ch2Infractions3:
+  - Racism.
+  - Fraud.
+  - Cyber crime.
+  - Domestic abuse.
+  - Grievous bodily harm.
+  - Hate speech.
+  - Indecent exposure.
+  - Disruptive speech.
+  ch2Infractions4:
+  - Animal cruelty.
+  - Molestation.
+  - Arson.
+  - Acid attack.
+  - Drug trafficking.
+  - Manslaughter.
+  - Child abuse.
+  ch2Infractions5:
+  - Murder.
+  - Sexual abuse of a child.
+  - Rape.
+  - Torture.
+  - Kidnapping.
+  - Human trafficking.
+  - Terrorism.
+  ch3Infractions1:
+  - Vandalism.
+  - Antisocial behaviour.
+  - Abusive to police.
+  - Disturbance in a public space.
+  - Unpaid parking ticket.
+  - Public indecency.
+  - Speeding.
+  - Public disruption.
+  ch3Infractions2:
+  - Driving without a licence.
+  - Petty theft.
+  - Dealing drugs.
+  - Burglary.
+  - Robbery.
+  - Stalking and harrassment.
+  - Cyber bullying.
+  - Interferring with government affairs.
+  ch3Infractions3:
+  - Racism.
+  - Fraud.
+  - Cyber crime.
+  - Domestic abuse.
+  - Grievous bodily harm.
+  - Hate speech.
+  - Indecent exposure.
+  - Disruptive speech.
+  - Abusive to enforcement operative.
+  - Unsanctioned demonstrations.
+  - Creating civil unrest.
+  ch3Infractions4:
+  - Animal cruelty.
+  - Molestation.
+  - Arson.
+  - Acid attack.
+  - Drug trafficking.
+  - Manslaughter.
+  - Child abuse.
+  - Crimes against the party.
+  - Assault on an enforcement operative.
+  - Associating with terrorists.
+  ch3Infractions5:
+  - Murder.
+  - Sexual abuse of a child.
+  - Rape.
+  - Torture.
+  - Kidnapping.
+  - Human trafficking.
+  - Terrorism.
+  - Facilitating terrorism.
+  - Attempted murder of party representatives.
+  - Attempted murder of enforcement operatives.
+  ch4Infractions1:
+  - Vandalism.
+  - Antisocial behaviour.
+  - Abusive to police.
+  - Disturbance in a public space.
+  - Unpaid parking ticket.
+  - Public indecency.
+  - Speeding.
+  - Public disruption.
+  ch4Infractions2:
+  - Driving without a licence.
+  - Petty theft.
+  - Dealing drugs.
+  - Burglary.
+  - Robbery.
+  - Stalking and harrassment.
+  - Cyber bullying.
+  ch4Infractions3:
+  - Racism.
+  - Fraud.
+  - Cyber crime.
+  - Domestic abuse.
+  - Grievous bodily harm.
+  - Hate speech.
+  - Indecent exposure.
+  - Disruptive speech.
+  ch4Infractions4:
+  - Animal cruelty.
+  - Molestation.
+  - Arson.
+  - Acid attack.
+  - Drug trafficking.
+  - Manslaughter.
+  - Child abuse.
+  - Crimes against the party.
+  - Assault on an enforcement operative.
+  - Associating with terrorists.
+  - Abusive to enforcement operative.
+  - Creating civil unrest.
+  - Unsanctioned demonstrations.
+  - Interferring with government.
+  - Disruptive speech.
+  ch4Infractions5:
+  - Murder.
+  - Sexual abuse of a child.
+  - Rape.
+  - Torture.
+  - Kidnapping.
+  - Human trafficking.
+  - Terrorism.
+  - Facilitating terrorism.
+  - Attempted murder of party representatives.
+  - Attempted murder of enforcement operatives.
+  CaseListLength: 10
   ch1MaxPossibleInfractions: 3
   ch2MaxPossibleInfractions: 5
   ch3MaxPossibleInfractions: 7
@@ -8520,7 +8689,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291711935}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
@@ -11194,8 +11363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d41ffe87ca8b542b8746719c76b575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SubmitButton: {fileID: 0}
-  SentenceGFX: {fileID: 0}
+  SubmitButton: {fileID: 1610783272}
+  SentenceGFX: {fileID: 1483301008}
   currSentence: 0
   chapterOneSentences:
   - "\xA3200 Fine"

@@ -34,9 +34,18 @@ public class GameplayTracking : MonoBehaviour
     private int weeklyCorrectlyMarkedCases = 0;
     [SerializeField]
     private float averageCompletedCases = 0;
-    [SerializeField]
-    public int ExpectedCaseClearance = 5;
     private int daysElapsedInWeek = 0;
+
+    [Header("Expected Case Clearance")]
+    [SerializeField]
+    private int ch1ExpectedClearance = 7;
+    [SerializeField]
+    private int ch2ExpectedClearance = 10;
+    [SerializeField]
+    private int ch3ExpectedClearance = 15;
+    [SerializeField]
+    private int ch4ExpectedClearance = 25;
+    private int expectedCaseClearance;
 
     public void ProcessVictim(string Name, int Punishment, int ExpectedPunishment)
     {
@@ -70,6 +79,26 @@ public class GameplayTracking : MonoBehaviour
 
         SuspicionEvents();
         victimList.Add(Name);
+    }
+
+    private void DetermineExpectedClearance()
+    {
+        if(storyManager.currentChapter == StoryManager.Chapter.One)
+        {
+            expectedCaseClearance = ch1ExpectedClearance;
+        }
+        else if(storyManager.currentChapter == StoryManager.Chapter.Two)
+        {
+            expectedCaseClearance = ch2ExpectedClearance;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Three)
+        {
+            expectedCaseClearance = ch3ExpectedClearance;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Four)
+        {
+            expectedCaseClearance = ch4ExpectedClearance;
+        }
     }
 
     private void SuspicionEvents()
@@ -120,8 +149,10 @@ public class GameplayTracking : MonoBehaviour
 
     public float CalculateAverageCompletedCases()
     {
+        DetermineExpectedClearance();
+
         averageCompletedCases = weeklyCompletedCases / daysElapsedInWeek;
-        float ratio = averageCompletedCases / ExpectedCaseClearance;
+        float ratio = averageCompletedCases / expectedCaseClearance;
         return ratio;
     }
 
@@ -135,11 +166,13 @@ public class GameplayTracking : MonoBehaviour
 
     public void CheckMeetingQuota()
     {
-        if(averageCompletedCases < ExpectedCaseClearance/2)
+        DetermineExpectedClearance();
+
+        if(averageCompletedCases < expectedCaseClearance/2)
         {
             suspicionLevel++;
         }
-        if(averageCompletedCases > ExpectedCaseClearance*2)
+        if(averageCompletedCases > expectedCaseClearance*2)
         {
             suspicionLevel--;
         }

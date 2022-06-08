@@ -5447,7 +5447,10 @@ MonoBehaviour:
   weeklyCompletedCases: 0
   weeklyCorrectlyMarkedCases: 0
   averageCompletedCases: 0
-  ExpectedCaseClearance: 7
+  ch1ExpectedClearance: 6
+  ch2ExpectedClearance: 10
+  ch3ExpectedClearance: 15
+  ch4ExpectedClearance: 20
 --- !u!114 &958383137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5617,7 +5620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyManager: {fileID: 604082766}
-  useChapters: 0
+  useChapters: 1
   CharGen:
     MaleNames: {fileID: 4900000, guid: 2d7ab87a8afcf5d4bafab5152af7a087, type: 3}
     FemaleNames: {fileID: 4900000, guid: fafbc55692c7c534591da39fd32bab6f, type: 3}
@@ -5852,7 +5855,10 @@ MonoBehaviour:
   - Facilitating terrorism.
   - Attempted murder of party representatives.
   - Attempted murder of enforcement operatives.
-  CaseListLength: 10
+  ch1CaseCount: 10
+  ch2CaseCount: 15
+  ch3CaseCount: 25
+  ch4CaseCount: 35
   ch1MaxPossibleInfractions: 3
   ch2MaxPossibleInfractions: 5
   ch3MaxPossibleInfractions: 7

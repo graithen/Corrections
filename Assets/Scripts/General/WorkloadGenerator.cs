@@ -23,8 +23,17 @@ public class WorkloadGenerator : MonoBehaviour
     private int CharacterID = 0;
 
     private List<CaseData> DailyCaseList = new List<CaseData>();
+
+    [Header("Daily Case Numbers")]
     [SerializeField]
-    private int CaseListLength = 10;
+    private int ch1CaseCount = 10;
+    [SerializeField]
+    private int ch2CaseCount = 15;
+    [SerializeField]
+    private int ch3CaseCount = 25;
+    [SerializeField]
+    private int ch4CaseCount = 35;
+    private int CaseListLength;
 
     [Header("Infraction Limits")]
     [SerializeField]
@@ -47,6 +56,8 @@ public class WorkloadGenerator : MonoBehaviour
 
     public List<CaseData> GenerateWorkload(bool Story)
     {
+        DetermineCaseListLength();
+
         for (int i = 0; i < CaseListLength; i++)
         {
             DailyCaseList.Add(GenerateCaseInfo());
@@ -60,6 +71,26 @@ public class WorkloadGenerator : MonoBehaviour
         ChangeMutator();
 
         return DailyCaseList;
+    }
+
+    private void DetermineCaseListLength()
+    {
+        if (storyManager.currentChapter == StoryManager.Chapter.One)
+        {
+            CaseListLength = ch1CaseCount;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Two)
+        {
+            CaseListLength = ch2CaseCount;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Three)
+        {
+            CaseListLength = ch3CaseCount;
+        }
+        else if (storyManager.currentChapter == StoryManager.Chapter.Four)
+        {
+            CaseListLength = ch4CaseCount;
+        }
     }
 
     private CaseData GenerateCaseInfo()
@@ -236,29 +267,102 @@ public class WorkloadGenerator : MonoBehaviour
         int chance = 0;
         chance = Random.Range(0, 100);
 
-        if (chance > 60)
+        if (storyManager.currentChapter == StoryManager.Chapter.One)
         {
-            infractionPicked = list1[Random.Range(0, list1.Count)];
+            if (chance > 60)
+            {
+                infractionPicked = list1[Random.Range(0, list1.Count)];
+            }
+            else if (chance >= 45 && chance < 60)
+            {
+                infractionPicked = list2[Random.Range(0, list2.Count)];
+            }
+            else if (chance >= 20 && chance < 45)
+            {
+                infractionPicked = list3[Random.Range(0, list3.Count)];
+            }
+            else if (chance >= 5 && chance < 20)
+            {
+                infractionPicked = list4[Random.Range(0, list4.Count)];
+            }
+            else if (chance < 5)
+            {
+                infractionPicked = list5[Random.Range(0, list5.Count)];
+            }
         }
-        else if (chance >= 45 && chance < 60)
+        else if (storyManager.currentChapter == StoryManager.Chapter.Two)
         {
-            infractionPicked = list2[Random.Range(0, list2.Count)];
+            if (chance > 70)
+            {
+                infractionPicked = list1[Random.Range(0, list1.Count)];
+            }
+            else if (chance >= 45 && chance < 70)
+            {
+                infractionPicked = list2[Random.Range(0, list2.Count)];
+            }
+            else if (chance >= 20 && chance < 45)
+            {
+                infractionPicked = list3[Random.Range(0, list3.Count)];
+            }
+            else if (chance >= 5 && chance < 20)
+            {
+                infractionPicked = list4[Random.Range(0, list4.Count)];
+            }
+            else if (chance < 5)
+            {
+                infractionPicked = list5[Random.Range(0, list5.Count)];
+            }
         }
-        else if (chance >= 20 && chance < 45)
+        else if (storyManager.currentChapter == StoryManager.Chapter.Three)
         {
-            infractionPicked = list3[Random.Range(0, list3.Count)];
+            if (chance > 80)
+            {
+                infractionPicked = list1[Random.Range(0, list1.Count)];
+            }
+            else if (chance >= 55 && chance < 80)
+            {
+                infractionPicked = list2[Random.Range(0, list2.Count)];
+            }
+            else if (chance >= 25 && chance < 55)
+            {
+                infractionPicked = list3[Random.Range(0, list3.Count)];
+            }
+            else if (chance >= 10 && chance < 25)
+            {
+                infractionPicked = list4[Random.Range(0, list4.Count)];
+            }
+            else if (chance < 10)
+            {
+                infractionPicked = list5[Random.Range(0, list5.Count)];
+            }
         }
-        else if (chance >= 5 && chance < 20)
+        else if (storyManager.currentChapter == StoryManager.Chapter.Four)
         {
-            infractionPicked = list4[Random.Range(0, list4.Count)];
-        }
-        else if (chance < 5)
-        {
-            infractionPicked = list5[Random.Range(0, list5.Count)];
+            if (chance > 85)
+            {
+                infractionPicked = list1[Random.Range(0, list1.Count)];
+            }
+            else if (chance >= 55 && chance < 85)
+            {
+                infractionPicked = list2[Random.Range(0, list2.Count)];
+            }
+            else if (chance >= 30 && chance < 55)
+            {
+                infractionPicked = list3[Random.Range(0, list3.Count)];
+            }
+            else if (chance >= 15 && chance < 30)
+            {
+                infractionPicked = list4[Random.Range(0, list4.Count)];
+            }
+            else if (chance < 15)
+            {
+                infractionPicked = list5[Random.Range(0, list5.Count)];
+            }
         }
 
         return infractionPicked;
     }
+
 
     private int CalculateInfractionLevel(List<string> infraction)
     {

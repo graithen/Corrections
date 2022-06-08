@@ -166,9 +166,6 @@ public class CaseManager : MonoBehaviour
         }
 
         verticalScroll.value = 1;
-
-        gameplayTracking.totalCompletedCases++;
-
         SentenceGFX.SetActive(false);
         SubmitButton.SetActive(true);
     }

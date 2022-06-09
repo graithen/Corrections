@@ -92,8 +92,8 @@ public class DateTimeSystem : MonoBehaviour
         //Set a date and time five years from now when no saved date and time to put
         hr = startHour;
         min = startMinute;
-        day = System.DateTime.Now.Day;
-        DayIndex = (int)System.DateTime.Today.DayOfWeek;
+        day = (int)System.DayOfWeek.Monday;
+        DayIndex = (int)System.DayOfWeek.Monday;
         month = System.DateTime.Now.Month;
         year = System.DateTime.Now.Year + 5;
 
@@ -126,20 +126,30 @@ public class DateTimeSystem : MonoBehaviour
                 if (hr >= maxHr)
                 {
                     hr = startHour;
-                    day++;
+                    day+= Random.Range(2,7);
                     CalculateDay();
                     DayTrigger.Invoke();
+
+                    month++;
+                    MonthTrigger.Invoke();
+                    if (month > maxMonth)
+                    {
+                        month = 1;
+                        year++;
+                        YearTrigger.Invoke();
+                    }
+
                     if (day > maxDay)
                     {
                         day = 1;
-                        month++;
-                        MonthTrigger.Invoke();
-                        if (month > maxMonth)
-                        {
-                            month = 1;
-                            year++;
-                            YearTrigger.Invoke();
-                        }
+                        //month++;
+                        //MonthTrigger.Invoke();
+                        //if (month > maxMonth)
+                        //{
+                        //    month = 1;
+                        //    year++;
+                        //    YearTrigger.Invoke();
+                        //}
                     }
                 }
             }

@@ -33,13 +33,13 @@ public class StartScreen : MonoBehaviour
 
     public void StartGame()
     {
-        if(DetailsFilled()) //Display Enter Name Message!
+        if(!DetailsFilled()) //Display Enter Name Message!
         {
             warningText.gameObject.SetActive(true);
         }
         else //Start Game!
         {
-            PlayerPrefs.SetString("PlayerName", fNameInputField.text);
+            PlayerPrefs.SetString("PlayerFName", fNameInputField.text);
             PlayerPrefs.SetString("PlayerSName", sNameInputField.text);
             PlayerPrefs.SetString("PlayerAge", ageInputField.text);
 
@@ -63,6 +63,8 @@ public class StartScreen : MonoBehaviour
         gameNameText.gameObject.SetActive(false);
         welcomeText.gameObject.SetActive(false);
         fNameInputField.gameObject.SetActive(false);
+        sNameInputField.gameObject.SetActive(false);
+        ageInputField.gameObject.SetActive(false);
         warningText.gameObject.SetActive(false);
 
         while(backgroundImage.color.a > 0)
@@ -72,7 +74,9 @@ public class StartScreen : MonoBehaviour
         }
 
         dateTimeSystem.Pause(); //Unpase Time when Clicked Play
-        //Debug.Log(PlayerPrefs.GetString("PlayerName"));
+        //Debug.Log(PlayerPrefs.GetString("FName: " + "PlayerFName"));
+        //Debug.Log(PlayerPrefs.GetString("SName: " + "PlayerSName"));
+        //Debug.Log(PlayerPrefs.GetString("Age: " + "PlayerAge"));
         backgroundImage.gameObject.SetActive(false);
     }
 }

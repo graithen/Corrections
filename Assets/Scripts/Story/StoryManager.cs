@@ -33,11 +33,11 @@ public class StoryManager : MonoBehaviour
     [Header("Stories")]
     [SerializeField]
     private List<StoryData> allStories;
-    private Dictionary<int, StoryData> storedStories = new Dictionary<int, StoryData>();
+    //private Dictionary<int, StoryData> storedStories = new Dictionary<int, StoryData>();
 
     private void Start()
     {
-        InitStoryDictionary();
+        //InitStoryDictionary();
         UpdateChapter();
     }
 
@@ -61,23 +61,31 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    private void InitStoryDictionary()
-    {
-        for (int i = 0; i < allStories.Count; i++)
-        {
-            storedStories.Add(allStories[i].releaseDay, allStories[i]);
-        }
-    }
+    //private void InitStoryDictionary()
+    //{
+    //    for (int i = 0; i < allStories.Count; i++)
+    //    {
+    //        storedStories.Add(allStories[i].releaseDay, allStories[i]);
+    //    }
+    //}
 
     public void CheckForStoryNews()
     {
-        StoryData thisStory;
-        bool hasStory = storedStories.TryGetValue(gameplayTracking.completedDays + 1, out thisStory);
-
-        if(hasStory)
+        for (int i = 0; i < allStories.Count; i++)
         {
-            SendNewsArticleToNewsManager(thisStory);
+            if(allStories[i].releaseDay == gameplayTracking.completedDays + 1)
+            {
+                SendNewsArticleToNewsManager(allStories[i]);
+            }
         }
+
+        //StoryData thisStory;
+        //bool hasStory = storedStories.TryGetValue(gameplayTracking.completedDays + 1, out thisStory);
+
+        //if(hasStory)
+        //{
+        //    SendNewsArticleToNewsManager(thisStory);
+        //}
     }
 
     private void SendNewsArticleToNewsManager(StoryData story)
@@ -91,13 +99,21 @@ public class StoryManager : MonoBehaviour
 
     public void CheckForStoryEmails()
     {
-        StoryData thisStory;
-        bool hasStory = storedStories.TryGetValue(gameplayTracking.completedDays + 1, out thisStory);
-
-        if(hasStory)
+        for (int i = 0; i < allStories.Count; i++)
         {
-            SendEmailsToEmailManager(thisStory);
+            if(allStories[i].releaseDay == gameplayTracking.completedDays + 1)
+            {
+                SendEmailsToEmailManager(allStories[i]);
+            }
         }
+
+        //StoryData thisStory;
+        //bool hasStory = storedStories.TryGetValue(gameplayTracking.completedDays + 1, out thisStory);
+
+        //if(hasStory)
+        //{
+        //    SendEmailsToEmailManager(thisStory);
+        //}
     }
 
     private void SendEmailsToEmailManager(StoryData story)

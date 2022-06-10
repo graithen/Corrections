@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
+  m_Name: StoryEmail 27 1
+  m_EditorClassIdentifier: 
+  sender: Col. Ames
+  subject: BFP Affiliation
+  body: 'It has been brought forth to our attention that the sadistic ideology of
+    the BFP has infiltrated our ranks here at the Ministry of Enforcement, explicitly
+    the Corrections Division. Friends or family, they are enemies of the state. We
+    have actioned the detainment of a number of Corrections employees whom possess
+    direct ties to the BFP terrorist group. Those of you who exhibit any traces of
+    sympathy towards these criminals shall encounter the same fate.
+
+    
+
+    The
+    People Prevail.
+
+'
+  sendDay: 0
+  sendHour: 9
+  sendMin: 15

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
+  m_Name: StoryEmail 30 1
+  m_EditorClassIdentifier: 
+  sender: Col. Ames
+  subject: Proceed with caution
+  body: "Given the recent brutalities of our fellow party officials, I exhort you
+    to remain vigilant when travelling about the Capital. These BFP savages will
+    stop at nothing to deter our countrymen\u2019s faith in THE PARTY.\r\n\r\nThe
+    People Prevail.\r"
+  sendDay: 0
+  sendHour: 9
+  sendMin: 15

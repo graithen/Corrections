@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 1 1
   m_EditorClassIdentifier: 
-  sender: 
-  subject: 
-  body: 
+  sender: Ethan
+  subject: "Sandhurst\u2026"
+  body: "Buddy,\r\n\r\nHave you seen the news?! That Sandhurst having the hots for
+    minors. That\u2019s sick. And after me and the Mrs put are votes in for him too,
+    I\u2019m mortified. I think it\u2019s THE PARTY\u2019s race from here.\r\n\r\nLet\u2019s
+    grab a drink later!\r\n\r\nE\r\n"
   sendDay: 0
-  sendHour: 0
+  sendHour: 10
   sendMin: 0

@@ -206,10 +206,16 @@ public class GameplayTracking : MonoBehaviour
         if (finalDayEnding)
         {
             //Do Stuff for Final Day Ending!
+
+            //Show Rap Sheet of Yourself
+            //List Victims - People you Wrongly Sentenced
         }
-        else
+        else //If you get an F
         {
             //Do Stuff for Other Ending!
+
+            //Show Rap Sheet of Yourself 
+            //Crimes Against THE PARTY
         }
     }
 

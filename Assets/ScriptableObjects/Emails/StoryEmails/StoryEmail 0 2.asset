@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 0 2
   m_EditorClassIdentifier: 
-  sender: 
-  subject: 
-  body: 
+  sender: Ethan
+  subject: Greetings
+  body: "Morning!\r\n\r\nI\u2019m Ethan, it\u2019s a pleasure to meet you, buddy.
+    Big congrats on landing the dream gig! \r\n\r\nI\u2019m here to help, so will
+    give you some pointers on how to keep your performance A-OK. I\u2019ll also give
+    you a heads up on any prominent cases that are coming through your way.\r\n\r\nWelcome
+    to the team!\r\n\r\nE\r\n"
   sendDay: 0
-  sendHour: 0
+  sendHour: 10
   sendMin: 0

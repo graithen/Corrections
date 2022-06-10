@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: DailyEmail 1
   m_EditorClassIdentifier: 
-  sender: Sender A
-  subject: Subject A
-  body: BODY!!!
-  sendDay: 2
-  sendHour: 10
-  sendMin: 25
+  sender: Ministry of Corrections IT
+  subject: '[AUTOMATED MESSAGE] Employment Induction'
+  body: "Greetings,\r\n\r\nWelcome to the Ministry of Corrections.\r\n\r\nRole: Corrections
+    Officer\r\n\r\nYour work obligations are as follows:\r\n-\tReview each assigned
+    case file\r\n-\tSelect the appropriate penalty\r\n-\tSubmit each assignment for
+    processing\r\n\r\nTake care to monitor both the \u201CNews\u201D and \u201CE-mail\u201D
+    tabs for further insight. \r\n\r\nMinistry of Corrections\r\n"
+  sendDay: 1
+  sendHour: 9
+  sendMin: 30

@@ -14,6 +14,6 @@ public class DayEndScreen : MonoBehaviour
 
     private void OnEnable()
     {
-        dayEndText.text = "End of Day " + gameplayTracking.completedDays;
+        dayEndText.text = "A Few Days Later ...";
     }
 }

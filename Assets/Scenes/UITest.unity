@@ -5400,33 +5400,39 @@ MonoBehaviour:
   underConstructionText: {fileID: 1618158013}
   newReviewNotif: {fileID: 1890990300}
   ch1ReviewStatements:
-  - Ch1_F
-  - Ch1_E
-  - Ch1_D
-  - Ch1_C
-  - Ch1_B
-  - Ch1_A
+  - 'Unacceptable performance. Your work is discreditable to our department.  '
+  - Unsatisfactory conduct. We will not accept this level of performance.
+  - Poor effort. We expect a certain level of merit from your work.
+  - Acceptable work. You are meeting the minimum performance required.
+  - Stellar performance! You have been showing great diligence in your work, but
+    there is still room for improvement.
+  - Excellent work! You are setting the standard for the rest of the department.
   ch2ReviewStatements:
-  - Ch2_F
-  - Ch2_E
-  - Ch2_D
-  - Ch2_C
-  - Ch2_B
-  - Ch2_A
+  - 'Unacceptable performance. Your work is discreditable to our department.  '
+  - Unsatisfactory conduct. We will not accept this level of performance.
+  - Poor effort. We expect a certain level of merit from your work.
+  - Acceptable work. You are meeting the minimum performance required.
+  - Stellar performance! You have been showing great diligence in your work, but
+    there is still room for improvement.
+  - Excellent work! You are setting the standard for the rest of the department.
   ch3ReviewStatements:
-  - Ch3_F
-  - Ch3_E
-  - Ch3_D
-  - Ch3_C
-  - Ch3_B
-  - Ch3_A
+  - "Intolerable conduct. Your work is dishonourable to THE PARTY\u2019s reputation."
+  - Deplorable work. THE PARTY deems this degree of performance as unacceptable.
+  - "Sub-standard performance. You are not fulfilling of THE PARTY\u2019s statutory
+    requirements."
+  - Adequate work. THE PARTY sees your efforts as mediocre.
+  - Exceptional performance. THE PARTY appreciates your labour hard work, however,
+    we believe you have not reached your full potential.
+  - Exemplary effort. You are a quintessential employee of THE PARTY.
   ch4ReviewStatements:
-  - Ch4_F
-  - Ch4_E
-  - Ch4_D
-  - Ch4_C
-  - Ch4_B
-  - Ch4_A
+  - "Intolerable conduct. Your work is dishonourable to THE PARTY\u2019s reputation."
+  - Deplorable work. THE PARTY deems this degree of performance as unacceptable.
+  - "Sub-standard performance. You are not fulfilling of THE PARTY\u2019s statutory
+    requirements."
+  - Adequate work. THE PARTY sees your efforts as mediocre.
+  - Exceptional performance. THE PARTY appreciates your labour hard work, however,
+    we believe you have not reached your full potential.
+  - Exemplary effort. You are a quintessential employee of THE PARTY.
 --- !u!114 &958383136
 MonoBehaviour:
   m_ObjectHideFlags: 0

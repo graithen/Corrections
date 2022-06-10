@@ -7,6 +7,8 @@ using TMPro;
 
 public class GameplayTracking : MonoBehaviour
 {
+    public bool triggerSuspicionEvents = false;
+
     [Header("Custom Components")]
     [SerializeField]
     private StoryManager storyManager;
@@ -83,7 +85,11 @@ public class GameplayTracking : MonoBehaviour
 
         weeklyCompletedCases++;
 
-        SuspicionEvents();
+        if(triggerSuspicionEvents)
+        {
+            SuspicionEvents();
+        }
+
         victimList.Add(Name);
     }
 

@@ -3810,22 +3810,27 @@ MonoBehaviour:
     emails: []
   - releaseDay: 8
     news: {fileID: 11400000, guid: fda9cb7f96797e843a63ec06975870a9, type: 2}
-    emails: []
+    emails:
+    - {fileID: 11400000, guid: 191ce21c7a049284597f127fe1a72d2a, type: 2}
   - releaseDay: 9
     news: {fileID: 11400000, guid: 1bd253b753aeef244adb6a09e30d5d3e, type: 2}
-    emails: []
+    emails:
+    - {fileID: 11400000, guid: 96cdb143dbad306459495b565dc9597c, type: 2}
   - releaseDay: 11
     news: {fileID: 11400000, guid: ba0a4374d5cf28b4595b90c944ab0bd0, type: 2}
-    emails: []
+    emails:
+    - {fileID: 11400000, guid: b3a4fe5eec32209419cf388396732a24, type: 2}
   - releaseDay: 13
     news: {fileID: 11400000, guid: 696a67b2dd4b4cc48b2e9c3d399b3020, type: 2}
-    emails: []
+    emails:
+    - {fileID: 11400000, guid: 606eec7e65ebfcd4e8a00e72b73b3b74, type: 2}
   - releaseDay: 13
     news: {fileID: 11400000, guid: 2a7c56892702f5349a392dccf24396ae, type: 2}
     emails: []
   - releaseDay: 14
     news: {fileID: 11400000, guid: be06189215c6e7944b19ab89981777c3, type: 2}
-    emails: []
+    emails:
+    - {fileID: 11400000, guid: 66e63d7d51b1b2e449105f9626f1272a, type: 2}
   - releaseDay: 15
     news: {fileID: 11400000, guid: 0ad496fb514bfd4418d5013d8b94e224, type: 2}
     emails: []
@@ -3834,16 +3839,21 @@ MonoBehaviour:
     emails: []
   - releaseDay: 16
     news: {fileID: 11400000, guid: 2dadc36091ec0314f9a28b1d5d4e6186, type: 2}
-    emails: []
+    emails:
+    - {fileID: 11400000, guid: fcf0c7a6a82a2de4b96b1ae290a75515, type: 2}
+    - {fileID: 11400000, guid: 02eeedc2e3d2fbb408dbaa6ab01d0bab, type: 2}
   - releaseDay: 17
     news: {fileID: 11400000, guid: d0f85925786e0a34a934b90c5cfba368, type: 2}
-    emails: []
+    emails:
+    - {fileID: 11400000, guid: fd288888b0de1b54f9fc373ecd46b732, type: 2}
   - releaseDay: 18
     news: {fileID: 11400000, guid: 89cc3bd77b760ce44b091023821b4add, type: 2}
-    emails: []
+    emails:
+    - {fileID: 11400000, guid: 126d5f1408c6a584282e608b744c022d, type: 2}
   - releaseDay: 18
     news: {fileID: 11400000, guid: 34a7a21f68a0de640b2640ddbbcfa782, type: 2}
-    emails: []
+    emails:
+    - {fileID: 11400000, guid: a2e697290d61bf44a9f65f16c4f8db11, type: 2}
   - releaseDay: 20
     news: {fileID: 11400000, guid: db3211b7d3013314582849bc025b60eb, type: 2}
     emails: []

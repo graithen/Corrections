@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
+  m_Name: StoryEmail 8 1
+  m_EditorClassIdentifier: 
+  sender: Ethan
+  subject: Bullying and Hate Speech
+  body: "Hey buddy,\r\n\r\nJust on the back of THE PARTY\u2019s latest announcement
+    to crack down on bullying and hate speech, I\u2019d slap a few extra years on
+    any sentences that involve negative speech. Will work wonders for your performance
+    rating!\r\n\r\nE\r\n"
+  sendDay: 0
+  sendHour: 10
+  sendMin: 0

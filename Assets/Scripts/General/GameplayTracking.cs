@@ -201,7 +201,7 @@ public class GameplayTracking : MonoBehaviour
     {
         endScreen.SetActive(true);
 
-        playerNameText.text = PlayerPrefs.GetString("PlayerName");
+        playerNameText.text = PlayerPrefs.GetString("PlayerFName") + " " + PlayerPrefs.GetString("PlayerSName");
 
         if (finalDayEnding)
         {

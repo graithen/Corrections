@@ -9040,7 +9040,9 @@ MonoBehaviour:
   backgroundImage: {fileID: 1458663666}
   gameNameText: {fileID: 1762514275}
   welcomeText: {fileID: 534852482}
-  nameInputField: {fileID: 1136608524}
+  fNameInputField: {fileID: 0}
+  sNameInputField: {fileID: 0}
+  ageInputField: {fileID: 0}
   warningText: {fileID: 1832977478}
   startButton: {fileID: 411259663}
 --- !u!1 &1483301008
@@ -12829,6 +12831,10 @@ PrefabInstance:
     - target: {fileID: 6779405796236597636, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
       propertyPath: m_Name
       value: TutorialCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779405796236597636, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6779405796236597656, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
       propertyPath: m_Pivot.x

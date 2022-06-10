@@ -77,7 +77,7 @@ public class PerformanceReview : MonoBehaviour
 
     private void UpdateUI()
     {
-        employeeNameText.text = PlayerPrefs.GetString("PlayerName");
+        employeeNameText.text = PlayerPrefs.GetString("PlayerFName") + " " + PlayerPrefs.GetString("PlayerSName");
 
         //Debug.Log(Grade);
         switch (Grade)

@@ -16,7 +16,11 @@ public class StartScreen : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI welcomeText;
     [SerializeField]
-    private TMP_InputField nameInputField;
+    private TMP_InputField fNameInputField;
+    [SerializeField]
+    private TMP_InputField sNameInputField;
+    [SerializeField]
+    private TMP_InputField ageInputField;
     [SerializeField]
     private TextMeshProUGUI warningText;
     [SerializeField]
@@ -29,23 +33,36 @@ public class StartScreen : MonoBehaviour
 
     public void StartGame()
     {
-        if(string.IsNullOrEmpty(nameInputField.text)) //Display Enter Name Message!
+        if(DetailsFilled()) //Display Enter Name Message!
         {
             warningText.gameObject.SetActive(true);
         }
         else //Start Game!
         {
-            PlayerPrefs.SetString("PlayerName", nameInputField.text);
+            PlayerPrefs.SetString("PlayerName", fNameInputField.text);
+            PlayerPrefs.SetString("PlayerSName", sNameInputField.text);
+            PlayerPrefs.SetString("PlayerAge", ageInputField.text);
+
             startButton.gameObject.SetActive(false);
             StartCoroutine(coStartAnim());
         }
+    }
+
+    private bool DetailsFilled()
+    {
+        if(string.IsNullOrEmpty(fNameInputField.text) || string.IsNullOrEmpty(sNameInputField.text) || string.IsNullOrEmpty(ageInputField.text))
+        {
+            return false;
+        }
+
+        return true;
     }
 
     private IEnumerator coStartAnim()
     {
         gameNameText.gameObject.SetActive(false);
         welcomeText.gameObject.SetActive(false);
-        nameInputField.gameObject.SetActive(false);
+        fNameInputField.gameObject.SetActive(false);
         warningText.gameObject.SetActive(false);
 
         while(backgroundImage.color.a > 0)

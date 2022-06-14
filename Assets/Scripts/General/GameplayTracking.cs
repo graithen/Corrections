@@ -27,6 +27,10 @@ public class GameplayTracking : MonoBehaviour
     private TextMeshProUGUI playerNameTextWarCrimes;
     [SerializeField]
     private Text victimListTextWarCrimes;
+    [SerializeField]
+    private TextMeshProUGUI playerNameTextRapSheet;
+    [SerializeField]
+    private Text crimesListRapSheet;
 
     [Header("Values")]
     public int suspicionRating = 0;
@@ -36,9 +40,8 @@ public class GameplayTracking : MonoBehaviour
     private int suspicionEventIndex = 0;
 
     private List<string> victimList = new List<string>();
-    // Start is called before the first frame update
-
     public List<string> VictimStatus = new List<string> { "Beaten to death by guards", "Died of starvation"};
+    public List<string> crimesList = new List<string>();
 
     [Header("Performance Stats")]
     public int completedDays = 0;
@@ -98,17 +101,14 @@ public class GameplayTracking : MonoBehaviour
         {
             SuspicionEvents();
         }
-
-        if (Punishment > 2)
-        {
-            victimList.Add(Name);
-        }
-
+     
         if (storyManager.currentChapter == StoryManager.Chapter.Three || storyManager.currentChapter == StoryManager.Chapter.Four)
         {
-            
-        }
-        
+            if (Punishment > 2)
+            {
+                victimList.Add(Name);
+            }
+        }    
     }
 
     private void DetermineExpectedClearance()
@@ -236,7 +236,16 @@ public class GameplayTracking : MonoBehaviour
         else
         {
             rapSheet.SetActive(true);
+            playerNameTextRapSheet.text = PlayerPrefs.GetString("PlayerFName") + " " + PlayerPrefs.GetString("PlayerSName");
 
+            string crimes = "";
+            for (int i = 0; i < 5; i++)
+            {
+                int temp = Random.Range(0, crimesList.Count);
+                crimes += crimesList[temp] + "\n";
+                crimesList.Remove(crimesList[temp]);
+            }
+            crimesListRapSheet.text = crimes;
         }
     }
 

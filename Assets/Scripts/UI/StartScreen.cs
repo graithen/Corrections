@@ -8,6 +8,8 @@ public class StartScreen : MonoBehaviour
 {
     [SerializeField]
     private DateTimeSystem dateTimeSystem;
+    [SerializeField]
+    private TutorialManager tutorialManager;
 
     [SerializeField]
     private Image backgroundImage;
@@ -77,6 +79,9 @@ public class StartScreen : MonoBehaviour
         //Debug.Log(PlayerPrefs.GetString("FName: " + "PlayerFName"));
         //Debug.Log(PlayerPrefs.GetString("SName: " + "PlayerSName"));
         //Debug.Log(PlayerPrefs.GetString("Age: " + "PlayerAge"));
+        yield return new WaitForSeconds(0.5f);
+
+        tutorialManager.EnableTutorialCanvas(true);
         backgroundImage.gameObject.SetActive(false);
     }
 }

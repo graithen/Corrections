@@ -14,7 +14,11 @@ public class TutorialManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> instructions;
     [SerializeField]
-    private GameObject nextButton; 
+    private List<Vector2> maskPosition;
+    [SerializeField]
+    private GameObject nextButton;
+    [SerializeField]
+    private RectTransform maskHole;
 
     private int currInstructionIndex;
 
@@ -24,8 +28,9 @@ public class TutorialManager : MonoBehaviour
         dateTimeSystem.Pause();
         if (enable)
         {
+            nextButton.SetActive(true);
             currInstructionIndex = 0;
-            EnableInstruction(currInstructionIndex);      
+            EnableInstruction(currInstructionIndex);
         }
     }
 
@@ -48,6 +53,7 @@ public class TutorialManager : MonoBehaviour
             if (i == currInstructionIndex)
             {
                 instructions[i].SetActive(true);
+                maskHole.anchoredPosition = maskPosition[i];
             }
             else
             {

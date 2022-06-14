@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class GameplayTracking : MonoBehaviour
@@ -19,9 +20,13 @@ public class GameplayTracking : MonoBehaviour
     [SerializeField]
     private GameObject endScreen;
     [SerializeField]
-    private TextMeshProUGUI playerNameText;
+    private GameObject warCrimes;
     [SerializeField]
-    private TextMeshProUGUI victimListText;
+    private GameObject rapSheet;
+    [SerializeField]
+    private TextMeshProUGUI playerNameTextWarCrimes;
+    [SerializeField]
+    private Text victimListTextWarCrimes;
 
     [Header("Values")]
     public int suspicionRating = 0;
@@ -94,12 +99,14 @@ public class GameplayTracking : MonoBehaviour
             SuspicionEvents();
         }
 
-        if(storyManager.currentChapter == StoryManager.Chapter.Three || storyManager.currentChapter == StoryManager.Chapter.Four)
+        if (Punishment > 2)
         {
-            if(Punishment > 2)
-            {
-                victimList.Add(Name);
-            }
+            victimList.Add(Name);
+        }
+
+        if (storyManager.currentChapter == StoryManager.Chapter.Three || storyManager.currentChapter == StoryManager.Chapter.Four)
+        {
+            
         }
         
     }
@@ -212,29 +219,24 @@ public class GameplayTracking : MonoBehaviour
     {
         endScreen.SetActive(true);
 
-        playerNameText.text = PlayerPrefs.GetString("PlayerFName") + " " + PlayerPrefs.GetString("PlayerSName");
 
         if (finalDayEnding)
         {
-            //Do Stuff for Final Day Ending!
-            string victimNames = "";
+            warCrimes.SetActive(true);
+            playerNameTextWarCrimes.text = PlayerPrefs.GetString("PlayerFName") + " " + PlayerPrefs.GetString("PlayerSName");
 
+            string victimNames = "";
             foreach(string name in victimList)
             {
-                victimNames += name + ": " + VictimStatus[Random.Range(0, VictimStatus.Count)] + "\n";
+                string details = name + ": " + VictimStatus[Random.Range(0, VictimStatus.Count)];
+                victimNames += details + "\n";
             }
-
-
-
-            //Show Rap Sheet of Yourself
-            //List Victims - People you Wrongly Sentenced
+            victimListTextWarCrimes.text = victimNames;
         }
-        else //If you get an F
+        else
         {
-            //Do Stuff for Other Ending!
+            rapSheet.SetActive(true);
 
-            //Show Rap Sheet of Yourself 
-            //Crimes Against THE PARTY
         }
     }
 

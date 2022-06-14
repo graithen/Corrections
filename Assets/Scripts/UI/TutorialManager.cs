@@ -13,6 +13,8 @@ public class TutorialManager : MonoBehaviour
     private GameObject tutorialCanvas;
     [SerializeField]
     private List<GameObject> instructions;
+    [SerializeField]
+    private GameObject nextButton; 
 
     private int currInstructionIndex;
 
@@ -30,12 +32,13 @@ public class TutorialManager : MonoBehaviour
     public void NextInstruction()
     {
         currInstructionIndex++;
-        if (currInstructionIndex >= instructions.Count - 1)
+        if (currInstructionIndex == instructions.Count - 1)
         {
-            currInstructionIndex = 0;
+            //currInstructionIndex = 0;
+            nextButton.SetActive(false);
         }
-        EnableInstruction(currInstructionIndex);
 
+        EnableInstruction(currInstructionIndex);
     }
 
     private void EnableInstruction(int currIndex)

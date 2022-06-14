@@ -20,6 +20,8 @@ public class GameplayTracking : MonoBehaviour
     private GameObject endScreen;
     [SerializeField]
     private TextMeshProUGUI playerNameText;
+    [SerializeField]
+    private TextMeshProUGUI victimListText;
 
     [Header("Values")]
     public int suspicionRating = 0;
@@ -30,6 +32,8 @@ public class GameplayTracking : MonoBehaviour
 
     private List<string> victimList = new List<string>();
     // Start is called before the first frame update
+
+    public List<string> VictimStatus = new List<string> { "Beaten to death by guards", "Died of starvation"};
 
     [Header("Performance Stats")]
     public int completedDays = 0;
@@ -90,7 +94,14 @@ public class GameplayTracking : MonoBehaviour
             SuspicionEvents();
         }
 
-        victimList.Add(Name);
+        if(storyManager.currentChapter == StoryManager.Chapter.Three || storyManager.currentChapter == StoryManager.Chapter.Four)
+        {
+            if(Punishment > 2)
+            {
+                victimList.Add(Name);
+            }
+        }
+        
     }
 
     private void DetermineExpectedClearance()
@@ -206,6 +217,14 @@ public class GameplayTracking : MonoBehaviour
         if (finalDayEnding)
         {
             //Do Stuff for Final Day Ending!
+            string victimNames = "";
+
+            foreach(string name in victimList)
+            {
+                victimNames += name + ": " + VictimStatus[Random.Range(0, VictimStatus.Count)] + "\n";
+            }
+
+
 
             //Show Rap Sheet of Yourself
             //List Victims - People you Wrongly Sentenced

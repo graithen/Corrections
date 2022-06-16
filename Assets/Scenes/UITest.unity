@@ -6836,6 +6836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9b75f4d80293f40bbb8b9dcaf5c853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameplayTracking: {fileID: 958383136}
   TimeUI: {fileID: 1252668117}
   DateUI: {fileID: 256136774}
   timeFormat: 0

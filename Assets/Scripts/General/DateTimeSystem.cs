@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class DateTimeSystem : MonoBehaviour
 {
+    public GameplayTracking gameplayTracking;
+
     [Header("Time Settings")]
     public TextMeshProUGUI TimeUI;
     public TextMeshProUGUI DateUI;
@@ -276,7 +278,7 @@ public class DateTimeSystem : MonoBehaviour
     }
 
     void CalculateDay()
-    {
+    {    
         switch (DayIndex)
         {
             case 1:
@@ -287,6 +289,10 @@ public class DateTimeSystem : MonoBehaviour
             case 2:
                 {
                     CurrentDay = DayOfWeek.Tuesday;
+                    if (gameplayTracking.completedDays > 2)
+                    {
+                        PerformanceReview.Invoke(); //invoke the performance review
+                    }
                     break;
                 }
             case 3:
@@ -297,17 +303,24 @@ public class DateTimeSystem : MonoBehaviour
             case 4:
                 {
                     CurrentDay = DayOfWeek.Thursday;
+                    if (gameplayTracking.completedDays > 2)
+                    {
+                        PerformanceReview.Invoke(); //invoke the performance review
+                    }
                     break;
                 }
             case 5:
                 {
                     CurrentDay = DayOfWeek.Friday;
-                    PerformanceReview.Invoke(); //invoke the performance review
                     break;
                 }
             case 6:
                 {
                     CurrentDay = DayOfWeek.Saturday;
+                    if (gameplayTracking.completedDays > 2)
+                    {
+                        PerformanceReview.Invoke(); //invoke the performance review
+                    }
                     break;
                 }
             case 7:
@@ -316,9 +329,9 @@ public class DateTimeSystem : MonoBehaviour
                     break;
                 }
         }
-        
+
         DayIndex++;
-        
+
         if (DayIndex > 7)
             DayIndex = 1;
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class TutorialManager : MonoBehaviour
     private List<Vector2> maskPosition;
     [SerializeField]
     private GameObject nextButton;
+    [SerializeField]
+    private GameObject finishButton;
     [SerializeField]
     private RectTransform maskHole;
 
@@ -41,6 +44,12 @@ public class TutorialManager : MonoBehaviour
         {
             //currInstructionIndex = 0;
             nextButton.SetActive(false);
+            finishButton.SetActive(true);
+        }
+        else
+        {
+            nextButton.SetActive(true);
+            finishButton.SetActive(false);
         }
 
         EnableInstruction(currInstructionIndex);

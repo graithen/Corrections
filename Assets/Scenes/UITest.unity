@@ -2769,6 +2769,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2642480104111172027, guid: f5cbebf6970412b4f932ecd35f3eff86, type: 3}
   m_PrefabInstance: {fileID: 734719933}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &410985292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6618907842976048508, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
+  m_PrefabInstance: {fileID: 6779405795763074378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &411259661
 GameObject:
   m_ObjectHideFlags: 0
@@ -7271,6 +7276,7 @@ MonoBehaviour:
   - {x: 90, y: -204}
   - {x: 90, y: -420}
   nextButton: {fileID: 561353233}
+  finishButton: {fileID: 410985292}
   maskHole: {fileID: 1174910942}
 --- !u!114 &958383141
 MonoBehaviour:
@@ -16428,14 +16434,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 694194572, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 694194572, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3540846873535133776, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16528,6 +16526,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7204304318231688893, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 958383140}
     - target: {fileID: 7658026673638230623, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -18,6 +18,8 @@ public class NewsManager : MonoBehaviour
     private Scrollbar verticalScroll;
     [SerializeField]
     private GameObject noNewsText;
+    [SerializeField]
+    private GameObject breakingNewsText;
 
     [Header("Custom Components")]
     [SerializeField]
@@ -128,6 +130,7 @@ public class NewsManager : MonoBehaviour
                     GameObject newsTweet = Instantiate(newsPrefab, newsContainer);
                     newsTweet.GetComponent<TweetUI>().Populate(thisArticle.title, thisArticle.body);
                     newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+                    breakingNewsText.SetActive(true);
                 }
 
                 verticalScroll.value = 0;

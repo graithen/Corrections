@@ -6837,6 +6837,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameplayTracking: {fileID: 958383136}
+  newsManager: {fileID: 604082767}
+  emailManager: {fileID: 604082768}
   TimeUI: {fileID: 1252668117}
   DateUI: {fileID: 256136774}
   timeFormat: 0

@@ -69,6 +69,7 @@ public class EmailManager : MonoBehaviour
                 if(dateTimeSystem.TimeGet == dateTimeSystem.IntToStringTime(todaysEmails[i].sendHour, todaysEmails[i].sendMin))
                 {
                     NewEmailButton(todaysEmails[i]);
+                    todaysEmails.Remove(todaysEmails[i]);
 
                     if (!emailButtonHolder.gameObject.activeInHierarchy)
                     {
@@ -109,6 +110,22 @@ public class EmailManager : MonoBehaviour
         else
         {
             noEmailsText.SetActive(true);
+        }
+    }
+
+    public void SendRemainingEmailsForToday()
+    {
+        if(todaysEmails.Count > 0)
+        {
+            for (int i = 0; i < todaysEmails.Count; i++)
+            {
+                NewEmailButton(todaysEmails[i]);
+
+                if (!emailButtonHolder.gameObject.activeInHierarchy)
+                {
+                    newEmailNotif.SetActive(true);
+                }
+            }
         }
     }
 }

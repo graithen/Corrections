@@ -131,6 +131,7 @@ public class NewsManager : MonoBehaviour
                 }
 
                 verticalScroll.value = 0;
+                finalNewsFeed.Remove(dateTimeSystem.TimeGet);
             }
         }
 
@@ -147,5 +148,33 @@ public class NewsManager : MonoBehaviour
         {
             noNewsText.SetActive(true);
         }
+    }
+
+    public void PublishRemainingNewsArticlesForToday()
+    {
+        if (finalNewsFeed != null)
+        {
+            foreach(NewsData newsArticle in finalNewsFeed.Values)
+            {
+                if(string.IsNullOrEmpty(newsArticle.body))
+                {
+                    GameObject newsTweet = Instantiate(fluffNewsPrefab, newsContainer);
+                    newsTweet.GetComponent<TweetUI>().Populate(newsArticle.title, newsArticle.body);
+                    newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, fluffNewsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+                }
+                else
+                {
+                    GameObject newsTweet = Instantiate(newsPrefab, newsContainer);
+                    newsTweet.GetComponent<TweetUI>().Populate(newsArticle.title, newsArticle.body);
+                    newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+                }
+
+
+            }
+
+            verticalScroll.value = 0;
+        }
+
+        UpdateNoNewsText();
     }
 }

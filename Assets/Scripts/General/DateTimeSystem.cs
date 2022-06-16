@@ -7,6 +7,8 @@ using UnityEngine.Events;
 public class DateTimeSystem : MonoBehaviour
 {
     public GameplayTracking gameplayTracking;
+    public NewsManager newsManager;
+    public EmailManager emailManager;
 
     [Header("Time Settings")]
     public TextMeshProUGUI TimeUI;
@@ -365,6 +367,9 @@ public class DateTimeSystem : MonoBehaviour
 
     public void EndDay()
     {
+        newsManager.PublishRemainingNewsArticlesForToday();
+        emailManager.SendRemainingEmailsForToday();
+
         min = 59;
         hr = maxHr - 1;
     }

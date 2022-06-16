@@ -140,6 +140,11 @@ public class CaseManager : MonoBehaviour
 
     private IEnumerator Submit()
     {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<Button>().enabled = false;
+        }
+
         SubmitButton.SetActive(false);
 
         SentenceGFX.SetActive(true);
@@ -189,6 +194,11 @@ public class CaseManager : MonoBehaviour
         {
             contentScreen.GetComponent<RectTransform>().offsetMax += new Vector2(Time.deltaTime * caseWipeAnimSpeed, 0);
             yield return null;
+        }
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<Button>().enabled = true;
         }
         //Debug.Log("Finished Open Anim!");
     }

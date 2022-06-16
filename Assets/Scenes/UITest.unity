@@ -557,7 +557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next Day!
+  m_text: Go To Work!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -799,7 +799,6 @@ GameObject:
   - component: {fileID: 94275096}
   - component: {fileID: 94275098}
   - component: {fileID: 94275097}
-  - component: {fileID: 94275099}
   m_Layer: 0
   m_Name: DayEndScreen
   m_TagString: Untagged
@@ -867,20 +866,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94275095}
   m_CullTransparentMesh: 1
---- !u!114 &94275099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 94275095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8024122dbdd2c3c4bad896a046c60c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameplayTracking: {fileID: 958383136}
-  dayEndText: {fileID: 1563432052}
 --- !u!1 &120785757
 GameObject:
   m_ObjectHideFlags: 0
@@ -6727,6 +6712,7 @@ GameObject:
   - component: {fileID: 958383136}
   - component: {fileID: 958383135}
   - component: {fileID: 958383140}
+  - component: {fileID: 958383141}
   m_Layer: 0
   m_Name: GameplayController
   m_TagString: Untagged
@@ -6955,10 +6941,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 94275095}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 958383141}
+        m_TargetAssemblyTypeName: DayEndScreen, Assembly-CSharp
+        m_MethodName: ActivateDayEndScreen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7286,6 +7272,21 @@ MonoBehaviour:
   - {x: 90, y: -420}
   nextButton: {fileID: 561353233}
   maskHole: {fileID: 1174910942}
+--- !u!114 &958383141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958383134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8024122dbdd2c3c4bad896a046c60c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayEndScreen: {fileID: 94275097}
+  dayEndText: {fileID: 1563432052}
+  dayEndButton: {fileID: 1562169194}
 --- !u!1 &958883226
 GameObject:
   m_ObjectHideFlags: 0
@@ -11755,7 +11756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1562169193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11833,10 +11834,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 94275095}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 958383141}
+        m_TargetAssemblyTypeName: DayEndScreen, Assembly-CSharp
+        m_MethodName: DeactivateDayEndScreen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11900,7 +11901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1563432051
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11941,7 +11942,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Day is OVER!
+  m_text: A Few Days Later ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16427,6 +16428,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 694194572, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 694194572, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3540846873535133776, guid: d2c5d6db9e70e3d4da5518aa3005fb64, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

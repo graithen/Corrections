@@ -73,9 +73,6 @@ public class CaseManager : MonoBehaviour
     [SerializeField]
     private Scrollbar verticalScroll;
 
-    public int caseWipeAnimSpeed = 2500;
-    public int sentencedAnimSpeed = 100;
-
     private void Start()
     {
         workloadGenerator = FindObjectOfType<WorkloadGenerator>();
@@ -146,28 +143,10 @@ public class CaseManager : MonoBehaviour
 
     private IEnumerator Submit()
     {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).GetComponent<Button>().enabled = false;
-        }
-
         SubmitButton.SetActive(false);
-
         SentenceGFX.SetActive(true);
-        SentenceGFX.GetComponent<RectTransform>().localScale = new Vector3(10, 10, 10);
-        while (SentenceGFX.GetComponent<RectTransform>().localScale.x > 1)
-        {
-            SentenceGFX.GetComponent<RectTransform>().localScale -= new Vector3(Time.deltaTime * sentencedAnimSpeed, Time.deltaTime * sentencedAnimSpeed, Time.deltaTime * sentencedAnimSpeed);
-            yield return null;
-        }
-        SentenceGFX.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
-        while (contentScreen.GetComponent<RectTransform>().offsetMax.magnitude < 1800)
-        {
-            contentScreen.GetComponent<RectTransform>().offsetMax -= new Vector2(Time.deltaTime * caseWipeAnimSpeed, 0);
-            yield return null;
-        }
-        //Debug.Log("Finished Close Anim!");
+        yield return new WaitForSeconds(1.5f);
 
         CheckSentenceDropdown();
 
@@ -195,18 +174,6 @@ public class CaseManager : MonoBehaviour
         verticalScroll.value = 1;
         SentenceGFX.SetActive(false);
         SubmitButton.SetActive(true);
-
-        while (contentScreen.GetComponent<RectTransform>().offsetMax.x < 0)
-        {
-            contentScreen.GetComponent<RectTransform>().offsetMax += new Vector2(Time.deltaTime * caseWipeAnimSpeed, 0);
-            yield return null;
-        }
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).GetComponent<Button>().enabled = true;
-        }
-        //Debug.Log("Finished Open Anim!");
     }
 
     private void PopulateSentenceDropdown()

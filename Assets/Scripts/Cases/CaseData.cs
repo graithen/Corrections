@@ -11,6 +11,8 @@ public struct CaseData
     private int age;
     public string Gender { get { return gender; } set { gender = value; } }
     private string gender;
+    public string Occupation { get { return occupation; } set { occupation = value; } }
+    private string occupation;
 
     //Gameplay information
     private string infraction;

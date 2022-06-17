@@ -11,7 +11,7 @@ public class WorkloadGenerator : MonoBehaviour
 
     [SerializeField]
     private CharacterGeneration CharGen;
-    public Dictionary<int, (string, string, int, bool)> CharacterPool;
+    public Dictionary<int, (string, string, int, bool, string)> CharacterPool;
 
     public List<string> Infractions1, Infractions2, Infractions3, Infractions4, Infractions5;
 
@@ -97,7 +97,7 @@ public class WorkloadGenerator : MonoBehaviour
     {
         CaseData newCase = new CaseData();
 
-        (string, string, int, bool) Character;
+        (string, string, int, bool, string) Character;
         CharacterPool.TryGetValue(CharacterID, out Character);
 
         newCase.SecondName = Character.Item1;
@@ -124,7 +124,7 @@ public class WorkloadGenerator : MonoBehaviour
     {
         CaseData newCase = new CaseData();
 
-        (string, string, int, bool) Character;
+        (string, string, int, bool, string) Character;
         CharacterPool.TryGetValue(CharacterID, out Character);
 
         newCase.SecondName = Character.Item1;

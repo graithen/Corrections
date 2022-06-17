@@ -9,15 +9,16 @@ public class CharacterGeneration
     public TextAsset MaleNames;
     public TextAsset FemaleNames;
     public TextAsset SecondNames;
+    public TextAsset Occupations;
 
     [Header("Generation Settings")]
     private int numberOfCharacters = 100;
     public int NumberOfCharacters { get { return numberOfCharacters; } set { numberOfCharacters = value; } }
 
-    Dictionary<int, (string, string, int, bool)> Characters = new Dictionary<int, (string, string, int, bool)>(); //Dictionary with tuples (Surname, First Name, Age, Is Male?)
+    Dictionary<int, (string, string, int, bool, string)> Characters = new Dictionary<int, (string, string, int, bool, string)>(); //Dictionary with tuples (Surname, First Name, Age, Is Male?)
 
     //Loaded Data
-    public string[] MaleNameList, FemaleNameList, SecondNameList;
+    public string[] MaleNameList, FemaleNameList, SecondNameList, OccupationsList;
 
     public void InitializeData()
     {
@@ -31,9 +32,12 @@ public class CharacterGeneration
 
         text = SecondNames.ToString();
         SecondNameList = text.Split('\n');
+
+        text = Occupations.ToString();
+        OccupationsList = text.Split('\n');
     }
 
-    public Dictionary<int, (string, string, int, bool)> GenerateCharacters()
+    public Dictionary<int, (string, string, int, bool, string)> GenerateCharacters()
     {
         for (int i = 0; i < NumberOfCharacters; i++)
         {
@@ -41,6 +45,7 @@ public class CharacterGeneration
             string secondName = "";
             int age = 28;
             bool isMale = true;
+            string occupation = "";
 
             //Roll Gender - 30% chance is female
             int rand = Random.Range(0, 100);
@@ -62,8 +67,9 @@ public class CharacterGeneration
             secondName = SecondNameList[Random.Range(0, SecondNameList.Length - 1)];
             age = Random.Range(14, 65);
             
+            occupation = OccupationsList[Random.Range(0, OccupationsList.Length - 1)];
             
-            Characters.Add(i, (secondName, firstName, age, isMale));
+            Characters.Add(i, (secondName, firstName, age, isMale, occupation));
         }
 
         return Characters;

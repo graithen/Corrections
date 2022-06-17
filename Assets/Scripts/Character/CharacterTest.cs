@@ -8,7 +8,7 @@ public class CharacterTest : MonoBehaviour
     [SerializeField]
     private CharacterGeneration CharGen;
 
-    public Dictionary<int, (string, string, int, bool)> CharacterPool;
+    public Dictionary<int, (string, string, int, bool, string)> CharacterPool;
 
     private int CharacterID = 0;
     private string SecondName;
@@ -59,7 +59,7 @@ public class CharacterTest : MonoBehaviour
 
     private void GetCharacterInfo()
     {
-        (string, string, int, bool) Character;
+        (string, string, int, bool, string) Character;
         CharacterPool.TryGetValue(CharacterID, out Character);
 
         FirstName = Character.Item1;

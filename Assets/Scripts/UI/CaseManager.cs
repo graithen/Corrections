@@ -89,14 +89,20 @@ public class CaseManager : MonoBehaviour
         noCasesRightNowText.gameObject.SetActive(false);
         endDayButton.gameObject.SetActive(false);
 
+        string caseID = "COR-";
+        for(int i = 0; i < 10; i++)
+        {
+            caseID += Random.Range(0, 9);
+        }
+
         currCaseIndex = index;
         //Update UI Elements within container here
         //picture = todaysCases[index];
         fName.text = todaysCases[index].FirstName;
         sName.text = todaysCases[index].SecondName;
         DoB.text = todaysCases[index].Age.ToString();
-        //iDNumber.text = todaysCases[index];
-        //occupation.text = todaysCases[index];
+        iDNumber.text = caseID;
+        occupation.text = todaysCases[index].Occupation;
         infractionDetails.text = ListToString(todaysCases[index].InfractionDetails);
         infractionNotes.text = todaysCases[index].InfractionNotes;
 

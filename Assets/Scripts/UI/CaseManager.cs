@@ -29,6 +29,9 @@ public class CaseManager : MonoBehaviour
     [SerializeField]
     private List<string> chapterFourSentences;
 
+    [SerializeField]
+    private List<Sprite> characterImages;
+
     private WorkloadGenerator workloadGenerator;
     private GameplayTracking gameplayTracking;
     private StoryManager storyManager;
@@ -94,7 +97,7 @@ public class CaseManager : MonoBehaviour
 
         currCaseIndex = index;
         //Update UI Elements within container here
-        //picture = todaysCases[index];
+        picture.sprite = PickImageRandomlyFromList();
         fName.text = todaysCases[index].FirstName;
         sName.text = todaysCases[index].SecondName;
         DoB.text = todaysCases[index].Age.ToString();
@@ -283,5 +286,11 @@ public class CaseManager : MonoBehaviour
         }
 
         return thisSentence;
+    }
+
+    private Sprite PickImageRandomlyFromList()
+    {
+        Sprite image = characterImages[Random.Range(0,characterImages.Count-1)];
+        return image;
     }
 }

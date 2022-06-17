@@ -112,6 +112,7 @@ public class WorkloadGenerator : MonoBehaviour
         {
             newCase.Gender = "Female";
         }
+        newCase.Occupation = Character.Item5;
 
         newCase.InfractionDetails = GenerateInfraction(useChapters);
         newCase.InfractionLevel = CalculateInfractionLevel(newCase.InfractionDetails);

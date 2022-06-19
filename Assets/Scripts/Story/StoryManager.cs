@@ -29,6 +29,8 @@ public class StoryManager : MonoBehaviour
     private NewsManager newsManager;
     [SerializeField]
     private EmailManager emailManager;
+    [SerializeField]
+    private AudioManager audioManager;
 
     [Header("Stories")]
     [SerializeField]
@@ -59,6 +61,8 @@ public class StoryManager : MonoBehaviour
         {
             currentChapter = Chapter.Four;
         }
+
+        audioManager.PlayBGM(currentChapter);
     }
 
     //private void InitStoryDictionary()

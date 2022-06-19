@@ -29,8 +29,11 @@ public class CaseManager : MonoBehaviour
     [SerializeField]
     private List<string> chapterFourSentences;
 
-    [SerializeField]
     private List<Sprite> characterImages;
+    [SerializeField]
+    private List<Sprite> femaleCharacterImages;
+    [SerializeField]
+    private List<Sprite> maleCharacterImages;
 
     private WorkloadGenerator workloadGenerator;
     private GameplayTracking gameplayTracking;
@@ -97,7 +100,7 @@ public class CaseManager : MonoBehaviour
 
         currCaseIndex = index;
         //Update UI Elements within container here
-        picture.sprite = PickImageRandomlyFromList();
+        picture.sprite = PickImageRandomlyFromList(todaysCases[index].Gender);
         fName.text = todaysCases[index].FirstName;
         sName.text = todaysCases[index].SecondName;
         DoB.text = todaysCases[index].Age.ToString();
@@ -288,8 +291,17 @@ public class CaseManager : MonoBehaviour
         return thisSentence;
     }
 
-    private Sprite PickImageRandomlyFromList()
+    private Sprite PickImageRandomlyFromList(string gender)
     {
+        if(gender == "Male")
+        {
+            characterImages = maleCharacterImages;
+        }
+        else if(gender == "Female")
+        {
+            characterImages = femaleCharacterImages;
+        }
+
         Sprite image = characterImages[Random.Range(0,characterImages.Count-1)];
         return image;
     }

@@ -47,9 +47,9 @@ public class CharacterGeneration
             bool isMale = true;
             string occupation = "";
 
-            //Roll Gender - 30% chance is female
+            //Roll Gender - 50% chance is female
             int rand = Random.Range(0, 100);
-            if(rand < 30)
+            if(rand < 50)
             {
                 isMale = false;
             }
@@ -65,7 +65,7 @@ public class CharacterGeneration
             }
 
             secondName = SecondNameList[Random.Range(0, SecondNameList.Length - 1)];
-            age = Random.Range(14, 65);
+            age = Random.Range(18, 65);
             
             occupation = OccupationsList[Random.Range(0, OccupationsList.Length - 1)];
             

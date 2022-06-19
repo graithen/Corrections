@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3715ddd9e65704fac04c0ad11f531d, type: 3}
+  m_Name: Chapter3
+  m_EditorClassIdentifier: 
+  alienClip: {fileID: 8300000, guid: 68475c3dc54ff4343a38e1d3aea8cd76, type: 3}
+  bassClip: {fileID: 8300000, guid: 71ad13c891d15b441a0b7a21983fcceb, type: 3}
+  kickClip: {fileID: 8300000, guid: 965075ac1cb43de45aa938ffc430c0d8, type: 3}
+  pianoClip: {fileID: 8300000, guid: 0aa180a045770f34ca027f322211e7cb, type: 3}
+  celloClip: {fileID: 0}

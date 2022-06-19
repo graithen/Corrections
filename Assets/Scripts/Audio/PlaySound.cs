@@ -9,6 +9,6 @@ public class PlaySound : MonoBehaviour
 
     public void PlayAudio()
     {
-        AudioManager.PlayAudio(Audio);
+        AudioManager.PlayUIAudio(Audio);
     }
 }

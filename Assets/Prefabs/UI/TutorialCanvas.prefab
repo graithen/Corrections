@@ -884,6 +884,7 @@ GameObject:
   - component: {fileID: 4781286182955979571}
   - component: {fileID: 7630202513749824069}
   - component: {fileID: 7658026673638230623}
+  - component: {fileID: 2593985205257500538}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -995,10 +996,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
-        m_MethodName: EnableTutorialCanvas
-        m_Mode: 6
+      - m_Target: {fileID: 2593985205257500538}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1007,6 +1008,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2593985205257500538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104302672187505401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c4d869f0a1b564bb2d849af2f03135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Audio: {fileID: 8300000, guid: 342037a090f75db49a9de4a9e11652f4, type: 3}
 --- !u!1 &5290385983997578275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,6 +1244,7 @@ GameObject:
   - component: {fileID: 5167184358367462083}
   - component: {fileID: 4953533134358622371}
   - component: {fileID: 7204304318231688893}
+  - component: {fileID: 2055720905739847261}
   m_Layer: 5
   m_Name: FinishButton
   m_TagString: Untagged
@@ -1340,10 +1355,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
-        m_MethodName: EnableTutorialCanvas
-        m_Mode: 6
+      - m_Target: {fileID: 2055720905739847261}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1352,6 +1367,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2055720905739847261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6618907842976048508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c4d869f0a1b564bb2d849af2f03135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Audio: {fileID: 8300000, guid: 342037a090f75db49a9de4a9e11652f4, type: 3}
 --- !u!1 &6779405796236597636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1860,7 @@ GameObject:
   - component: {fileID: 7241293184987705749}
   - component: {fileID: 8626551357763386432}
   - component: {fileID: 3540846873535133776}
+  - component: {fileID: 5815512973237533815}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -1942,9 +1971,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
-        m_MethodName: NextInstruction
+      - m_Target: {fileID: 5815512973237533815}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: PlayAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1954,6 +1983,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5815512973237533815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712371164037761354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c4d869f0a1b564bb2d849af2f03135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Audio: {fileID: 8300000, guid: 342037a090f75db49a9de4a9e11652f4, type: 3}
 --- !u!1 &8997948190710176784
 GameObject:
   m_ObjectHideFlags: 0

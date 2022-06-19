@@ -5,10 +5,15 @@ using UnityEngine;
 public class PlaySound : MonoBehaviour
 {
     public AudioClip Audio;
-    public AudioManager AudioManager;
+    private AudioManager audioManager;
+
+    private void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
 
     public void PlayAudio()
     {
-        AudioManager.PlayUIAudio(Audio);
+        audioManager.PlayUIAudio(Audio);
     }
 }

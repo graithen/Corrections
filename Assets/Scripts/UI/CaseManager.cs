@@ -75,9 +75,15 @@ public class CaseManager : MonoBehaviour
     private Button endDayButton;
 
     [SerializeField]
+    private Image processingPanel;
+
+    [SerializeField]
     private TMP_Dropdown sentenceDropdown;
     [SerializeField]
     private Scrollbar verticalScroll;
+
+    [SerializeField]
+    private float sentencedAnimSpeed = 50;
 
     private void Start()
     {
@@ -152,13 +158,27 @@ public class CaseManager : MonoBehaviour
         SubmitButton.SetActive(false);
         SentenceGFX.SetActive(true);
 
-        yield return new WaitForSeconds(1.5f);
+        SentenceGFX.transform.localScale = Vector3.one * 10;
+        while(SentenceGFX.transform.localScale.x > 1)
+        {
+            SentenceGFX.transform.localScale -= Vector3.one * Time.deltaTime * sentencedAnimSpeed;
+            yield return null;
+        }
+        SentenceGFX.transform.localScale = Vector3.one;
 
+        processingPanel.gameObject.SetActive(true);
+        processingPanel.color = new Color(0, 0, 0, 0);
+        while (processingPanel.color.a < 0.8f)
+        {
+            processingPanel.color += new Color(0, 0, 0, Time.deltaTime * 10);
+            yield return null;
+        }
+        yield return new WaitForSeconds(0.5f);
         CheckSentenceDropdown();
 
         todaysCases.RemoveAt(currCaseIndex);
         Destroy(transform.GetChild(currCaseIndex).gameObject);
-      
+        
         if (todaysCases.Count > 0)
         {
             for (int i = 0; i < transform.childCount; i++)
@@ -177,9 +197,10 @@ public class CaseManager : MonoBehaviour
             endDayButton.gameObject.SetActive(true);
         }
 
-        verticalScroll.value = 1;
+        //verticalScroll.value = 1;
         SentenceGFX.SetActive(false);
         SubmitButton.SetActive(true);
+        processingPanel.gameObject.SetActive(false);
     }
 
     private void PopulateSentenceDropdown()

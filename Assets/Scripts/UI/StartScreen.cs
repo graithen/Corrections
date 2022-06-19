@@ -27,6 +27,8 @@ public class StartScreen : MonoBehaviour
     private TextMeshProUGUI warningText;
     [SerializeField]
     private Button startButton;
+    [SerializeField]
+    private GameObject gameScreen;
 
     private void Start()
     {
@@ -62,6 +64,8 @@ public class StartScreen : MonoBehaviour
 
     private IEnumerator coStartAnim()
     {
+        gameScreen.SetActive(true);
+
         gameNameText.gameObject.SetActive(false);
         welcomeText.gameObject.SetActive(false);
         fNameInputField.gameObject.SetActive(false);

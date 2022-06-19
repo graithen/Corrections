@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4556757063444899238}
   - component: {fileID: 1157015017989088157}
   - component: {fileID: 2002058512120600859}
+  - component: {fileID: 9108378915346586225}
   m_Layer: 0
   m_Name: CaseButton
   m_TagString: Untagged
@@ -124,7 +125,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3836115594032345855}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9108378915346586225}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1157015017989088157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +166,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &9108378915346586225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215310781001209057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c4d869f0a1b564bb2d849af2f03135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Audio: {fileID: 8300000, guid: 342037a090f75db49a9de4a9e11652f4, type: 3}
 --- !u!1 &5107421891461300585
 GameObject:
   m_ObjectHideFlags: 0

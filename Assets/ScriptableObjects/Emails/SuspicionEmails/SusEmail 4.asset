@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: SusEmail 4
   m_EditorClassIdentifier: 
-  sender: Sussy Man
-  subject: You Sussy Baka
-  body: SUS!!!!!
+  sender: Alex
+  subject: Prison?
+  body: "Babe\u2026\r\n\r\nI was taken in for questioning today by federal agents!
+    They threatened to arrest me if I don\u2019t give up your location. Whatever
+    you\u2019ve been doing, I won\u2019t stand for it, especially with me as collateral
+    damage!\r\n\r\nA\rlex"
   sendDay: 0
-  sendHour: 10
+  sendHour: 12
   sendMin: 30

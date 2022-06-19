@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: SusEmail 0
   m_EditorClassIdentifier: 
-  sender: Sussy Man
-  subject: You Sussy Baka
-  body: SUS!
+  sender: Alex
+  subject: A Letter
+  body: "Hey Honey,\r\n\r\nA letter came for you today. Has CONFIDENTIAL printed
+    on the front and says it\u2019s for your eyes only. Is this important?\r\n\r\nAlex"
   sendDay: 0
-  sendHour: 10
-  sendMin: 30
+  sendHour: 12
+  sendMin: 0

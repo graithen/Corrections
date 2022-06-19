@@ -8173,7 +8173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de2763cf1c4d8c45b039198feb52f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerSuspicionEvents: 0
+  triggerSuspicionEvents: 1
   storyManager: {fileID: 604082766}
   emailManager: {fileID: 604082768}
   endScreen: {fileID: 1993886541}

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: SusEmail 3
   m_EditorClassIdentifier: 
-  sender: Sussy Man
-  subject: You Sussy Baka
-  body: SUS!!!!
+  sender: Alex
+  subject: What's happenning?
+  body: "Babe!\r\n\r\nHave you done something wrong?! \nMen with guns were just here
+    asking for you!\nThis is starting to scare me.\n\nAlex"
   sendDay: 0
-  sendHour: 10
+  sendHour: 11
   sendMin: 30

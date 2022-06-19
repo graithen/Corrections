@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: SusEmail 2
   m_EditorClassIdentifier: 
-  sender: Sussy Man
-  subject: You Sussy Baka
-  body: SUS!!!
+  sender: Alex
+  subject: Suspicious Activity
+  body: "Honey,\r\n\r\nSome men dressed in suits came to the house today. They were
+    stern with their words, asking where you had been recently. I\u2019m starting
+    to get really anxious... Are you ok?\r\n\nAlex"
   sendDay: 0
-  sendHour: 10
-  sendMin: 30
+  sendHour: 12
+  sendMin: 0

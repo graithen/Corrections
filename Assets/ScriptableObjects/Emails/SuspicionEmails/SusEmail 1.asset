@@ -12,9 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: SusEmail 1
   m_EditorClassIdentifier: 
-  sender: Sussy Man
-  subject: You Sussy Baka
-  body: SUS!!
+  sender: Alex
+  subject: Strange Phone Call
+  body: 'Hey Honey,
+
+    
+
+    I just received the strangest phone call. A posh-sounding
+    man asking about you, implying that you were in some kind of trouble. He said
+    it was a matter of urgency that he got a hold of you. Should I be worried??
+
+
+    Alex'
   sendDay: 0
-  sendHour: 10
+  sendHour: 11
   sendMin: 30

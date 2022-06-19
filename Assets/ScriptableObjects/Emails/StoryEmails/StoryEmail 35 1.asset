@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 35 1
   m_EditorClassIdentifier: 
-  sender: Col. Ames
+  sender: Dept. Manager
   subject: Loyalist Army
   body: "The Loyalist rebellion poses a mortal threat to our society, therefore,
     appropriate retaliation by means of severe judicial punishment is imperative

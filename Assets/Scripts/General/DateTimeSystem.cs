@@ -374,15 +374,24 @@ public class DateTimeSystem : MonoBehaviour
         hr = maxHr - 1;
     }
 
-    public string PickRandomTime()
+    public string PickRandomTime(bool allDay)
     {
         string randomTime = "";
+        int randomHour = 0;
+        int randomMinute = 0;
 
-        int randomHour = Random.Range(startHour, maxHr);
-        int randomMinute = Random.Range(startMinute, maxMin);
+        if (allDay)
+        {
+            randomHour = Random.Range(startHour, maxHr);
+            randomMinute = Random.Range(startMinute, maxMin);
+        }
+        else
+        {
+            randomHour = Random.Range(startHour, startHour + 2);
+            randomMinute = Random.Range(startMinute, maxMin);
+        }
 
         randomTime = IntToStringTime(randomHour, randomMinute);
-
         return randomTime;
     }
 

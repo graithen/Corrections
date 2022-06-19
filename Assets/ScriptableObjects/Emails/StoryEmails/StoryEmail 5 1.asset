@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 5 1
   m_EditorClassIdentifier: 
-  sender: Abby
+  sender: Dept. Manager
   subject: Friendly Reminder
   body: 'Despite the recent legislations put in place by THE PARTY to help you financially,
     please do not use this an excuse to slack off at work. I would like to remind
     you that we will be constantly tracking your performance.
 
-    
+
 
     Abby,
 

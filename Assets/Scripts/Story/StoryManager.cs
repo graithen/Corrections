@@ -97,7 +97,8 @@ public class StoryManager : MonoBehaviour
         //Add the news article to todays News
         if(story.news != null)
         {
-            newsManager.finalNewsFeed.Add(dateTimeSystem.PickRandomTime(), story.news);
+            story.news.publishTime = dateTimeSystem.PickRandomTime(false);
+            newsManager.todaysNewsData.Add(story.news);
         }
     }
 

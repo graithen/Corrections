@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 30 1
   m_EditorClassIdentifier: 
-  sender: Col. Ames
+  sender: Dept. Manager
   subject: Proceed with caution
   body: "Given the recent brutalities of our fellow party officials, I exhort you
     to remain vigilant when travelling about the Capital. These BFP savages will

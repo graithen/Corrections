@@ -12,33 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 0 1
   m_EditorClassIdentifier: 
-  sender: Abby
+  sender: Dept. Manager
   subject: Welcome Update
   body: 'Good morning,
 
-    
 
-    A very warm welcome from myself. My name is Abby,
-    and I am your department manager. You should have already received instructions
-    regarding your responsibilities and how to effectively complete your allocated
-    case files. I have informed Ethan to reach out to you in case you need any further
-    guidance.
 
-    
+    A very warm welcome from myself. My name is Abby, and
+    I am your department manager. You should have already received instructions regarding
+    your responsibilities and how to effectively complete your allocated case files.
+    I have informed Ethan to reach out to you in case you need any further guidance.
 
-    Regarding the upcoming elections, you may hear talk of
-    a reshuffling in the department. I want to assure you not to worry yourself about
-    any of that. Work will resume as usual.
 
-    
+
+    Regarding
+    the upcoming elections, you may hear talk of a reshuffling in the department.
+    I want to assure you not to worry yourself about any of that. Work will resume
+    as usual.
+
+
 
     Kind Regards,
 
-    
+
 
     Abby
 
 '
   sendDay: 0
   sendHour: 9
-  sendMin: 30
+  sendMin: 15

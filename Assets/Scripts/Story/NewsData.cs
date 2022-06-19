@@ -9,4 +9,7 @@ public class NewsData : ScriptableObject
     public string title;
     [TextArea(10,5)]
     public string body;
+
+    [HideInInspector]
+    public string publishTime;
 }

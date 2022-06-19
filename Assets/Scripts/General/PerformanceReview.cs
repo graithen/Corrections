@@ -10,6 +10,8 @@ public class PerformanceReview : MonoBehaviour
     private GameplayTracking gameplayTracking;
     [SerializeField]
     private StoryManager storyManager;
+    [SerializeField]
+    private AudioManager audioManager;
 
     [Header("UI")]
     [SerializeField]
@@ -22,6 +24,8 @@ public class PerformanceReview : MonoBehaviour
     private GameObject underConstructionText;
     [SerializeField]
     private GameObject newReviewNotif;
+    [SerializeField]
+    private AudioClip notifSfx;
 
     private int Grade; //A - F rating, 'F' being 1, 'A' being  
 
@@ -105,6 +109,7 @@ public class PerformanceReview : MonoBehaviour
 
         performanceReviewText.text = PickPerformanceReviewText();
         newReviewNotif.SetActive(true);
+        audioManager.PlayUIAudio(notifSfx);
 
         gameplayTracking.ResetWeeklyValues();
     }

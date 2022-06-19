@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 24 1
   m_EditorClassIdentifier: 
-  sender: Col. Ames
+  sender: Dept. Manager
   subject: BFP Criminals
   body: "My superiors have ruled the expeditious sentencing of the highest degree
     of any and all BFP affiliates. This is a direct order and I surmise you to comply.

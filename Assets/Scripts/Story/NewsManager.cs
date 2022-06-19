@@ -43,10 +43,13 @@ public class NewsManager : MonoBehaviour
     [SerializeField]
     private List<NewsData> chapterFourFluffNews;
 
-    private List<NewsData> todaysNewsData = new List<NewsData>();
-    public Dictionary<string, NewsData> finalNewsFeed;
+    public List<NewsData> todaysNewsData = new List<NewsData>();
+    //public Dictionary<string, NewsData> finalNewsFeed;
 
-
+    private void Start()
+    {
+        ConstructDailyFeed();
+    }
     private void OnEnable()
     {
         UpdateNoNewsText();
@@ -54,8 +57,8 @@ public class NewsManager : MonoBehaviour
 
     public void ConstructDailyFeed() // Called at Start of Day (DayTime NewDayEvent)
     {
-        finalNewsFeed = new Dictionary<string, NewsData>();
-        finalNewsFeed.Clear();
+        //finalNewsFeed = new Dictionary<string, NewsData>();
+        //finalNewsFeed.Clear();
         todaysNewsData.Clear();
 
         if(generateFluffNews)
@@ -91,6 +94,7 @@ public class NewsManager : MonoBehaviour
                     int x = Random.Range(1, allNewsData.Count);
                     if (!todaysNewsData.Contains(allNewsData[x]))
                     {
+                        allNewsData[x].publishTime = dateTimeSystem.PickRandomTime(true);
                         todaysNewsData.Add(allNewsData[x]);
                         allNewsData.Remove(allNewsData[x]); //Uncomment to make it so news doesn't repeat on other days
                     }
@@ -100,10 +104,10 @@ public class NewsManager : MonoBehaviour
                     }
                 }
 
-                foreach (var newsArticle in todaysNewsData)
-                {
-                    finalNewsFeed.Add(dateTimeSystem.PickRandomTime(), newsArticle);
-                }
+                //foreach (var newsArticle in todaysNewsData)
+                //{
+                //    finalNewsFeed.Add(dateTimeSystem.PickRandomTime(), newsArticle);
+                //}
             }
         }
 
@@ -112,30 +116,57 @@ public class NewsManager : MonoBehaviour
 
     public void PublishFeed()
     {
-        if(finalNewsFeed != null)
+        if(todaysNewsData.Count > 0)
         {
-            NewsData thisArticle;
-            bool hasNews = finalNewsFeed.TryGetValue(dateTimeSystem.TimeGet, out thisArticle);
 
-            if (hasNews)
+            for (int i = 0; i < todaysNewsData.Count; i++)
             {
-                if(string.IsNullOrEmpty(thisArticle.body))
+                if(dateTimeSystem.TimeGet == todaysNewsData[i].publishTime)
                 {
-                    GameObject newsTweet = Instantiate(fluffNewsPrefab, newsContainer);
-                    newsTweet.GetComponent<TweetUI>().Populate(thisArticle.title, thisArticle.body);
-                    newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, fluffNewsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
-                }
-                else
-                {
-                    GameObject newsTweet = Instantiate(newsPrefab, newsContainer);
-                    newsTweet.GetComponent<TweetUI>().Populate(thisArticle.title, thisArticle.body);
-                    newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
-                    breakingNewsText.SetActive(true);
-                }
+                    if (string.IsNullOrEmpty(todaysNewsData[i].body))
+                    {
+                        GameObject newsTweet = Instantiate(fluffNewsPrefab, newsContainer);
+                        newsTweet.GetComponent<TweetUI>().Populate(todaysNewsData[i].title, todaysNewsData[i].body);
+                        newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, fluffNewsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+                        newsTweet.transform.SetSiblingIndex(0);
+                    }
+                    else
+                    {
+                        GameObject newsTweet = Instantiate(newsPrefab, newsContainer);
+                        newsTweet.GetComponent<TweetUI>().Populate(todaysNewsData[i].title, todaysNewsData[i].body);
+                        newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+                        breakingNewsText.SetActive(true);
+                        newsTweet.transform.SetSiblingIndex(0);
+                    }
 
-                verticalScroll.value = 0;
-                finalNewsFeed.Remove(dateTimeSystem.TimeGet);
+                    verticalScroll.value = 1;
+                    todaysNewsData.Remove(todaysNewsData[i]);
+                }
             }
+
+
+            //NewsData thisArticle;
+            //bool hasNews = finalNewsFeed.TryGetValue(dateTimeSystem.TimeGet, out thisArticle);
+
+            //if (hasNews)
+            //{
+            //    if(string.IsNullOrEmpty(thisArticle.body))
+            //    {
+            //        GameObject newsTweet = Instantiate(fluffNewsPrefab, newsContainer);
+            //        newsTweet.GetComponent<TweetUI>().Populate(thisArticle.title, thisArticle.body);
+            //        newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, fluffNewsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+            //    }
+            //    else
+            //    {
+            //        GameObject newsTweet = Instantiate(newsPrefab, newsContainer);
+            //        newsTweet.GetComponent<TweetUI>().Populate(thisArticle.title, thisArticle.body);
+            //        newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+            //        breakingNewsText.SetActive(true);
+            //    }
+
+            //    verticalScroll.value = 0;
+            //    finalNewsFeed.Remove(dateTimeSystem.TimeGet);
+            //}
         }
 
         UpdateNoNewsText();
@@ -155,28 +186,53 @@ public class NewsManager : MonoBehaviour
 
     public void PublishRemainingNewsArticlesForToday()
     {
-        if (finalNewsFeed != null)
+        if(todaysNewsData.Count > 0)
         {
-            foreach(NewsData newsArticle in finalNewsFeed.Values)
+            for (int i = 0; i < todaysNewsData.Count; i++)
             {
-                if(string.IsNullOrEmpty(newsArticle.body))
+                if (string.IsNullOrEmpty(todaysNewsData[i].body))
                 {
                     GameObject newsTweet = Instantiate(fluffNewsPrefab, newsContainer);
-                    newsTweet.GetComponent<TweetUI>().Populate(newsArticle.title, newsArticle.body);
+                    newsTweet.GetComponent<TweetUI>().Populate(todaysNewsData[i].title, todaysNewsData[i].body);
                     newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, fluffNewsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+                    newsTweet.transform.SetSiblingIndex(0);
                 }
                 else
                 {
                     GameObject newsTweet = Instantiate(newsPrefab, newsContainer);
-                    newsTweet.GetComponent<TweetUI>().Populate(newsArticle.title, newsArticle.body);
+                    newsTweet.GetComponent<TweetUI>().Populate(todaysNewsData[i].title, todaysNewsData[i].body);
                     newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+                    breakingNewsText.SetActive(true);
+                    newsTweet.transform.SetSiblingIndex(0);
                 }
 
-
+                verticalScroll.value = 1;
+                todaysNewsData.Remove(todaysNewsData[i]);
             }
-
-            verticalScroll.value = 0;
         }
+
+        //if (finalNewsFeed != null)
+        //{
+        //    foreach(NewsData newsArticle in finalNewsFeed.Values)
+        //    {
+        //        if(string.IsNullOrEmpty(newsArticle.body))
+        //        {
+        //            GameObject newsTweet = Instantiate(fluffNewsPrefab, newsContainer);
+        //            newsTweet.GetComponent<TweetUI>().Populate(newsArticle.title, newsArticle.body);
+        //            newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, fluffNewsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+        //        }
+        //        else
+        //        {
+        //            GameObject newsTweet = Instantiate(newsPrefab, newsContainer);
+        //            newsTweet.GetComponent<TweetUI>().Populate(newsArticle.title, newsArticle.body);
+        //            newsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, newsPrefab.GetComponent<RectTransform>().sizeDelta.y + 16);
+        //        }
+
+
+        //    }
+
+        //    verticalScroll.value = 0;
+        //}
 
         UpdateNoNewsText();
     }

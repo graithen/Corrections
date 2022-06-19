@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 34 1
   m_EditorClassIdentifier: 
-  sender: Col. Ames
+  sender: Dept. Manager
   subject: My Allegiance
   body: "In spite of the recent emergence of the Loyalist Army in addition to my
     military ranking, my allegiance remains to THE PARTY, hence I shall continue

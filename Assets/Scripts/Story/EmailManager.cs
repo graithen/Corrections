@@ -22,6 +22,9 @@ public class EmailManager : MonoBehaviour
     private TextMeshProUGUI bodyText;
     [SerializeField]
     private GameObject noEmailsText;
+    [SerializeField]
+    private AudioClip notifAudio;
+
 
     [Header("Custom Components")]
     [SerializeField]
@@ -30,12 +33,19 @@ public class EmailManager : MonoBehaviour
     private GameplayTracking gameplayTracking;
     [SerializeField]
     private StoryManager storyManager;
+    [SerializeField]
+    private AudioManager audioManager;
 
     [Header("Data")]
     [SerializeField]
     private List<EmailData> allEmails;
     [HideInInspector]
     public List<EmailData> todaysEmails = new List<EmailData>();
+
+    private void Start()
+    {
+        ConstructTodaysEmails();
+    }
 
     private void OnEnable()
     {
@@ -69,6 +79,7 @@ public class EmailManager : MonoBehaviour
                 if(dateTimeSystem.TimeGet == dateTimeSystem.IntToStringTime(todaysEmails[i].sendHour, todaysEmails[i].sendMin))
                 {
                     NewEmailButton(todaysEmails[i]);
+                    audioManager.PlayUIAudio(notifAudio);
                     todaysEmails.Remove(todaysEmails[i]);
 
                     if (!emailButtonHolder.gameObject.activeInHierarchy)

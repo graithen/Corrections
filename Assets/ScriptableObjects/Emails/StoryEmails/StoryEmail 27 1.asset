@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 27 1
   m_EditorClassIdentifier: 
-  sender: Col. Ames
+  sender: Dept. Manager
   subject: BFP Affiliation
   body: 'It has been brought forth to our attention that the sadistic ideology of
     the BFP has infiltrated our ranks here at the Ministry of Enforcement, explicitly
@@ -21,10 +21,10 @@ MonoBehaviour:
     direct ties to the BFP terrorist group. Those of you who exhibit any traces of
     sympathy towards these criminals shall encounter the same fate.
 
-    
 
-    The
-    People Prevail.
+
+    The People
+    Prevail.
 
 '
   sendDay: 0

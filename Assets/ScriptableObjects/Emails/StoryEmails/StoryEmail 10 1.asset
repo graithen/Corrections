@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 10 1
   m_EditorClassIdentifier: 
-  sender: Abby
+  sender: Dept. Manager
   subject: THE PARTY Update
   body: "I am sure you have heard about THE PARTY\u2019s recent success in passing
     a bill allowing them to override the constitution. With that, I believe we will

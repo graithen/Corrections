@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 3 1
   m_EditorClassIdentifier: 
-  sender: Abby
+  sender: Dept. Manager
   subject: Welcoming THE PARTY
   body: 'On behalf of the entire Ministry of Corrections, we welcome THE PARTY with
     open arms. I would like everybody to comply with any demands given by our new
@@ -20,7 +20,7 @@ MonoBehaviour:
     to start off on the right foot, anybody willing to mess things up will report
     me.
 
-    
+
 
     Abby
 

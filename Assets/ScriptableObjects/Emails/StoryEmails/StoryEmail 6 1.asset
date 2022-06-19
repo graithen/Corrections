@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 6 1
   m_EditorClassIdentifier: 
-  sender: Abby
+  sender: Dept. Manager
   subject: Tuition Announcement
   body: "Given the government\u2019s recent decision to abolish Tuition Fees, we
     have been advised that the Ministry of Corrections will be offering an internship

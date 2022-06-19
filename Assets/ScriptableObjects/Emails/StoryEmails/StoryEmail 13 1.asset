@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 13 1
   m_EditorClassIdentifier: 
-  sender: Abby
+  sender: Dept. Manager
   subject: Merger Details
   body: "Following THE PARTY\u2019s announcement to merge the Ministry of Corrections
     into the newly founded Ministry of Enforcement, you will soon report all your

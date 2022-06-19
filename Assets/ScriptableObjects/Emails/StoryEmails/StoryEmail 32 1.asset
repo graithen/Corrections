@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 32 1
   m_EditorClassIdentifier: 
-  sender: Col. Ames
+  sender: Dept. Manager
   subject: BFP Inmates
   body: "Upon government adjudication, each and every BFP inmate ought to be publicly
     executed.\r\n\r\nThe People Prevail.\r"

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ab6b63d5629a41864ae2bf6a7b543, type: 3}
   m_Name: StoryEmail 21 1
   m_EditorClassIdentifier: 
-  sender: Col. Ames
+  sender: Dept. Manager
   subject: BFP Rebellion
   body: "A cordial cue to disregard the futile efforts of these anarchists. Need
     I remind you; your performance is primary to all.\r\n\r\nThe People Prevail.\r"

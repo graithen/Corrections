@@ -30,9 +30,23 @@ public class StartScreen : MonoBehaviour
     [SerializeField]
     private GameObject gameScreen;
 
+    [SerializeField]
+    private Image titleScreen;
+    [SerializeField]
+    private Image titleLogo;
+    [SerializeField]
+    private TextMeshProUGUI titleText;
+    [SerializeField]
+    private Image disclaimer;
+    [SerializeField]
+    private TextMeshProUGUI disclaimerTitle;
+    [SerializeField]
+    private TextMeshProUGUI disclaimerBody;
+
     private void Start()
     {
         dateTimeSystem.Pause(); //Pause Time at Start
+        StartCoroutine(coTitleDisclaimer());
     }
 
     public void StartGame()
@@ -87,5 +101,28 @@ public class StartScreen : MonoBehaviour
 
         tutorialManager.EnableTutorialCanvas(true);
         backgroundImage.gameObject.SetActive(false);
+    }
+
+    private IEnumerator coTitleDisclaimer()
+    {
+        yield return new WaitForSeconds(4f);
+        titleLogo.gameObject.SetActive(false);
+        titleText.gameObject.SetActive(false);
+        while(titleScreen.color.a > 0)
+        {
+            titleScreen.color = new Color(titleScreen.color.r, titleScreen.color.g, titleScreen.color.b, titleScreen.color.a - Time.deltaTime);
+            yield return null;
+        }
+        titleScreen.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(5f);
+        disclaimerTitle.gameObject.SetActive(false);
+        disclaimerBody.gameObject.SetActive(false);
+        while(disclaimer.color.a > 0)
+        {
+            disclaimer.color = new Color(disclaimer.color.r, disclaimer.color.g, disclaimer.color.b, disclaimer.color.a - Time.deltaTime);
+            yield return null;
+        }
+        disclaimer.gameObject.SetActive(false);
     }
 }
